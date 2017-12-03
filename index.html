@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+	<link rel="stylesheet" href="/capstone/css/main.css" type="text/css"/>
+	<script src="/capstone/js/custom.js"></script>
+	<head>
+		<title>Client Side</title>
+	</head>
+
+
+	<body>
+		<div id="main">
+			<div id="search" class="row">
+		        <div class="col-xs-4">
+		            <form id="search_form" action="/capstone/php/search.php" onsubmit="setHTTPGetParam('search')" metohd="get">
+		                <fieldset>
+		                    <legand>SEARCH</legend>
+		                    <input type="hidden" name="page" value="1" id="search_param_page">
+		                    <input type="hidden" name="maxItem" value="10" id="search_param_maxItem">
+		                    <input type="hidden" name="sort" value="0" id="search_param_sort">
+		                    <div class="input-group input-group-lg">
+		                        <input class="form-control" type="text" name="quary" value="" id="search_param_input" placeholder="Search..." maxlength="255" autocomplete="off">
+		                        <span class="input-group-btn">
+		                            <button id="search_button" class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+		                        </span>
+		                    </div>
+		                </fieldset>
+		            </form>
+		        </div>
+		        <div id="search_option" class="col-xs-8">
+		            <div class="row">
+		                <span>
+		                    <p>정렬옵션</p>
+		                    <select id="search_option_sort">
+		                        <option value="new_date">최신 등록순</option>
+		                        <option value="low_price">낮은 가격순</option>
+		                        <option value="high_price">높은 가격순</option>
+		                    </select>
+		                </span>
+		                <span>
+		                    <p>페이지 당 표시</p>
+		                    <select id="search_option_maxItem">
+		                        <option value="5">5</option>
+		                        <option value="10">10</option>
+		                        <option value="25">25</option>
+		                    </select>
+		                </span>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+
+
+	</body>
+</html>

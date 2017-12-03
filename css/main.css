@@ -1,0 +1,86 @@
+span{
+	display: inline-block;
+	margin: auto;
+}
+
+div{
+	display: block;
+}
+
+body{
+	font-family: sans-serif;
+	font-size: 12pt;
+}
+
+header{
+	font-size: 8pt;
+	padding : 5pt;
+	background-color: LightBlue;
+}
+
+nav{
+	margin-left: 10%;
+	font-size: 10pt;
+}
+
+nav a{
+	border: 1px solid #FFFFFF00;
+	padding: 3px;
+	font-weight: bold;
+	color: Purple;
+}
+
+
+
+nav strong{
+	background: #DDCAF7;
+	padding: 3px;
+}
+
+nav a:hover{
+	border: 1px solid purple;
+	color: Purple;
+	text-decoration: none;
+}
+
+#main{
+	margin: 10%;
+}
+
+#search div{
+	position: relative;
+}
+
+
+
+#content{
+	font-size: 10pt;
+	padding : 3pt;
+	margin : 5pt;
+	background-color: LightGreen;
+	width : 90%;
+}
+
+#content img{
+	width : 100pt;
+	height: 100pt;
+}
+
+
+
+#content_name{
+	font-family: serif;
+	font-size: 8pt;
+	color: Black;
+}
+
+#content_price{
+	font-family: serif;
+	font-size: 12pt;
+	font-weight: bold;
+	color: Red;
+}
+
+#content_store{
+	font-size: 12pt;
+}
