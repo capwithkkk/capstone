@@ -4,20 +4,25 @@ class insert:
     def __init__(self):
         pass
 
-    def make_insert_query(self,name,store,url,pic_url,price):
+    @staticmethod
+    def make_insert_query(name,store,url,pic_url,price):
         conn = pymysql.connect(host = 'localhost',
-                       user = 'root',
-                       password = 'root',
+                       user = 'admin',
+                       password = 'admin',
                        db = 'capstone',
                        charset = 'utf8')
         curs = conn.cursor()
-        sql = 'INSERT INTO product VALUES(null,"'+name+'","'+ store +'","'+url+'","' + pic_url + '",'+price+',null,1)'
-        curs.execute(sql)
+        try:
+            sql = 'INSERT INTO product VALUES(null,"'+name+'","'+ store +'","'+url+'","' + pic_url + '",'+str(price).replace(",","")+',null,1)'
+            print(sql)
+            curs.execute(sql)
 
 
-        sql2 = 'select * from product'
-        curs.execute(sql2)
-        conn.commit()
+            sql2 = 'select * from product'
+            curs.execute(sql2)
+            conn.commit()
+        except pymysql.err.IntegrityError:
+            pass
 
 
         conn.close()
