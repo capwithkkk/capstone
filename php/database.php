@@ -38,6 +38,13 @@
         }
     }
 
+    function http_get_category(){
+        global $db;
+        $full_query =  "SELECT * from category";
+        $rows = $db->query($full_query);
+        return $rows;
+    }
+
 
 
 ?>

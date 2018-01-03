@@ -15,7 +15,8 @@ CREATE TABLE product(
 	expired	Date,
 	category_id	integer,
 	foreign key(category_id) references category(category_id),
-	primary key(pro_index)
+	primary key(pro_index),
+	unique key(name,store)
 );
 
 

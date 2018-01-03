@@ -1,18 +1,20 @@
 <nav>
+    <ul class="pagination">
     <?php
         $search_page = "search.php";
         $start_page = ($page < 6)? 1:$page - 5;
         if($page > 1){
-            ?><a href="<?=$search_page?>?page=<?=$page-1?>&maxItem=<?=$maxItem?>&sort=<?=$sort?>&quary=<?=$quary?>"><이전</a><?php
+            ?><li><a href="<?=$search_page?>?page=<?=$page-1?>&maxItem=<?=$maxItem?>&sort=<?=$sort?>&category=<?=$category?>&quary=<?=$quary?>"><이전</a></li><?php
         }
 
         for($i = $start_page; $i < $start_page+10; $i++){
             if($i == $page){
-                ?><strong><?=$i?></strong><?php
+                ?><li class="active"><a href="#"><?=$i?></a></li><?php
             }
             else{
-                ?><a href="<?=$search_page?>?page=<?=$i?>&maxItem=<?=$maxItem?>&sort=<?=$sort?>&quary=<?=$quary?>"><?=$i?></a><?php
+                ?><li><a href="<?=$search_page?>?page=<?=$i?>&maxItem=<?=$maxItem?>&sort=<?=$sort?>&category=<?=$category?>&quary=<?=$quary?>"><?=$i?></a></li><?php
             }
         }
-        ?><a href="<?=$search_page?>?page=<?=$page+1?>&maxItem=<?=$maxItem?>&sort=<?=$sort?>&quary=<?=$quary?>">다음></a>
+        ?><li><a href="<?=$search_page?>?page=<?=$page+1?>&maxItem=<?=$maxItem?>&sort=<?=$sort?>&category=<?=$category?>&quary=<?=$quary?>">다음></a></li>
+    </ul>
 </nav>

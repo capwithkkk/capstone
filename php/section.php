@@ -5,7 +5,7 @@
 
 <?php
     if($page != null && $maxItem != null && $quary != null && $sort != null){
-        $rows = http_print_prod(($page - 1) * $maxItem,$maxItem,$quary,$sort,"전체");
+        $rows = http_print_prod(($page - 1) * $maxItem,$maxItem,$quary,$sort,$category);
         ?><br><?php
         foreach ($rows as $row) {
             $price_num = (is_numeric($row['price']))?number_format($row['price']):0;

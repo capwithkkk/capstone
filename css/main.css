@@ -84,3 +84,15 @@ nav a:hover{
 #content_store{
 	font-size: 12pt;
 }
+
+div.tagged{
+	background-color: #bbee00;
+	font-weight : bold;
+	color: White;
+	border: 2px solid black;
+
+}
+
+.modal-header{
+	background: aqua;
+}
