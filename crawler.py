@@ -3,14 +3,27 @@ from insert import insert
 from selenium import webdriver
 
 
-#todo
 class ParserUnit:
-    pass
+
+    def __init__(self, store):
+        self.store = store
+        self.rules = self.get_parse_rule()
+        for rule in self.rules:
+            self.search = rule[0]
+            self.section = rule[1]
+            self.articles = rule[2]
+            self.name = rule[3]
+            self.url = rule[4]
+            self.pic_url = rule[5]
+            self.price = rule[6]
+            self.button = rule[7]
+
+    def get_parse_rule(self):
+        return insert().take_query("SELECT search,section,articles,name,url,pic_url,price,button FROM parse_rule WHERE store = '" + self.store  + "'")
 
 
 class Data:
-
-    def __init__(self,name,url,pic_url,price,category):
+    def __init__(self, name, url, pic_url, price, category):
         self.name = name
         self.url = url
         self.pic_url = pic_url
@@ -36,25 +49,33 @@ class Data:
 class ParserInterface(abc.ABC):
 
     @abc.abstractclassmethod
-    def parse_to_list(self,driver:webdriver) -> Data:
+    def parse_to_list(self, driver: webdriver) -> Data:
         raise NotImplementedError()
 
 
-#todo implement
-class AbstractParser(ParserInterface):
+class ParserImpl(ParserInterface):
 
-    def parse_to_list(self,page:str) -> Data:
-        list = []
-        #todo
+    def __init__(self,store):
+        self.store = store
+        self.parser_unit = ParserUnit(store)
 
-        return list
-    pass
+    def parse_to_list(self,driver:webdriver) -> Data:
+        rule_list = []
+        section = driver.find_element_by_xpath(self.parser_unit.section)
+        articles = section.find_elements_by_xpath(self.parser_unit.articles)
+        for article in articles:
+            name = article.find_element_by_xpath(self.parser_unit.name).text
+            url  = article.find_element_by_xpath(self.parser_unit.url).get_attribute('href')
+            pic_url = article.find_element_by_xpath(self.parser_unit.pic_url).get_attribute('src')
+            price = article.find_element_by_xpath(self.parser_unit.price).text
+            rule_list.append(Data(name, url, pic_url, price, "전체"))
+        return rule_list
 
 
 class MinerInterface(abc.ABC):
 
     @abc.abstractclassmethod
-    def search_init(self,keyword:str):
+    def search_init(self, keyword:str):
         raise NotImplementedError()
 
     @abc.abstractclassmethod
@@ -78,13 +99,13 @@ class MinerInterface(abc.ABC):
         raise NotImplementedError()
 
     @abc.abstractclassmethod
-    def insert_to_db(self,name,url,pic_url,price,category):
+    def insert_to_db(self, name, url, pic_url, price, category):
         raise NotImplementedError()
 
 
 class MinerImpl(MinerInterface):
 
-    def __init__(self,driver,store,url,parser):
+    def __init__(self, driver, store, url, parser):
         self.store = store
         self.url = url
         if parser is None:
@@ -112,40 +133,49 @@ class MinerImpl(MinerInterface):
         driver_element.submit()
 
     def do_next_page(self) -> bool:
-        try:
-            page_element = self.get_next_button_element()
-            if page_element is None:
-                return False
-            self.driver.execute_script("arguments[0].click()",page_element)
-            time.sleep(1)
-            return True
-        except:
+        page_element = self.get_next_button_element()
+        if page_element is None:
             return False
+        self.driver.execute_script("arguments[0].click()", page_element)
+        time.sleep(2)
+        return True
 
-    #todo
     def get_query_input_element(self) -> webdriver:
-        return None
+        return self.driver.find_element_by_xpath(self.parser.parser_unit.search)
 
-    #todo
     def get_next_button_element(self) -> webdriver:
-        return None
+        return self.driver.find_element_by_xpath(self.parser.parser_unit.button)
 
     def insert_to_db(self,name,url,pic_url,price,category):
-        insert.make_insert_query(name,self.store,url,pic_url,price)
+        insert.make_insert_query(name, self.store, url, pic_url, price)
 
     @staticmethod
-    def get_parser(self,store:str) -> ParserInterface:
-        return self.parser
+    def get_parser(store:str) -> ParserInterface:
+        return ParserImpl(store)
 
-    def mining(self,keyword):
+    def mining(self, keyword):
+        driver = self.driver
+        driver.get(self.url)
+        self.search_init(keyword)
+        front_item_name = ""
         while True:
-            driver = self.driver
-            driver.get(self.url)
-            self.search_init(keyword)
             data_list = self.parser.parse_to_list(self.driver)
+            if len(data_list) == 0 or front_item_name == data_list[0].name:
+                break
+            else:
+                front_item_name = data_list[0].name
             for data in data_list:
-                self.insert_to_db(data.name,data.url,data.pic_url,data.price,data.category)
+                print("""
+                name   : %s
+                store  : %s
+                url    : %s
+                pic_url: %s
+                price  : %s
+                """ % (data.name, self.store, data.url, data.pic_url, data.price))
+                #insert().insert_to_db(data.name,data.url,data.pic_url,data.price,data.category)
             if not self.do_next_page():
                 break
 
 
+miner = MinerImpl(None, "G마켓", "http://www.gmarket.co.kr", None)
+miner.mining("신발")
