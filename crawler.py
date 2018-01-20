@@ -1,6 +1,7 @@
 import abc, time
-from insert import insert
+from insert import Database
 from selenium import webdriver
+from singleton import SingletonInstance
 
 
 class ParserUnit:
@@ -19,10 +20,11 @@ class ParserUnit:
             self.button = rule[7]
 
     def get_parse_rule(self):
-        return insert().take_query("SELECT search,section,articles,name,url,pic_url,price,button FROM parse_rule WHERE store = '" + self.store  + "'")
+        return Database.instance().take_query("SELECT search,section,articles,name,url,pic_url,price,button FROM parse_rule WHERE store = '" + self.store  + "'")
 
 
 class Data:
+
     def __init__(self, name, url, pic_url, price, category):
         self.name = name
         self.url = url
@@ -30,20 +32,18 @@ class Data:
         self.price = price
         self.category = category
 
-    def get_name(self) -> str:
-        return self.name
 
-    def get_url(self) -> str:
-        return self.url
+class CategoryDict(SingletonInstance):
 
-    def get_pic_url(self) -> str:
-        return self.pic_url
+    def __init__(self):
+        self.categories = {}
+        category_table = CategoryDict.get_categories()
+        for category in category_table:
+            self.categories[category[1]] = category[0]
 
-    def get_price(self) -> int:
-        return self.price
-
-    def get_category(self) -> str:
-        raise self.category
+    @staticmethod
+    def get_categories():
+        return Database.instance().take_query("SELECT category_id, category_name FROM category")
 
 
 class ParserInterface(abc.ABC):
@@ -108,24 +108,37 @@ class MinerImpl(MinerInterface):
     def __init__(self, driver, store, url, parser):
         self.store = store
         self.url = url
-        if parser is None:
+        if parser is None and store is not None:
             self.parser = MinerImpl.get_parser(self.store)
         else:
             self.parser = parser
         if driver is None:
-            option = webdriver.ChromeOptions()
-            option.add_argument('headless')
-            prefs = {"profile.managed_default_content_settings.images":2}
-            option.add_experimental_option("prefs",prefs)
-            self.driver = webdriver.Chrome(chrome_options=option,executable_path="./chrome/chromedriver")
+            self.driver = MinerImpl.create_driver()
         else:
             self.driver = driver
+
+    @staticmethod
+    def create_driver() -> webdriver:
+        option = webdriver.ChromeOptions()
+        option.add_argument('headless')
+        prefs = {"profile.managed_default_content_settings.images":2}
+        option.add_experimental_option("prefs",prefs)
+        return webdriver.Chrome(chrome_options=option,executable_path="./chrome/chromedriver")
+
+    @staticmethod
+    def get_parser(store:str) -> ParserInterface:
+        return ParserImpl(store)
 
     def get_store(self) -> str:
         return self.store
 
     def get_driver(self) -> webdriver:
         return self.driver
+
+    def set_store(self, store, url, parser):
+        self.store = store
+        self.url = url
+        self.parser = parser
 
     def search_init(self,keyword:str):
         driver_element = self.get_query_input_element()
@@ -146,12 +159,8 @@ class MinerImpl(MinerInterface):
     def get_next_button_element(self) -> webdriver:
         return self.driver.find_element_by_xpath(self.parser.parser_unit.button)
 
-    def insert_to_db(self,name,url,pic_url,price,category):
-        insert.make_insert_query(name, self.store, url, pic_url, price)
-
-    @staticmethod
-    def get_parser(store:str) -> ParserInterface:
-        return ParserImpl(store)
+    def insert_to_db(self, name, url, pic_url, price, category):
+        Database.instance().make_insert_query(name, self.store, url, pic_url, price, category)
 
     def mining(self, keyword):
         driver = self.driver
@@ -171,11 +180,12 @@ class MinerImpl(MinerInterface):
                 url    : %s
                 pic_url: %s
                 price  : %s
-                """ % (data.name, self.store, data.url, data.pic_url, data.price))
-                #insert().insert_to_db(data.name,data.url,data.pic_url,data.price,data.category)
+                category_num : %s
+                """ % (data.name, self.store, data.url, data.pic_url, data.price, CategoryDict.instance().categories[data.category]))
+                #Database.instance().insert_to_db(data.name, data.url, data.pic_url, data.price, CategoryDict.instance().categories[data.category])
             if not self.do_next_page():
                 break
 
 
-miner = MinerImpl(None, "G마켓", "http://www.gmarket.co.kr", None)
-miner.mining("신발")
+#miner = MinerImpl(None, "G마켓", "http://www.gmarket.co.kr", None)
+#miner.mining("신발")
