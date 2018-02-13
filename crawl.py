@@ -1,7 +1,7 @@
 ﻿from bs4 import BeautifulSoup
 from selenium import webdriver
 import requests
-from insert import insert
+from insert import Database
 import time
 
 driver = webdriver.PhantomJS("./phantomjs/bin/phantomjs")
@@ -40,7 +40,7 @@ class TestModule:
             pic_url: %s
             price  : %s
             """ % (name,store,url,pic_url,price))
-                insert.make_insert_query(name,store,url,pic_url,price)
+                Database.instance().make_insert_query(name,store,url,pic_url,price)
 
 
     #11번가 테스트용
@@ -64,6 +64,10 @@ class TestModule:
         driver_element = driver.find_element_by_id("AKCKwd")
         driver_element.send_keys(query)
         driver_element.submit()
+
+        driver.get
+
+
 
         while count >0:
             print("count : " +str(count))
@@ -186,7 +190,7 @@ class TestModule:
                 pic_url: %s
                 price  : %s
                 """ % (name,store,url,pic_url,price))
-                insert.make_insert_query(name,store,url,pic_url,price)
+                Database.instance().make_insert_query(name,store,url,pic_url,price)
             print("target : " + str(page_num+1))
 
             element = driver.find_element_by_css_selector("div.paginate > span.nxt")

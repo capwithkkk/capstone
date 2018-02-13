@@ -1,4 +1,4 @@
-import abc,random,heapq,time
+import abc,random,heapq
 from insert import Database
 from crawler import MinerImpl
 from crawler import ParserImpl
@@ -59,7 +59,7 @@ class AbstractCollector(abc.ABC):
             keyword = self.choose_keyword()
             for store_info in store_info_list:
                 miner.set_store(store_info.store, store_info.url, store_info.parser)
-                #miner.mining(keyword.name)
+                miner.mining(keyword.name)
                 print("store : " + store_info.store + ", and keyword : " + keyword.name + " and last priority : " + str(keyword.priority))
             self.nice(keyword)
             self.refresh_keyword(keyword)
@@ -97,7 +97,6 @@ class BaseCollector(AbstractCollector):
         self.update_required.append(keyword)
         heapq.heappush(self.priority_queue, keyword)
 
-    #todo implementation
     def update_keyword_list(self):
         self.update_required = []
         for key in self.priority_queue:
