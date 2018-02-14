@@ -4,7 +4,7 @@
         <div class="col-xs-4">
             <form id="search_form" action="search.php" onsubmit="setHTTPGetParam('search')" metohd="get">
                 <fieldset>
-                    <legand>SEARCH</legend>
+                    <legend>SEARCH</legend>
                     <input type="hidden" name="page" value="1" id="search_param_page">
                     <input type="hidden" name="maxItem" value="10" id="search_param_maxItem">
                     <input type="hidden" name="sort" value="0" id="search_param_sort">
