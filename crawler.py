@@ -121,9 +121,11 @@ class ParserImpl(ParserInterface):
                     brand = ParserImpl.find_item_info(root, self.parser_unit.brand)
                 else:
                     category = ParserImpl.find_category_info(
-                        root, self.parser_unit.categories, self.parser_unit.category_core
+                        article, self.parser_unit.categories, self.parser_unit.category_core
                     )
                     brand = ParserImpl.find_item_info(article, self.parser_unit.brand)
+                if brand is None or brand is "":
+                    brand = "N/A"
 
                 print("""
                     name    : %s
@@ -142,13 +144,16 @@ class ParserImpl(ParserInterface):
 
     @staticmethod
     def find_item_info(driver: webdriver, parse_rule: str) -> str:
-        return driver.find_element_by_xpath(parse_rule).text
+        text = driver.find_element_by_xpath(parse_rule).text
+        text = text.strip("()[]{} \r\n")
+        return text
 
     @staticmethod
     def find_category_info(driver: webdriver, categories: str, category_unit: str):
         categories = driver.find_elements_by_xpath(categories)
         for i in range(len(categories)-1, -1, -1):
             category = categories[i].find_element_by_xpath(category_unit).text
+            category = category.strip("()[]{} \r\n")
             sub_category = CategoryConverger.instance().substitute_category(category)
             if sub_category is not None:
                 return sub_category
@@ -159,7 +164,9 @@ class ParserImpl(ParserInterface):
     def find_item_info_from_link(root: lhtml, parse_rule: str) -> str:
         try:
             elem = root.xpath(parse_rule)
-            return elem[0].text
+            text = elem[0].text
+            text = text.strip("()[]{} \r\n")
+            return text
         except IndexError:
             return "N/A"
 
@@ -168,6 +175,7 @@ class ParserImpl(ParserInterface):
         categories = root.xpath(categories)
         for i in range(len(categories)-1, -1, -1):
             category = categories[i].xpath(category_unit)[0].text
+            category = category.strip("()[]{} \r\n")
             sub_category = CategoryConverger.instance().substitute_category(category)
             if sub_category is not None:
                 return sub_category
@@ -287,7 +295,6 @@ class MinerImpl(MinerInterface):
         while True:
             try:
                 print("page : " + str(page))
-
                 data_list = self.parser.parse_to_list(self.driver)
                 if (not page_parsing_flag) and len(data_list) == 0 or front_item_name == data_list[0].name:
                     print("Crawling has been finished.")
@@ -304,5 +311,5 @@ class MinerImpl(MinerInterface):
                 time.sleep(0.1)
 
 
-miner = MinerImpl(None, "G마켓", "http://www.gmarket.co.kr/", None)
+miner = MinerImpl(None, "옥션", "http://www.auction.co.kr", None)
 miner.mining("테팔")
