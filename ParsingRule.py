@@ -1,12 +1,10 @@
-# delimiter:Tag
-#
-
 import re
+
 
 class ParsingRule:
 
     @staticmethod
-    def parse_wildcard_id_selector(string: str):
+    def parse_wildcard_id_selector(string: str) -> str:
         target_id = ""
         id = string.index("#")
 
@@ -19,7 +17,6 @@ class ParsingRule:
         target_id = target_id[:d_index]
         conc = target_id[d_index:]
 
-
         strings = target_id.split("*")
 
         out = ""
@@ -31,10 +28,10 @@ class ParsingRule:
 
         out += tag+"[id$=\"" + substring + "\"]"+conc + ","
 
-        print("out : " + out)
+        return out
 
     def __init__(self):
         parseDict = []
 
 
-ParsingRule.parse_wildcard_id_selector("tr#item_unit_*_*_it+span")
+#ParsingRule.parse_wildcard_id_selector("tr#item_unit_*_*_it+span")

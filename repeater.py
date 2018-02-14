@@ -12,8 +12,10 @@ class Repeater:
                 if failure_count is 0:
                     raise e
                 failure_count -= 1
+                time.sleep(0.1)
                 continue
-            return None
+            finally:
+                return None
 
     @staticmethod
     def repeat_function(func, params: tuple, exception: Exception, failure_count: int) -> object:

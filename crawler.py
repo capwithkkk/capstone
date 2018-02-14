@@ -1,11 +1,11 @@
-import abc, time
+import abc
+import time
 from repeater import Repeater
 from insert import Database
 from selenium import webdriver
 from selenium.common.exceptions import StaleElementReferenceException, NoSuchElementException
 from singleton import SingletonInstance
-import xml.etree.ElementTree as ElementTree
-import requests
+import lxml.html as lhtml
 
 
 class ParserUnit:
@@ -22,17 +22,18 @@ class ParserUnit:
             self.pic_url = rule[5]
             self.price = rule[6]
             self.button = rule[7]
-        #self.extra_rules = self.get_parse_rule_extra()
-        #for rule in self.extra_rules:
-        #    self.category = rule[0]
-        #    self.brand = rule[1]
-        #    self.in_link = rule[2]
+        self.extra_rules = self.get_parse_rule_extra()
+        for rule in self.extra_rules:
+            self.categories = rule[0]
+            self.category_core = rule[1]
+            self.brand = rule[2]
+            self.in_link = rule[3]
 
     def get_parse_rule(self):
         return Database.instance().take_query("SELECT search,section,articles,name,url,pic_url,price,button FROM parse_rule WHERE store = '" + self.store  + "'")
 
     def get_parse_rule_extra(self):
-        return Database.instance().take_query("SELECT category,brand,is_inlink FROM parse_rule WHERE store = '" + self.store  + "'")
+        return Database.instance().take_query("SELECT categories,category_core,brand,is_inlink FROM parse_rule_extra WHERE store = '" + self.store  + "'")
 
 
 class Data:
@@ -60,8 +61,7 @@ class CategoryDict(SingletonInstance):
 
 class CategoryConverger(SingletonInstance):
 
-    def __init__(self, name, category):
-        self.origin_name = name
+    def __init__(self):
         self.rules = CategoryConverger.get_category_converger()
         self.dict = {}
         for rule in self.rules:
@@ -71,8 +71,7 @@ class CategoryConverger(SingletonInstance):
         if name in self.dict:
             return self.dict[name]
         else:
-            print("치환실패 -")
-            return "전체"
+            return None
 
     @staticmethod
     def get_category_converger():
@@ -88,11 +87,11 @@ class ParserInterface(abc.ABC):
 
 class ParserImpl(ParserInterface):
 
-    def __init__(self,store):
+    def __init__(self, store):
         self.store = store
         self.parser_unit = ParserUnit(store)
 
-    def parse_to_list(self, driver:webdriver) -> []:
+    def parse_to_list(self, driver: webdriver) -> []:
         rule_list = []
         try:
 
@@ -112,21 +111,29 @@ class ParserImpl(ParserInterface):
                 price0 = Repeater.repeat_function(article.find_element_by_xpath,{self.parser_unit.price},StaleElementReferenceException,2)
                 price = price0.text
 
+                if self.parser_unit.in_link:
+                    #root = lhtml.fromstring(requests.get(url).text)
+                    root = DriverHelper.instance().get_driver()
+                    root.get(url)
+                    category = ParserImpl.find_category_info(
+                        root, self.parser_unit.categories, self.parser_unit.category_core
+                    )
+                    brand = ParserImpl.find_item_info(root, self.parser_unit.brand)
+                else:
+                    category = ParserImpl.find_category_info(
+                        root, self.parser_unit.categories, self.parser_unit.category_core
+                    )
+                    brand = ParserImpl.find_item_info(article, self.parser_unit.brand)
+
                 print("""
-                    name   : %s
-                    url    : %s
-                    pic_url: %s
-                    price  : %s
-                    """ % (name, url, pic_url, price)
+                    name    : %s
+                    url     : %s
+                    pic_url : %s
+                    price   : %s
+                    category: %s
+                    brand   : %s
+                    """ % (name, url, pic_url, price, category, brand)
                       )
-                #todo implement
-                #if self.parser_unit.in_link:
-                #    new_page = None
-                #    category = ParserImpl.find_item_info_from_link(url, self.parser_unit.category)
-                #    brand = ParserImpl.find_item_info_from_link(url, self.parser_unit.category)
-                #else:
-                #    category = ParserImpl.find_item_info_from_article(article, self.parser_unit.category)
-                #    brand = ParserImpl.find_item_info_from_article(article, self.parser_unit.category)
 
                 rule_list.append(Data(name, url, pic_url, price, "전체"))
         except NoSuchElementException:
@@ -134,15 +141,38 @@ class ParserImpl(ParserInterface):
         return rule_list
 
     @staticmethod
-    def find_item_info_from_article(driver: webdriver, parse_rule: str) -> str:
+    def find_item_info(driver: webdriver, parse_rule: str) -> str:
         return driver.find_element_by_xpath(parse_rule).text
 
     @staticmethod
-    def find_item_info_from_link(url: str, parse_rule: str) -> str:
-        req = requests.get(url)
-        root = ElementTree.fromstring(req.content)
-        elem = root.find(parse_rule)
-        return elem.itertext()
+    def find_category_info(driver: webdriver, categories: str, category_unit: str):
+        categories = driver.find_elements_by_xpath(categories)
+        for i in range(len(categories)-1, -1, -1):
+            category = categories[i].find_element_by_xpath(category_unit).text
+            sub_category = CategoryConverger.instance().substitute_category(category)
+            if sub_category is not None:
+                return sub_category
+            print("치환시도 : " + category)
+        return "N/A"
+
+    @staticmethod
+    def find_item_info_from_link(root: lhtml, parse_rule: str) -> str:
+        try:
+            elem = root.xpath(parse_rule)
+            return elem[0].text
+        except IndexError:
+            return "N/A"
+
+    @staticmethod
+    def find_category_info_from_link(root: lhtml, categories: str, category_unit: str):
+        categories = root.xpath(categories)
+        for i in range(len(categories)-1, -1, -1):
+            category = categories[i].xpath(category_unit)[0].text
+            sub_category = CategoryConverger.instance().substitute_category(category)
+            if sub_category is not None:
+                return sub_category
+            print("치환시도 : " + category)
+        return "N/A"
 
 
 class MinerInterface(abc.ABC):
@@ -176,6 +206,15 @@ class MinerInterface(abc.ABC):
         raise NotImplementedError()
 
 
+class DriverHelper(SingletonInstance):
+
+    def __init__(self):
+        self.driver = MinerImpl.create_driver()
+
+    def get_driver(self):
+        return self.driver
+
+
 class MinerImpl(MinerInterface):
 
     def __init__(self, driver, store, url, parser):
@@ -194,9 +233,10 @@ class MinerImpl(MinerInterface):
     def create_driver() -> webdriver:
         option = webdriver.ChromeOptions()
         option.add_argument('headless')
+        option.add_argument("--disable-extensions")
         prefs = {"profile.managed_default_content_settings.images":2}
         option.add_experimental_option("prefs", prefs)
-        return webdriver.Chrome(chrome_options=option,executable_path="./chrome/chromedriver")
+        return webdriver.Chrome(chrome_options=option, executable_path="./chrome/chromedriver")
 
     @staticmethod
     def get_parser(store:str) -> ParserInterface:
@@ -243,34 +283,26 @@ class MinerImpl(MinerInterface):
         self.search_init(keyword)
         front_item_name = ""
         page = 1
+        page_parsing_flag = False
         while True:
             try:
                 print("page : " + str(page))
+
                 data_list = self.parser.parse_to_list(self.driver)
-                if len(data_list) == 0 or front_item_name == data_list[0].name:
-                    print("사유 : " + str(len(data_list)))
+                if (not page_parsing_flag) and len(data_list) == 0 or front_item_name == data_list[0].name:
+                    print("Crawling has been finished.")
                     break
                 else:
                     front_item_name = data_list[0].name
-                '''
-                for data in data_list:
-                    print("""
-                    name   : %s
-                    store  : %s
-                    url    : %s
-                    pic_url: %s
-                    price  : %s
-                    category_num : %s
-                    """ % (data.name, self.store, data.url, data.pic_url, data.price, CategoryDict.instance().categories[data.category]))
-                '''
+                    page_parsing_flag = True
                     #Database.instance().insert_to_db(data.name, data.url, data.pic_url, data.price, CategoryDict.instance().categories[data.category])
                 if not self.do_next_page():
                     break
                 page += 1
+                page_parsing_flag = False
             except StaleElementReferenceException:
                 time.sleep(0.1)
 
 
-
-miner = MinerImpl(None, "11번가", "http://www.11st.co.kr/", None)
-miner.mining("신발")
+miner = MinerImpl(None, "G마켓", "http://www.gmarket.co.kr/", None)
+miner.mining("테팔")
