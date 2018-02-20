@@ -38,6 +38,19 @@
         }
     }
 
+    function http_get_count($key,$category){
+        global $db;
+        $key = $db->quote("%".$key."%");
+        $category = $db->quote($category);
+        $full_query = "SELECT count(*) from product NATURAL JOIN category WHERE name LIKE $key and (category_name = $category or category_name in (SELECT T1.category_name FROM category AS T1 INNER JOIN (SELECT category_name FROM category WHERE parent_name = $category) AS T2 ON T2.category_name = T1.parent_name OR T1.parent_name = $category GROUP BY T1.category_name))";
+        $rows = $db->query($full_query);
+        $count = 0;
+        foreach($rows as $row){
+            $count = $row['count(*)'];
+        }
+        return $count;
+    }
+
     function http_get_category(){
         global $db;
         $full_query =  "SELECT * from category";

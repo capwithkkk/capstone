@@ -1,9 +1,5 @@
 <?php
-    if (!isset($_SERVER["REQUEST_METHOD"]) || $_SERVER["REQUEST_METHOD"] != "GET") {
-    	header("HTTP/1.1 400 Invalid Request");
-    	die("ERROR 400: Invalid request.");
-    }
-
+    include 'exception.php';
     include "database.php";
     class Tree{
 

@@ -1,21 +1,18 @@
 "use strict";
 var categoryLoaded = false;
 
-function setHTTPGetParam(id){
-	switch(id){
-		case "search":
-			$('#search_param_page').val(1);
-			$('#search_param_maxItem').val($('#search_option_maxItem').val);
-			$('#search_param_sort').val($('#search_option_sort').val);
-			//document.getElementById('search_param_input').value = Base64.encode(document.getElementById('search_param_input').value);
-			break;
-	}
+function setHTTPGetParam(){
+    $('#search_param_page').val(1);
+    $('#search_param_maxItem').val($('#search_option_maxItem').attr("value"));
+    $('#search_param_sort').val($('#search_option_sort').attr("value"));
 }
 
-
+function dropdownSelection(id,value,title) {
+    var caret = $("<span></span>").addClass("caret");
+    $(id).val(value).text(title + " ").append(caret);
+}
 
 function categoryLoad(data,status){
-
 	var category_core = $("#category_core");
 	createCategoryItem(category_core,data,0);
 }
@@ -23,7 +20,7 @@ function categoryLoad(data,status){
 function setCategory(name) {
     $('#search_param_category').val(name);
     $('#search_option_category').val("카테고리변경(" + name + ")");
-    $("#popup").modal('hide');
+    $("#popup_category").modal('hide');
 }
 
 function createCategoryItem(parent,item,level){
@@ -46,14 +43,18 @@ function createCategoryItem(parent,item,level){
 
 function categoryShow() {
 	if(categoryLoaded === false){
-    	$.get("/capstone/php/category.php",categoryLoad);
+    	$.get("category.php",categoryLoad);
         categoryLoaded = true;
 	}
 }
 
 function init(){
-	alert("hello");
+    $("#setting_ok").click(setHTTPGetParam)
+    $("#search_form").submit(setHTTPGetParam)
 	$("#search_option_category").click(categoryShow);
+
+    $(".search_option_sort_item").click(function () {dropdownSelection("#search_option_sort",$(this).attr("title"),$(this).text());})
+    $(".search_option_maxItem_item").click(function () {dropdownSelection("#search_option_maxItem",$(this).attr("title"),$(this).text());})
 }
 
 $(document).ready(init);

@@ -1,3 +1,4 @@
+/* Global */
 span{
 	display: inline-block;
 	margin: auto;
@@ -18,18 +19,9 @@ header{
 	background-color: LightBlue;
 }
 
-nav{
-	margin-left: 10%;
-	font-size: 10pt;
+div.row{
+    margin: 10px;
 }
-
-nav a{
-	border: 1px solid #FFFFFF00;
-	padding: 3px;
-	font-weight: bold;
-	color: Purple;
-}
-
 
 
 nav strong{
@@ -43,15 +35,87 @@ nav a:hover{
 	text-decoration: none;
 }
 
-#main{
-	margin: 10%;
+
+/* main */
+
+/*** Logo */
+
+#logo_main{
+    width: 430px;
+    margin: 100px auto;
 }
 
-#search div{
-	position: relative;
+#logo{
+    width: 215px;
 }
 
+#logo #logo_image{
+    width: 215px;
+    height: 25px;
+}
 
+/*** Search Bar */
+
+#search{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+legend{
+    display: none;
+}
+
+/* Category */
+/*** Category_Logo */
+#category_image_big{
+    height: 20px;
+    width: 60px;
+}
+
+#category_image_small{
+    height: 15px;
+    width: 60px;
+}
+
+/*** Category_Selector */
+
+div.modal-header{
+    background: aqua;
+}
+
+div.tagged{
+    font-weight: bold;
+    background: darkgrey;
+    border: 2px solid black;
+}
+
+/* Page_Option*/
+/*** Page_Option_Logo */
+#setting_image_big{
+    height: 20px;
+    width: 75px;
+}
+
+#setting_image_small{
+    height: 15px;
+    width: 75px;
+}
+
+/*** Page_Option_Selector */
+
+
+
+
+/* Article */
+
+/*** No Item */
+
+#no_item{
+    margin: auto;
+    text-align: center;
+}
+
+/*** Item */
 
 #content{
 	font-size: 10pt;
@@ -65,8 +129,6 @@ nav a:hover{
 	width : 100pt;
 	height: 100pt;
 }
-
-
 
 #content_name{
 	font-family: serif;
@@ -85,14 +147,16 @@ nav a:hover{
 	font-size: 12pt;
 }
 
-div.tagged{
-	background-color: #bbee00;
-	font-weight : bold;
-	color: White;
-	border: 2px solid black;
+/* navigation */
 
+nav{
+    margin-left: 10%;
+    font-size: 10pt;
 }
 
-.modal-header{
-	background: aqua;
+nav a{
+    border: 1px solid #FFFFFF00;
+    padding: 3px;
+    font-weight: bold;
+    color: Purple;
 }
