@@ -54,13 +54,15 @@ class AbstractCollector(abc.ABC):
         miner = MinerImpl(None, None, None, None)
         update_count = 0
         while True:
-            if update_count > 2:
+            if update_count > 30:
+                print("update")
                 self.update_keyword_list()
+                update_count = 0
             keyword = self.choose_keyword()
             for store_info in store_info_list:
                 miner.set_store(store_info.store, store_info.url, store_info.parser)
-                miner.mining(keyword.name)
                 print("store : " + store_info.store + ", and keyword : " + keyword.name + " and last priority : " + str(keyword.priority))
+                miner.mining(keyword.name)
             self.nice(keyword)
             self.refresh_keyword(keyword)
             update_count += 1
@@ -84,7 +86,7 @@ class BaseCollector(AbstractCollector):
 
     def nice(self, keyword:Keyword):
         random.seed(a=None)
-        keyword.priority += random.randint(17, 23)
+        keyword.priority += random.randint(320, 450)
 
     def get_all_store_info(self) -> []:
         store_list = []
@@ -98,6 +100,8 @@ class BaseCollector(AbstractCollector):
         heapq.heappush(self.priority_queue, keyword)
 
     def update_keyword_list(self):
+        for keyword in self.update_required:
+            Database.instance().take_exe("UPDATE keyword SET priority = " + str(keyword.priority) + " WHERE name = '" + str(keyword.name) + "'")
         self.update_required = []
         for key in self.priority_queue:
             key.priority = int(key.priority * 0.9)

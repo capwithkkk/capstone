@@ -6,6 +6,7 @@ from selenium import webdriver
 from selenium.common.exceptions import StaleElementReferenceException, NoSuchElementException
 from singleton import SingletonInstance
 import lxml.html as lhtml
+from log import SubstitutionTrialWriter
 
 
 class ParserUnit:
@@ -124,7 +125,7 @@ class ParserImpl(ParserInterface):
                         article, self.parser_unit.categories, self.parser_unit.category_core
                     )
                     brand = ParserImpl.find_item_info(article, self.parser_unit.brand)
-                if brand is None or brand is "":
+                if brand is None or brand is "" or brand in "상품상세설명 참조":
                     brand = "N/A"
 
                 print("""
@@ -158,6 +159,7 @@ class ParserImpl(ParserInterface):
             if sub_category is not None:
                 return sub_category
             print("치환시도 : " + category)
+            SubstitutionTrialWriter.instance().append(category)
         return "N/A"
 
     @staticmethod
@@ -180,6 +182,7 @@ class ParserImpl(ParserInterface):
             if sub_category is not None:
                 return sub_category
             print("치환시도 : " + category)
+            SubstitutionTrialWriter.instance().append(category)
         return "N/A"
 
 
@@ -311,5 +314,5 @@ class MinerImpl(MinerInterface):
                 time.sleep(0.1)
 
 
-miner = MinerImpl(None, "옥션", "http://www.auction.co.kr", None)
-miner.mining("테팔")
+#miner = MinerImpl(None, "옥션", "http://www.auction.co.kr", None)
+#miner.mining("테팔")

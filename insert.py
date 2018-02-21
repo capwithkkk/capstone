@@ -38,5 +38,12 @@ class Database(SingletonInstance):
         except pymysql.err.IntegrityError:
             pass
 
+    def take_exe(self,sql):
+        try:
+            self.curs.execute(sql)
+            self.conn.commit()
+        except pymysql.err.IntegrityError:
+            pass
+
     def on_destroy(self):
         self.conn.close()
