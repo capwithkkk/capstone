@@ -34,4 +34,3 @@ class ParsingRule:
         parseDict = []
 
 
-#ParsingRule.parse_wildcard_id_selector("tr#item_unit_*_*_it+span")

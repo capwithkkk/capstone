@@ -13,17 +13,24 @@ class Database(SingletonInstance):
                                charset = 'utf8')
         self.curs = self.conn.cursor()
 
-    def make_insert_query(self, name, store, url, pic_url, price, category):
-        time = datetime.datetime.now()
-        nowdays = time + datetime.timedelta(days=7)
-        nowdays_str = nowdays.strftime('%Y-%m-$d')
+    def make_query(self, sql):
         try:
-            sql = 'INSERT INTO product VALUES(null,"'+name+'","' + store + '","' + url + '","' + pic_url + '",' + str(price).replace(",", "")+',"' + nowdays_str + '",' + category + ')'
             print(sql)
             self.curs.execute(sql)
+            self.conn.commit()
+        except pymysql.err.IntegrityError:
+            print("INTEGRITY 에러 감지")
+            pass
 
-            #sql2 = 'select * from product'
-            #self.curs.execute(sql2)
+    def make_insert_query(self, name, store, url, pic_url, price, category, brand):
+        time = datetime.datetime.now()
+        nowdays = time + datetime.timedelta(days=30)
+        nowdays_str = nowdays.strftime('%Y-%m-%d')
+        try:
+            sql = 'REPLACE INTO product VALUES(null,"' + str(name) + '","' + str(store) + '","' + str(url) + '","' + str(pic_url) + '",' + str(price).replace(",", "") + ',"' + str(nowdays_str) + '",' + str(category) + ',"' + str(brand) + '")'
+
+            print(sql)
+            self.curs.execute(sql)
             self.conn.commit()
         except pymysql.err.IntegrityError:
             sql = 'DELETE FROM product WHERE name = ' + "'" + name + "'"
@@ -31,7 +38,7 @@ class Database(SingletonInstance):
             self.conn.commit()
             self.make_insert_query(name, store, url, pic_url, price)
 
-    def take_query(self,sql):
+    def take_query(self, sql):
         try:
             self.curs.execute(sql)
             return self.curs.fetchall()
