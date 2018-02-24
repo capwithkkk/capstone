@@ -7,6 +7,12 @@ url:  *[@class="item_info"]/a
 pic_url: *[@class="item_info"]/a/*[@class="thumb"]/img
 price:  *[@class="price_info"]/*[@class="price"]/a/strong
 button: //*[@class="paginate"]/*[@class="button_next"]/a
+name_attr: null
+url_attr: href
+pic_url_attr: src
+price_attr: null
+
+
 
 
 ¿Á¼Ç:
@@ -19,6 +25,10 @@ url:  *[@class="layout_left"]/*[@class="item_title_info"]/*[@class="item_title_w
 pic_url: *[@class="layout_left"]/*[@class="image_info"]/*[@class="image"]/a/img
 price:  *[@class="layout_right"]/*[@class="item_price_info"]/*[@class="item_price"]/strong
 button: //*[@class="paginate"]/span/a[@class="on"]/following-sibling::a[1]
+name_attr: null
+url_attr: href
+pic_url_attr: src
+price_attr: null
 
 
 
@@ -32,3 +42,7 @@ url: *[@class="total_listitem"]/*[@class="list_info"]/*[@class="info_tit"]/a
 pic_url: *[@class="total_listitem"]/*[@class="photo_wrap"]/a/img
 price: *[@class="total_listitem"]/*[@class="list_price"]/*[@class="price_box"]/*[@class="price_detail"]/strong
 button: //*[@id="list_paging"]/span/strong/following::a[contains(@onclick,"goPageNum")][1]
+name_attr: null
+url_attr: href
+pic_url_attr: data-original
+price_attr: null

@@ -1,4 +1,5 @@
 	INSERT INTO category VALUES(1,"전체","전체");
+	INSERT INTO category VALUES(2,"미분류","미분류");
 	INSERT INTO category VALUES(null,"식품","전체");
 	INSERT INTO category VALUES(null,"과일/견과","식품");
 	INSERT INTO category VALUES(null,"쌀/잡곡","식품");
