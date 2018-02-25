@@ -5,11 +5,11 @@ from insert import Database
 from selenium import webdriver
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.remote.webdriver import WebDriver
-from selenium.common.exceptions import StaleElementReferenceException, NoSuchElementException
+from selenium.common.exceptions import StaleElementReferenceException, NoSuchElementException, UnexpectedAlertPresentException, WebDriverException
 from singleton import SingletonInstance
 import lxml.html as lhtml
 from lxml.html import HtmlElement
-from log import SubstitutionTrialWriter
+from log import SubstitutionTrialWriter, ExceptionWriter
 
 
 class ParserUnit:
@@ -183,34 +183,40 @@ class ParserImpl(ParserInterface):
 
     @staticmethod
     def find_category_info(driver: webdriver, categories: str, category_unit: str):
-        loaded_categories = ParserImpl.out_from_xpath(driver, categories)
-        empty_sub_category_name = "미분류"
-        for i in range(len(loaded_categories)-1, -1, -1):
-            loaded_category_units = ParserImpl.out_from_xpath(loaded_categories[i], category_unit)
-            category = loaded_category_units[0].text.strip("()[]{} \r\n")
-            if category is not "전체" and category in CategoryDict.instance().categories:
-                return category
-            else:
-                sub_category = CategoryConverger.instance().substitute_category(category)
-                if sub_category is not None:
-                    return sub_category
-                empty_sub_category_name += " << " + category
-                print("치환시도 : " + category)
-                SubstitutionTrialWriter.instance().append(category)
-        print("미분류 처리 : " + empty_sub_category_name)
-        if empty_sub_category_name not in CategoryDict.instance().unclassified_categories:
-            print("미분류 소거식 추가")
-            CategoryDict.instance().unclassified_categories.append(empty_sub_category_name)
-            Database.instance().make_query('INSERT INTO category VALUES(null,"' + empty_sub_category_name + '", "미분류")')
-        return empty_sub_category_name
+        try:
+            loaded_categories = ParserImpl.out_from_xpath(driver, categories)
+            empty_sub_category_name = "미분류"
+            for i in range(len(loaded_categories)-1, -1, -1):
+                loaded_category_units = ParserImpl.out_from_xpath(loaded_categories[i], category_unit)
+                category = loaded_category_units[0].text.strip("()[]{} \r\n")
+                if category is not "전체" and category in CategoryDict.instance().categories:
+                    return category
+                else:
+                    sub_category = CategoryConverger.instance().substitute_category(category)
+                    if sub_category is not None:
+                        return sub_category
+                    empty_sub_category_name += " << " + category
+                    SubstitutionTrialWriter.instance().append(category)
+            if empty_sub_category_name not in CategoryDict.instance().unclassified_categories:
+                CategoryDict.instance().unclassified_categories.append(empty_sub_category_name)
+                Database.instance().make_query(
+                    'INSERT INTO category VALUES(null,"' + empty_sub_category_name + '", "미분류")'
+                )
+            return empty_sub_category_name
+        except NoSuchElementException:
+            raise NoSuchElementException
 
     @staticmethod
     def out_from_xpath(root, xpath: str):
-        if isinstance(root, WebElement) or isinstance(root, WebDriver):
-            return root.find_elements_by_xpath(xpath)
-        elif isinstance(root, HtmlElement):
-            return root.xpath(xpath)
-        return None
+        try:
+            if isinstance(root, WebElement) or isinstance(root, WebDriver):
+                return root.find_elements_by_xpath(xpath)
+            elif isinstance(root, HtmlElement):
+                return root.xpath(xpath)
+            return None
+        except (UnexpectedAlertPresentException,NoSuchElementException):
+            raise NoSuchElementException
+
 
 
 class MinerInterface(abc.ABC):
@@ -335,15 +341,16 @@ class MinerImpl(MinerInterface):
                     for data in data_list:
                         try:
                             Database.instance().make_insert_query(data.name, self.store, data.url, data.pic_url, data.price, CategoryDict.instance().categories[data.category], data.brand)
-                        except KeyError:
-                            pass
+                        except KeyError as e:
+                            print("Insertion failed.")
+                            ExceptionWriter.instance().append_exception(e)
                 if not self.do_next_page():
                     break
                 page += 1
                 page_parsing_flag = False
             except StaleElementReferenceException:
                 time.sleep(0.1)
-
-
-#miner = MinerImpl(None, "옥션", "http://www.auction.co.kr", None)
-#miner.mining("테팔")
+            except WebDriverException as e:
+                print("WebDriverException occurred. The crawling has been postponed until next keyword routine")
+                ExceptionWriter.instance().append_exception(e)
+                break
