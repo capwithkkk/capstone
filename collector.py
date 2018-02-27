@@ -2,6 +2,7 @@ import abc,random,heapq
 from insert import Database
 from crawler import MinerImpl
 from crawler import ParserImpl
+from log import ExceptionWriter, LogWriter
 
 
 class StoreInfo:
@@ -51,21 +52,26 @@ class AbstractCollector(abc.ABC):
     def run(self):
         self.init_keyword()
         store_info_list = self.get_all_store_info()
-        miner = MinerImpl(None, None, None, None)
+        miner = MinerImpl(None, None, None, None, 50)
         update_count = 0
         while True:
-            if update_count > 30:
-                print("update")
-                self.update_keyword_list()
-                update_count = 0
-            keyword = self.choose_keyword()
-            for store_info in store_info_list:
-                miner.set_store(store_info.store, store_info.url, store_info.parser)
-                print("store : " + store_info.store + ", and keyword : " + keyword.name + " and last priority : " + str(keyword.priority))
-                miner.mining(keyword.name)
-            self.nice(keyword)
-            self.refresh_keyword(keyword)
-            update_count += 1
+            try:
+                if update_count > 30:
+                    print("update")
+                    self.update_keyword_list()
+                    update_count = 0
+                keyword = self.choose_keyword()
+                for store_info in store_info_list:
+                    miner.set_store(store_info.store, store_info.url, store_info.parser)
+                    state_str = "store : " + store_info.store + ", and keyword : " + keyword.name + " and last priority : " + str(keyword.priority)
+                    LogWriter.instance().append("MINING LOG : " + state_str)
+                    miner.mining(keyword.name)
+                self.nice(keyword)
+                self.refresh_keyword(keyword)
+                update_count += 1
+            except RuntimeError as e:
+                ExceptionWriter.instance().append_exception(e)
+                pass
 
 
 class BaseCollector(AbstractCollector):

@@ -202,6 +202,10 @@ class ParserImpl(ParserInterface):
                 Database.instance().make_query(
                     'INSERT INTO category VALUES(null,"' + empty_sub_category_name + '", "미분류")'
                 )
+                category_index = Database.instance().take_query(
+                    'SELECT category_id FROM category WHERE category_name = "' + empty_sub_category_name + '"'
+                )[0][0]
+                CategoryDict.instance().categories[empty_sub_category_name] = category_index
             return empty_sub_category_name
         except NoSuchElementException:
             raise NoSuchElementException
@@ -216,7 +220,6 @@ class ParserImpl(ParserInterface):
             return None
         except (UnexpectedAlertPresentException,NoSuchElementException):
             raise NoSuchElementException
-
 
 
 class MinerInterface(abc.ABC):
@@ -261,9 +264,10 @@ class DriverHelper(SingletonInstance):
 
 class MinerImpl(MinerInterface):
 
-    def __init__(self, driver, store, url, parser):
+    def __init__(self, driver, store, url, parser, limit):
         self.store = store
         self.url = url
+        self.limit = limit
         if parser is None and store is not None:
             self.parser = MinerImpl.get_parser(self.store)
         else:
@@ -322,11 +326,18 @@ class MinerImpl(MinerInterface):
         Database.instance().make_insert_query(name, self.store, url, pic_url, price, category)
 
     def mining(self, keyword):
-        driver = self.driver
-        driver.get(self.url)
-        self.search_init(keyword)
+        try:
+            driver = self.driver
+            driver.get(self.url)
+            self.search_init(keyword)
+        except WebDriverException as e:
+            print("WebDriverException occurred during init process. "
+                  "The site is may carrying out temporary- or regular inspection.")
+            ExceptionWriter.instance().append_exception(e)
+            return
         front_item_name = ""
         page = 1
+        limit_count = 0
         page_parsing_flag = False
         while True:
             try:
@@ -341,10 +352,13 @@ class MinerImpl(MinerInterface):
                     for data in data_list:
                         try:
                             Database.instance().make_insert_query(data.name, self.store, data.url, data.pic_url, data.price, CategoryDict.instance().categories[data.category], data.brand)
+                            limit_count += 1
                         except KeyError as e:
                             print("Insertion failed.")
                             ExceptionWriter.instance().append_exception(e)
                 if not self.do_next_page():
+                    break
+                if limit_count > self.limit:
                     break
                 page += 1
                 page_parsing_flag = False
