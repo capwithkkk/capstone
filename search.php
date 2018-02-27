@@ -1,4 +1,4 @@
-<?php.
+<?php
 	include 'exception.php';
 ?>
 <!DOCTYPE html>
@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="css/main.css" type="text/css"/>
 	<script src="js/custom.js"></script>
 	<head>
-		<title>Client Side</title>
+		<title>MarketExplorer</title>
 	</head>
 
 

@@ -19,17 +19,18 @@ function categoryLoad(data,status){
 
 function setCategory(name) {
     $('#search_param_category').val(name);
-    $('#search_option_category').val("카테고리변경(" + name + ")");
     $("#popup_category").modal('hide');
 }
 
 function createCategoryItem(parent,item,level){
     var select = $("<a></a>").attr("href","javascript:setCategory(\""+ item.name + "\");").text(">".repeat(level) + item.name);
-	var newTag = $("<div></div>").attr("value",item.name).append(select);
+	var newTag = $("<li></li>").attr("value",item.name).append(select);
+    newTag.addClass("list-group-item")
 
     parent.append(newTag);
     if(item.child.length>0) {
-        var panel  = $("<div></div>");
+        var panel  = $("<ul></ul>");
+        panel.addClass("list-group")
         parent.append(panel);
         newTag.addClass("tagged");
         newTag.click(function () {

@@ -27,7 +27,7 @@ price:  *[@class="layout_right"]/*[@class="item_price_info"]/*[@class="item_pric
 button: //*[@class="paginate"]/span/a[@class="on"]/following-sibling::a[1]
 name_attr: null
 url_attr: href
-pic_url_attr: src
+pic_url_attr: data-original
 price_attr: null
 
 

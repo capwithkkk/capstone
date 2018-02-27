@@ -44,8 +44,10 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">카테고리(클릭으로 펼치기)</h4>
             </div>
-            <div class="modal-body" id="category_core">
-            </div>
+            <div class="modal-body">
+				<ul class="list-group" id="category_core">
+				</ul>
+			</div>
         </div>
     </div>
 </div>

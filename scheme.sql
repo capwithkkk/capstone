@@ -98,7 +98,7 @@ INSERT INTO parse_rule VALUES(
 '//*[@class="paginate"]/span/a[@class="on"]/following-sibling::a[1]',
 null,
 'href',
-'src',
+'data-original',
 null
 
 );

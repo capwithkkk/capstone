@@ -26,7 +26,7 @@
                     break;
             }
 
-            $full_query =  "SELECT product.* from product NATURAL JOIN category WHERE name LIKE $key and (category_name = $category or category_name in (SELECT T1.category_name FROM category AS T1 INNER JOIN (SELECT category_name FROM category WHERE parent_name = $category) AS T2 ON T2.category_name = T1.parent_name OR T1.parent_name = $category GROUP BY T1.category_name)) $sort_query LIMIT $rankMin,$limit";
+            $full_query =  "SELECT product.*, category_name from product NATURAL JOIN category WHERE name LIKE $key and (category_name = $category or category_name in (SELECT T1.category_name FROM category AS T1 INNER JOIN (SELECT category_name FROM category WHERE parent_name = $category) AS T2 ON T2.category_name = T1.parent_name OR T1.parent_name = $category GROUP BY T1.category_name)) $sort_query LIMIT $rankMin,$limit";
 
             $rows = $db->query($full_query);
 
