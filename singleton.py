@@ -11,3 +11,4 @@ class SingletonInstance:
         cls.__instance = cls(*args, **kargs)
         cls.instance = cls.__getInstance
         return cls.__instance
+

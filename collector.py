@@ -53,13 +53,8 @@ class AbstractCollector(abc.ABC):
         self.init_keyword()
         store_info_list = self.get_all_store_info()
         miner = MinerImpl(None, None, None, None, 50)
-        update_count = 0
         while True:
             try:
-                if update_count > 30:
-                    print("update")
-                    self.update_keyword_list()
-                    update_count = 0
                 keyword = self.choose_keyword()
                 for store_info in store_info_list:
                     miner.set_store(store_info.store, store_info.url, store_info.parser)
@@ -68,7 +63,7 @@ class AbstractCollector(abc.ABC):
                     miner.mining(keyword.name)
                 self.nice(keyword)
                 self.refresh_keyword(keyword)
-                update_count += 1
+                self.update_keyword_list()
             except RuntimeError as e:
                 ExceptionWriter.instance().append_exception(e)
                 pass
