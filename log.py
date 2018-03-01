@@ -1,5 +1,4 @@
 from singleton import SingletonInstance
-from selenium.common.exceptions import StaleElementReferenceException, NoSuchElementException, UnexpectedAlertPresentException, WebDriverException
 import datetime
 import traceback
 
@@ -76,11 +75,3 @@ class SubstitutionTrialWriter(BaseWriter):
         for item in self.set:
             file.write(item + "\n")
         file.close()
-
-
-try:
-    raise NoSuchElementException
-except WebDriverException as e:
-    print("WebDriverException occurred during init process. "
-          "The site is may carrying out temporary- or regular inspection.")
-    LogWriter.instance().append_exception(e)
