@@ -1,0 +1,2114 @@
+MINING LOG : store : 11번가, and keyword : 골프화 and last priority : 330(2018-02-28 00:30:21)
+MINING LOG : store : G마켓, and keyword : 골프화 and last priority : 330(2018-02-28 00:31:26)
+MINING LOG : store : 11번가, and keyword : 골프화 and last priority : 330(2018-02-28 00:39:09)
+MINING LOG : store : G마켓, and keyword : 골프화 and last priority : 330(2018-02-28 00:40:53)
+MINING LOG : store : 옥션, and keyword : 골프화 and last priority : 330(2018-02-28 00:54:22)
+MINING LOG : store : 11번가, and keyword : 수입 과일 and last priority : 330(2018-02-28 00:54:56)
+MINING LOG : store : G마켓, and keyword : 수입 과일 and last priority : 330(2018-02-28 00:56:10)
+MINING LOG : store : 옥션, and keyword : 수입 과일 and last priority : 330(2018-02-28 01:05:23)
+MINING LOG : store : 11번가, and keyword : 카약 and last priority : 330(2018-02-28 01:06:37)
+MINING LOG : store : G마켓, and keyword : 카약 and last priority : 330(2018-02-28 01:06:48)
+MINING LOG : store : 옥션, and keyword : 카약 and last priority : 330(2018-02-28 01:14:50)
+MINING LOG : store : 11번가, and keyword : 편의점상품권 and last priority : 330(2018-02-28 01:15:19)
+MINING LOG : store : G마켓, and keyword : 편의점상품권 and last priority : 330(2018-02-28 01:15:56)
+MINING LOG : store : 옥션, and keyword : 편의점상품권 and last priority : 330(2018-02-28 01:16:01)
+MINING LOG : store : 11번가, and keyword : 아동 책가방 and last priority : 331(2018-02-28 01:16:29)
+MINING LOG : store : G마켓, and keyword : 아동 책가방 and last priority : 331(2018-02-28 01:20:16)
+MINING LOG : store : 옥션, and keyword : 아동 책가방 and last priority : 331(2018-02-28 01:27:37)
+MINING LOG : store : 11번가, and keyword : 스티커 and last priority : 331(2018-02-28 01:28:07)
+MINING LOG : store : G마켓, and keyword : 스티커 and last priority : 331(2018-02-28 01:29:11)
+MINING LOG : store : 옥션, and keyword : 스티커 and last priority : 331(2018-02-28 01:37:38)
+MINING LOG : store : 11번가, and keyword : 홈메이드제조기 and last priority : 331(2018-02-28 01:38:06)
+MINING LOG : store : G마켓, and keyword : 홈메이드제조기 and last priority : 331(2018-02-28 01:38:14)
+MINING LOG : store : 옥션, and keyword : 홈메이드제조기 and last priority : 331(2018-02-28 01:44:58)
+MINING LOG : store : 11번가, and keyword : 스탠드에어컨 and last priority : 331(2018-02-28 01:45:18)
+MINING LOG : store : G마켓, and keyword : 스탠드에어컨 and last priority : 331(2018-02-28 01:45:47)
+MINING LOG : store : 옥션, and keyword : 스탠드에어컨 and last priority : 331(2018-02-28 01:56:27)
+MINING LOG : store : 11번가, and keyword : 패브릭커버 and last priority : 331(2018-02-28 01:56:51)
+MINING LOG : store : G마켓, and keyword : 패브릭커버 and last priority : 331(2018-02-28 01:58:57)
+MINING LOG : store : 옥션, and keyword : 패브릭커버 and last priority : 331(2018-02-28 02:09:44)
+MINING LOG : store : 11번가, and keyword : 공용아동의류 and last priority : 331(2018-02-28 02:10:14)
+MINING LOG : store : G마켓, and keyword : 공용아동의류 and last priority : 331(2018-02-28 02:11:46)
+MINING LOG : store : 옥션, and keyword : 공용아동의류 and last priority : 331(2018-02-28 02:23:39)
+MINING LOG : store : 11번가, and keyword : 컵 and last priority : 331(2018-02-28 02:24:05)
+MINING LOG : store : G마켓, and keyword : 컵 and last priority : 331(2018-02-28 02:24:42)
+MINING LOG : store : 옥션, and keyword : 컵 and last priority : 331(2018-02-28 02:35:52)
+MINING LOG : store : 11번가, and keyword : 크림 and last priority : 331(2018-02-28 02:36:19)
+MINING LOG : store : G마켓, and keyword : 크림 and last priority : 331(2018-02-28 02:37:44)
+MINING LOG : store : 옥션, and keyword : 크림 and last priority : 331(2018-02-28 02:49:16)
+MINING LOG : store : 11번가, and keyword : 솜 and last priority : 331(2018-02-28 02:49:42)
+MINING LOG : store : G마켓, and keyword : 솜 and last priority : 331(2018-02-28 02:50:06)
+MINING LOG : store : 옥션, and keyword : 솜 and last priority : 331(2018-02-28 03:02:09)
+MINING LOG : store : 11번가, and keyword : 청소기부품 and last priority : 331(2018-02-28 03:02:31)
+MINING LOG : store : G마켓, and keyword : 청소기부품 and last priority : 331(2018-02-28 03:03:29)
+MINING LOG : store : 옥션, and keyword : 청소기부품 and last priority : 331(2018-02-28 03:13:01)
+MINING LOG : store : 11번가, and keyword : 문화상품권 and last priority : 332(2018-02-28 03:13:19)
+MINING LOG : store : G마켓, and keyword : 문화상품권 and last priority : 332(2018-02-28 03:13:59)
+MINING LOG : store : 옥션, and keyword : 문화상품권 and last priority : 332(2018-02-28 03:24:50)
+MINING LOG : store : 11번가, and keyword : 보리 and last priority : 332(2018-02-28 03:25:17)
+MINING LOG : store : G마켓, and keyword : 보리 and last priority : 332(2018-02-28 03:26:31)
+MINING LOG : store : 11번가, and keyword : 골프화 and last priority : 330(2018-02-28 04:40:21)
+MINING LOG : store : G마켓, and keyword : 골프화 and last priority : 330(2018-02-28 04:40:55)
+MINING LOG : store : 옥션, and keyword : 골프화 and last priority : 330(2018-02-28 04:43:37)
+MINING LOG : store : 11번가, and keyword : 수입 과일 and last priority : 330(2018-02-28 04:44:04)
+MINING LOG : store : G마켓, and keyword : 수입 과일 and last priority : 330(2018-02-28 04:44:45)
+MINING LOG : store : 옥션, and keyword : 수입 과일 and last priority : 330(2018-02-28 04:53:33)
+MINING LOG : store : 11번가, and keyword : 카약 and last priority : 330(2018-02-28 04:54:04)
+MINING LOG : store : G마켓, and keyword : 카약 and last priority : 330(2018-02-28 04:54:11)
+MINING LOG : store : 옥션, and keyword : 카약 and last priority : 330(2018-02-28 04:57:33)
+MINING LOG : store : 11번가, and keyword : 편의점상품권 and last priority : 330(2018-02-28 04:58:08)
+MINING LOG : store : G마켓, and keyword : 편의점상품권 and last priority : 330(2018-02-28 04:58:48)
+MINING LOG : store : 옥션, and keyword : 편의점상품권 and last priority : 330(2018-02-28 04:58:53)
+MINING LOG : store : 11번가, and keyword : 아동 책가방 and last priority : 331(2018-02-28 04:59:13)
+MINING LOG : store : G마켓, and keyword : 아동 책가방 and last priority : 331(2018-02-28 05:01:53)
+MINING LOG : store : 옥션, and keyword : 아동 책가방 and last priority : 331(2018-02-28 05:06:53)
+MINING LOG : store : 11번가, and keyword : 스티커 and last priority : 331(2018-02-28 05:07:22)
+MINING LOG : store : G마켓, and keyword : 스티커 and last priority : 331(2018-02-28 05:07:51)
+MINING LOG : store : 옥션, and keyword : 스티커 and last priority : 331(2018-02-28 05:13:07)
+MINING LOG : store : 11번가, and keyword : 홈메이드제조기 and last priority : 331(2018-02-28 05:13:56)
+MINING LOG : store : G마켓, and keyword : 홈메이드제조기 and last priority : 331(2018-02-28 05:14:01)
+MINING LOG : store : 옥션, and keyword : 홈메이드제조기 and last priority : 331(2018-02-28 05:18:51)
+MINING LOG : store : 11번가, and keyword : 스탠드에어컨 and last priority : 331(2018-02-28 05:19:13)
+MINING LOG : store : G마켓, and keyword : 스탠드에어컨 and last priority : 331(2018-02-28 05:19:35)
+MINING LOG : store : 옥션, and keyword : 스탠드에어컨 and last priority : 331(2018-02-28 05:26:29)
+MINING LOG : store : 11번가, and keyword : 패브릭커버 and last priority : 331(2018-02-28 05:26:54)
+MINING LOG : store : G마켓, and keyword : 패브릭커버 and last priority : 331(2018-02-28 05:28:38)
+MINING LOG : store : 옥션, and keyword : 패브릭커버 and last priority : 331(2018-02-28 05:33:43)
+MINING LOG : store : 11번가, and keyword : 공용아동의류 and last priority : 331(2018-02-28 05:34:10)
+MINING LOG : store : G마켓, and keyword : 공용아동의류 and last priority : 331(2018-02-28 05:35:25)
+MINING LOG : store : 옥션, and keyword : 공용아동의류 and last priority : 331(2018-02-28 05:38:55)
+MINING LOG : store : 11번가, and keyword : 컵 and last priority : 331(2018-02-28 05:39:21)
+MINING LOG : store : G마켓, and keyword : 컵 and last priority : 331(2018-02-28 05:39:46)
+MINING LOG : store : 옥션, and keyword : 컵 and last priority : 331(2018-02-28 05:46:01)
+MINING LOG : store : 11번가, and keyword : 크림 and last priority : 331(2018-02-28 05:46:45)
+MINING LOG : store : G마켓, and keyword : 크림 and last priority : 331(2018-02-28 05:48:03)
+MINING LOG : store : 옥션, and keyword : 크림 and last priority : 331(2018-02-28 05:51:10)
+MINING LOG : store : 11번가, and keyword : 솜 and last priority : 331(2018-02-28 05:51:46)
+MINING LOG : store : G마켓, and keyword : 솜 and last priority : 331(2018-02-28 05:52:07)
+MINING LOG : store : 옥션, and keyword : 솜 and last priority : 331(2018-02-28 05:55:51)
+MINING LOG : store : 11번가, and keyword : 청소기부품 and last priority : 331(2018-02-28 05:56:20)
+MINING LOG : store : G마켓, and keyword : 청소기부품 and last priority : 331(2018-02-28 05:57:14)
+MINING LOG : store : 옥션, and keyword : 청소기부품 and last priority : 331(2018-02-28 06:03:15)
+MINING LOG : store : 11번가, and keyword : 문화상품권 and last priority : 332(2018-02-28 06:03:41)
+MINING LOG : store : G마켓, and keyword : 문화상품권 and last priority : 332(2018-02-28 06:04:29)
+MINING LOG : store : 옥션, and keyword : 문화상품권 and last priority : 332(2018-02-28 06:11:05)
+MINING LOG : store : 11번가, and keyword : 보리 and last priority : 332(2018-02-28 06:11:30)
+MINING LOG : store : G마켓, and keyword : 보리 and last priority : 332(2018-02-28 06:12:38)
+MINING LOG : store : 옥션, and keyword : 보리 and last priority : 332(2018-02-28 06:23:08)
+MINING LOG : store : 11번가, and keyword : 보일러 and last priority : 332(2018-02-28 06:23:33)
+MINING LOG : store : G마켓, and keyword : 보일러 and last priority : 332(2018-02-28 06:23:55)
+MINING LOG : store : 옥션, and keyword : 보일러 and last priority : 332(2018-02-28 06:30:21)
+MINING LOG : store : 11번가, and keyword : 벨트 and last priority : 332(2018-02-28 06:30:44)
+MINING LOG : store : G마켓, and keyword : 벨트 and last priority : 332(2018-02-28 06:32:53)
+MINING LOG : store : 옥션, and keyword : 벨트 and last priority : 332(2018-02-28 06:35:45)
+MINING LOG : store : 11번가, and keyword : 자전거 라이트 and last priority : 332(2018-02-28 06:36:12)
+MINING LOG : store : G마켓, and keyword : 자전거 라이트 and last priority : 332(2018-02-28 06:36:40)
+MINING LOG : store : 옥션, and keyword : 자전거 라이트 and last priority : 332(2018-02-28 06:45:02)
+MINING LOG : store : 11번가, and keyword : 예초기 and last priority : 332(2018-02-28 06:45:25)
+MINING LOG : store : 11번가, and keyword : 스탠드에어컨 and last priority : 331(2018-02-28 08:25:36)
+MINING LOG : store : G마켓, and keyword : 스탠드에어컨 and last priority : 331(2018-02-28 08:26:15)
+MINING LOG : store : 옥션, and keyword : 스탠드에어컨 and last priority : 331(2018-02-28 08:28:45)
+MINING LOG : store : 11번가, and keyword : 아동 책가방 and last priority : 297(2018-02-28 08:29:09)
+MINING LOG : store : G마켓, and keyword : 아동 책가방 and last priority : 297(2018-02-28 08:32:35)
+MINING LOG : store : 옥션, and keyword : 아동 책가방 and last priority : 297(2018-02-28 08:35:08)
+MINING LOG : store : 11번가, and keyword : 청소기부품 and last priority : 267(2018-02-28 08:35:35)
+MINING LOG : store : G마켓, and keyword : 청소기부품 and last priority : 267(2018-02-28 08:36:44)
+MINING LOG : store : 옥션, and keyword : 청소기부품 and last priority : 267(2018-02-28 08:39:04)
+MINING LOG : store : 11번가, and keyword : 국내여행 and last priority : 241(2018-02-28 08:39:26)
+MINING LOG : store : G마켓, and keyword : 국내여행 and last priority : 241(2018-02-28 08:40:02)
+MINING LOG : store : 옥션, and keyword : 국내여행 and last priority : 241(2018-02-28 08:41:52)
+MINING LOG : store : 11번가, and keyword : 야전침대 and last priority : 216(2018-02-28 08:42:11)
+MINING LOG : store : G마켓, and keyword : 야전침대 and last priority : 216(2018-02-28 08:43:07)
+MINING LOG : store : 옥션, and keyword : 야전침대 and last priority : 216(2018-02-28 08:46:29)
+MINING LOG : store : 11번가, and keyword : 시스템에어컨 and last priority : 194(2018-02-28 08:46:51)
+MINING LOG : store : G마켓, and keyword : 시스템에어컨 and last priority : 194(2018-02-28 08:51:07)
+MINING LOG : store : 옥션, and keyword : 시스템에어컨 and last priority : 194(2018-02-28 08:53:22)
+MINING LOG : store : 11번가, and keyword : 호흡 건강관리 and last priority : 174(2018-02-28 08:53:41)
+MINING LOG : store : G마켓, and keyword : 호흡 건강관리 and last priority : 174(2018-02-28 08:54:09)
+MINING LOG : store : 옥션, and keyword : 호흡 건강관리 and last priority : 174(2018-02-28 08:55:04)
+MINING LOG : store : 11번가, and keyword : 래쉬가드 and last priority : 156(2018-02-28 08:55:08)
+MINING LOG : store : G마켓, and keyword : 래쉬가드 and last priority : 156(2018-02-28 08:55:11)
+MINING LOG : store : 옥션, and keyword : 래쉬가드 and last priority : 156(2018-02-28 08:58:30)
+MINING LOG : store : 11번가, and keyword : 타이어 and last priority : 140(2018-02-28 08:58:52)
+MINING LOG : store : G마켓, and keyword : 타이어 and last priority : 140(2018-02-28 08:59:10)
+MINING LOG : store : 옥션, and keyword : 타이어 and last priority : 140(2018-02-28 09:01:40)
+MINING LOG : store : 11번가, and keyword : 카드 and last priority : 126(2018-02-28 09:02:03)
+MINING LOG : store : G마켓, and keyword : 카드 and last priority : 126(2018-02-28 09:02:48)
+MINING LOG : store : 옥션, and keyword : 카드 and last priority : 126(2018-02-28 09:05:14)
+MINING LOG : store : 11번가, and keyword : 나물 and last priority : 113(2018-02-28 09:05:38)
+MINING LOG : store : G마켓, and keyword : 나물 and last priority : 113(2018-02-28 09:06:35)
+MINING LOG : store : 옥션, and keyword : 나물 and last priority : 113(2018-02-28 09:09:06)
+MINING LOG : store : 11번가, and keyword : 비데 and last priority : 101(2018-02-28 09:09:27)
+MINING LOG : store : G마켓, and keyword : 비데 and last priority : 101(2018-02-28 09:09:54)
+MINING LOG : store : 옥션, and keyword : 비데 and last priority : 101(2018-02-28 09:12:42)
+MINING LOG : store : 11번가, and keyword : 배추 and last priority : 90(2018-02-28 09:13:05)
+MINING LOG : store : G마켓, and keyword : 배추 and last priority : 90(2018-02-28 09:13:50)
+MINING LOG : store : 옥션, and keyword : 배추 and last priority : 90(2018-02-28 09:16:19)
+MINING LOG : store : 11번가, and keyword : 원피스 and last priority : 81(2018-02-28 09:16:41)
+MINING LOG : store : G마켓, and keyword : 원피스 and last priority : 81(2018-02-28 09:16:46)
+MINING LOG : store : 옥션, and keyword : 원피스 and last priority : 81(2018-02-28 09:19:43)
+MINING LOG : store : 11번가, and keyword : 블라인드 and last priority : 72(2018-02-28 09:20:08)
+MINING LOG : store : G마켓, and keyword : 블라인드 and last priority : 72(2018-02-28 09:21:05)
+MINING LOG : store : 옥션, and keyword : 블라인드 and last priority : 72(2018-02-28 09:24:24)
+MINING LOG : store : 11번가, and keyword : 차음료 and last priority : 64(2018-02-28 09:24:46)
+MINING LOG : store : G마켓, and keyword : 차음료 and last priority : 64(2018-02-28 09:26:15)
+MINING LOG : store : 옥션, and keyword : 차음료 and last priority : 64(2018-02-28 09:29:06)
+MINING LOG : store : 11번가, and keyword : 네트워크장비 and last priority : 57(2018-02-28 09:29:28)
+MINING LOG : store : G마켓, and keyword : 네트워크장비 and last priority : 57(2018-02-28 09:36:14)
+MINING LOG : store : 옥션, and keyword : 네트워크장비 and last priority : 57(2018-02-28 09:47:10)
+MINING LOG : store : 11번가, and keyword : 정장 and last priority : 51(2018-02-28 09:47:30)
+MINING LOG : store : G마켓, and keyword : 정장 and last priority : 51(2018-02-28 09:50:24)
+MINING LOG : store : 옥션, and keyword : 정장 and last priority : 51(2018-02-28 09:58:47)
+MINING LOG : store : 11번가, and keyword : 냉동 and last priority : 45(2018-02-28 09:59:10)
+MINING LOG : store : G마켓, and keyword : 냉동 and last priority : 45(2018-02-28 10:01:36)
+MINING LOG : store : 옥션, and keyword : 냉동 and last priority : 45(2018-02-28 10:11:49)
+MINING LOG : store : 11번가, and keyword : 고양이스크래쳐 and last priority : 40(2018-02-28 10:12:15)
+MINING LOG : store : G마켓, and keyword : 고양이스크래쳐 and last priority : 40(2018-02-28 10:13:31)
+MINING LOG : store : 옥션, and keyword : 고양이스크래쳐 and last priority : 40(2018-02-28 10:24:55)
+MINING LOG : store : 11번가, and keyword : 밥상 and last priority : 36(2018-02-28 10:25:18)
+MINING LOG : store : G마켓, and keyword : 밥상 and last priority : 36(2018-02-28 10:26:49)
+MINING LOG : store : 옥션, and keyword : 밥상 and last priority : 36(2018-02-28 10:38:33)
+MINING LOG : store : 11번가, and keyword : 이젤 and last priority : 32(2018-02-28 10:38:54)
+MINING LOG : store : G마켓, and keyword : 이젤 and last priority : 32(2018-02-28 10:40:42)
+MINING LOG : store : 옥션, and keyword : 이젤 and last priority : 32(2018-02-28 10:50:45)
+MINING LOG : store : 11번가, and keyword : 남성가방 and last priority : 28(2018-02-28 10:51:06)
+MINING LOG : store : G마켓, and keyword : 남성가방 and last priority : 28(2018-02-28 10:52:03)
+MINING LOG : store : 옥션, and keyword : 남성가방 and last priority : 28(2018-02-28 11:02:17)
+MINING LOG : store : 11번가, and keyword : 김 and last priority : 25(2018-02-28 11:02:38)
+MINING LOG : store : G마켓, and keyword : 김 and last priority : 25(2018-02-28 11:03:14)
+MINING LOG : store : 옥션, and keyword : 김 and last priority : 25(2018-02-28 11:14:53)
+MINING LOG : store : 11번가, and keyword : 모발건강관리 and last priority : 22(2018-02-28 11:15:16)
+MINING LOG : store : G마켓, and keyword : 모발건강관리 and last priority : 22(2018-02-28 11:20:35)
+MINING LOG : store : 옥션, and keyword : 모발건강관리 and last priority : 22(2018-02-28 11:30:49)
+MINING LOG : store : 11번가, and keyword : 고추 and last priority : 19(2018-02-28 11:31:08)
+MINING LOG : store : G마켓, and keyword : 고추 and last priority : 19(2018-02-28 11:31:54)
+MINING LOG : store : 옥션, and keyword : 고추 and last priority : 19(2018-02-28 11:41:38)
+MINING LOG : store : 11번가, and keyword : 에어쿠션 and last priority : 17(2018-02-28 11:41:57)
+MINING LOG : store : G마켓, and keyword : 에어쿠션 and last priority : 17(2018-02-28 11:44:16)
+MINING LOG : store : 옥션, and keyword : 에어쿠션 and last priority : 17(2018-02-28 11:55:20)
+MINING LOG : store : 11번가, and keyword : 여성쪼리 and last priority : 15(2018-02-28 11:55:41)
+MINING LOG : store : G마켓, and keyword : 여성쪼리 and last priority : 15(2018-02-28 11:58:35)
+MINING LOG : store : 옥션, and keyword : 여성쪼리 and last priority : 15(2018-02-28 12:14:45)
+MINING LOG : store : 11번가, and keyword : 목욕용품 and last priority : 13(2018-02-28 12:15:06)
+MINING LOG : store : G마켓, and keyword : 목욕용품 and last priority : 13(2018-02-28 12:16:51)
+MINING LOG : store : 옥션, and keyword : 목욕용품 and last priority : 13(2018-02-28 12:28:33)
+MINING LOG : store : 11번가, and keyword : 메인보드 and last priority : 11(2018-02-28 12:28:56)
+MINING LOG : store : G마켓, and keyword : 메인보드 and last priority : 11(2018-02-28 12:29:23)
+MINING LOG : store : 옥션, and keyword : 메인보드 and last priority : 11(2018-02-28 12:37:34)
+MINING LOG : store : 11번가, and keyword : 역사서 and last priority : 9(2018-02-28 12:38:03)
+MINING LOG : store : G마켓, and keyword : 역사서 and last priority : 9(2018-02-28 12:43:07)
+MINING LOG : store : 옥션, and keyword : 역사서 and last priority : 9(2018-02-28 12:45:39)
+MINING LOG : store : 11번가, and keyword : 그릴 and last priority : 8(2018-02-28 12:46:00)
+MINING LOG : store : G마켓, and keyword : 그릴 and last priority : 8(2018-02-28 12:46:26)
+MINING LOG : store : 옥션, and keyword : 그릴 and last priority : 8(2018-02-28 12:49:36)
+MINING LOG : store : 11번가, and keyword : 아이언 and last priority : 7(2018-02-28 12:49:58)
+MINING LOG : store : G마켓, and keyword : 아이언 and last priority : 7(2018-02-28 12:50:38)
+MINING LOG : store : 옥션, and keyword : 아이언 and last priority : 7(2018-02-28 12:53:56)
+MINING LOG : store : 11번가, and keyword : 교재용악기 and last priority : 6(2018-02-28 12:54:20)
+MINING LOG : store : G마켓, and keyword : 교재용악기 and last priority : 6(2018-02-28 12:54:26)
+MINING LOG : store : 옥션, and keyword : 교재용악기 and last priority : 6(2018-02-28 12:56:58)
+MINING LOG : store : 11번가, and keyword : 아동 양말 and last priority : 5(2018-02-28 12:57:19)
+MINING LOG : store : G마켓, and keyword : 아동 양말 and last priority : 5(2018-02-28 12:59:01)
+MINING LOG : store : 옥션, and keyword : 아동 양말 and last priority : 5(2018-02-28 13:01:54)
+MINING LOG : store : 11번가, and keyword : 아동가구 and last priority : 4(2018-02-28 13:02:16)
+MINING LOG : store : G마켓, and keyword : 아동가구 and last priority : 4(2018-02-28 13:07:52)
+MINING LOG : store : 옥션, and keyword : 아동가구 and last priority : 4(2018-02-28 13:10:28)
+MINING LOG : store : 11번가, and keyword : 강아지용품 and last priority : 3(2018-02-28 13:10:49)
+MINING LOG : store : G마켓, and keyword : 강아지용품 and last priority : 3(2018-02-28 13:12:27)
+MINING LOG : store : 옥션, and keyword : 강아지용품 and last priority : 3(2018-02-28 13:15:43)
+MINING LOG : store : 11번가, and keyword : TV and last priority : 2(2018-02-28 13:16:07)
+MINING LOG : store : G마켓, and keyword : TV and last priority : 2(2018-02-28 13:16:32)
+MINING LOG : store : 옥션, and keyword : TV and last priority : 2(2018-02-28 13:19:06)
+MINING LOG : store : 11번가, and keyword : 휴대폰공기계 and last priority : 1(2018-02-28 13:19:31)
+MINING LOG : store : G마켓, and keyword : 휴대폰공기계 and last priority : 1(2018-02-28 13:20:30)
+MINING LOG : store : 옥션, and keyword : 휴대폰공기계 and last priority : 1(2018-02-28 13:23:04)
+MINING LOG : store : 11번가, and keyword : PSvita타이틀 and last priority : 0(2018-02-28 13:23:24)
+MINING LOG : store : G마켓, and keyword : PSvita타이틀 and last priority : 0(2018-02-28 13:24:09)
+MINING LOG : store : 옥션, and keyword : PSvita타이틀 and last priority : 0(2018-02-28 13:26:27)
+MINING LOG : store : 11번가, and keyword : 과즙 and last priority : 0(2018-02-28 13:26:32)
+MINING LOG : store : G마켓, and keyword : 과즙 and last priority : 0(2018-02-28 13:28:56)
+MINING LOG : store : 옥션, and keyword : 과즙 and last priority : 0(2018-02-28 13:31:36)
+MINING LOG : store : 11번가, and keyword : 고구마 and last priority : 0(2018-02-28 13:31:59)
+MINING LOG : store : G마켓, and keyword : 고구마 and last priority : 0(2018-02-28 13:32:21)
+MINING LOG : store : 옥션, and keyword : 고구마 and last priority : 0(2018-02-28 13:34:54)
+MINING LOG : store : 11번가, and keyword : 뿌리채소 and last priority : 0(2018-02-28 13:35:17)
+MINING LOG : store : G마켓, and keyword : 뿌리채소 and last priority : 0(2018-02-28 13:37:27)
+MINING LOG : store : 옥션, and keyword : 뿌리채소 and last priority : 0(2018-02-28 13:40:05)
+MINING LOG : store : 11번가, and keyword : 닌텐도DS and last priority : 0(2018-02-28 13:40:27)
+MINING LOG : store : G마켓, and keyword : 닌텐도DS and last priority : 0(2018-02-28 13:41:45)
+MINING LOG : store : 옥션, and keyword : 닌텐도DS and last priority : 0(2018-02-28 13:44:17)
+MINING LOG : store : 11번가, and keyword : 뉴스포츠용품 and last priority : 0(2018-02-28 13:44:33)
+MINING LOG : store : G마켓, and keyword : 뉴스포츠용품 and last priority : 0(2018-02-28 13:47:01)
+MINING LOG : store : 옥션, and keyword : 뉴스포츠용품 and last priority : 0(2018-02-28 13:49:39)
+MINING LOG : store : 11번가, and keyword : 고양이간식 and last priority : 0(2018-02-28 13:50:00)
+MINING LOG : store : G마켓, and keyword : 고양이간식 and last priority : 0(2018-02-28 13:50:37)
+MINING LOG : store : 옥션, and keyword : 고양이간식 and last priority : 0(2018-02-28 13:53:18)
+MINING LOG : store : 11번가, and keyword : 차량용쿠션 and last priority : 0(2018-02-28 13:53:40)
+MINING LOG : store : G마켓, and keyword : 차량용쿠션 and last priority : 0(2018-02-28 13:54:42)
+MINING LOG : store : 옥션, and keyword : 차량용쿠션 and last priority : 0(2018-02-28 13:57:46)
+MINING LOG : store : 11번가, and keyword : 책상 and last priority : 0(2018-02-28 13:58:10)
+MINING LOG : store : G마켓, and keyword : 책상 and last priority : 0(2018-02-28 14:00:04)
+MINING LOG : store : 옥션, and keyword : 책상 and last priority : 0(2018-02-28 14:02:51)
+MINING LOG : store : 11번가, and keyword : 찹쌀 and last priority : 0(2018-02-28 14:03:18)
+MINING LOG : store : G마켓, and keyword : 찹쌀 and last priority : 0(2018-02-28 14:03:49)
+MINING LOG : store : 옥션, and keyword : 찹쌀 and last priority : 0(2018-02-28 14:08:09)
+MINING LOG : store : 11번가, and keyword : 살균소독기 and last priority : 0(2018-02-28 14:08:30)
+MINING LOG : store : G마켓, and keyword : 살균소독기 and last priority : 0(2018-02-28 14:09:06)
+MINING LOG : store : 옥션, and keyword : 살균소독기 and last priority : 0(2018-02-28 14:11:58)
+MINING LOG : store : 11번가, and keyword : 산업용자재 and last priority : 0(2018-02-28 14:12:24)
+MINING LOG : store : G마켓, and keyword : 산업용자재 and last priority : 0(2018-02-28 14:16:10)
+MINING LOG : store : 옥션, and keyword : 산업용자재 and last priority : 0(2018-02-28 14:18:45)
+MINING LOG : store : 11번가, and keyword : 찻잔 and last priority : 0(2018-02-28 14:19:04)
+MINING LOG : store : G마켓, and keyword : 찻잔 and last priority : 0(2018-02-28 14:24:49)
+MINING LOG : store : 옥션, and keyword : 찻잔 and last priority : 0(2018-02-28 14:28:20)
+MINING LOG : store : 11번가, and keyword : 니트 and last priority : 0(2018-02-28 14:28:42)
+MINING LOG : store : G마켓, and keyword : 니트 and last priority : 0(2018-02-28 14:28:47)
+MINING LOG : store : 옥션, and keyword : 니트 and last priority : 0(2018-02-28 14:31:45)
+MINING LOG : store : 11번가, and keyword : 창문 에어컨 and last priority : 0(2018-02-28 14:32:09)
+MINING LOG : store : G마켓, and keyword : 창문 에어컨 and last priority : 0(2018-02-28 14:32:14)
+MINING LOG : store : 옥션, and keyword : 창문 에어컨 and last priority : 0(2018-02-28 14:35:41)
+MINING LOG : store : 11번가, and keyword : 산업기기 and last priority : 0(2018-02-28 14:35:59)
+MINING LOG : store : G마켓, and keyword : 산업기기 and last priority : 0(2018-02-28 14:36:25)
+MINING LOG : store : 옥션, and keyword : 산업기기 and last priority : 0(2018-02-28 14:39:02)
+MINING LOG : store : 11번가, and keyword : 사회과학 and last priority : 0(2018-02-28 14:39:20)
+MINING LOG : store : G마켓, and keyword : 사회과학 and last priority : 0(2018-02-28 14:40:16)
+MINING LOG : store : 옥션, and keyword : 사회과학 and last priority : 0(2018-02-28 14:43:02)
+MINING LOG : store : 11번가, and keyword : 참기름 and last priority : 0(2018-02-28 14:43:22)
+MINING LOG : store : G마켓, and keyword : 참기름 and last priority : 0(2018-02-28 14:43:52)
+MINING LOG : store : 옥션, and keyword : 참기름 and last priority : 0(2018-02-28 14:46:33)
+MINING LOG : store : 11번가, and keyword : 참고서 and last priority : 0(2018-02-28 14:46:56)
+MINING LOG : store : G마켓, and keyword : 참고서 and last priority : 0(2018-02-28 14:47:37)
+MINING LOG : store : 옥션, and keyword : 참고서 and last priority : 0(2018-02-28 14:50:25)
+MINING LOG : store : 11번가, and keyword : 고양이위생용품 and last priority : 0(2018-02-28 14:50:47)
+MINING LOG : store : G마켓, and keyword : 고양이위생용품 and last priority : 0(2018-02-28 14:53:35)
+MINING LOG : store : 옥션, and keyword : 고양이위생용품 and last priority : 0(2018-02-28 14:56:18)
+MINING LOG : store : 11번가, and keyword : 타이어 and last priority : 0(2018-02-28 14:56:40)
+MINING LOG : store : G마켓, and keyword : 타이어 and last priority : 0(2018-02-28 14:56:49)
+MINING LOG : store : 옥션, and keyword : 타이어 and last priority : 0(2018-02-28 14:59:31)
+MINING LOG : store : 11번가, and keyword : 사무가전 and last priority : 0(2018-02-28 15:00:07)
+MINING LOG : store : G마켓, and keyword : 사무가전 and last priority : 0(2018-02-28 15:03:29)
+MINING LOG : store : 옥션, and keyword : 사무가전 and last priority : 0(2018-02-28 15:06:05)
+MINING LOG : store : 11번가, and keyword : 사무용지 and last priority : 0(2018-02-28 15:06:24)
+MINING LOG : store : G마켓, and keyword : 사무용지 and last priority : 0(2018-02-28 15:09:56)
+MINING LOG : store : 옥션, and keyword : 사무용지 and last priority : 0(2018-02-28 15:12:39)
+MINING LOG : store : 11번가, and keyword : 차음료 and last priority : 0(2018-02-28 15:13:04)
+MINING LOG : store : G마켓, and keyword : 차음료 and last priority : 0(2018-02-28 15:14:41)
+MINING LOG : store : 옥션, and keyword : 차음료 and last priority : 0(2018-02-28 15:17:34)
+MINING LOG : store : 11번가, and keyword : 차량용캠핑장비 and last priority : 0(2018-02-28 15:18:00)
+MINING LOG : store : G마켓, and keyword : 차량용캠핑장비 and last priority : 0(2018-02-28 15:23:52)
+MINING LOG : store : 옥션, and keyword : 차량용캠핑장비 and last priority : 0(2018-02-28 15:33:37)
+MINING LOG : store : 11번가, and keyword : 사전 and last priority : 0(2018-02-28 15:33:57)
+MINING LOG : store : G마켓, and keyword : 사전 and last priority : 0(2018-02-28 15:36:29)
+MINING LOG : store : 옥션, and keyword : 사전 and last priority : 0(2018-02-28 15:46:53)
+MINING LOG : store : 11번가, and keyword : 차량용충전기 and last priority : 0(2018-02-28 15:47:13)
+MINING LOG : store : G마켓, and keyword : 차량용충전기 and last priority : 0(2018-02-28 15:53:15)
+MINING LOG : store : 옥션, and keyword : 차량용충전기 and last priority : 0(2018-02-28 15:57:33)
+MINING LOG : store : 11번가, and keyword : 차량용스마트키 and last priority : 0(2018-02-28 15:57:55)
+MINING LOG : store : G마켓, and keyword : 차량용스마트키 and last priority : 0(2018-02-28 15:58:18)
+MINING LOG : store : 옥션, and keyword : 차량용스마트키 and last priority : 0(2018-02-28 16:09:03)
+MINING LOG : store : 11번가, and keyword : 차량용시트 and last priority : 0(2018-02-28 16:09:24)
+MINING LOG : store : G마켓, and keyword : 차량용시트 and last priority : 0(2018-02-28 16:09:49)
+MINING LOG : store : 옥션, and keyword : 차량용시트 and last priority : 0(2018-02-28 16:20:41)
+MINING LOG : store : 11번가, and keyword : 뉴에이지 and last priority : 0(2018-02-28 16:21:08)
+MINING LOG : store : G마켓, and keyword : 뉴에이지 and last priority : 0(2018-02-28 16:24:12)
+MINING LOG : store : 옥션, and keyword : 뉴에이지 and last priority : 0(2018-02-28 16:34:40)
+MINING LOG : store : 11번가, and keyword : 고양이영양제 and last priority : 0(2018-02-28 16:35:02)
+MINING LOG : store : G마켓, and keyword : 고양이영양제 and last priority : 0(2018-02-28 16:36:22)
+MINING LOG : store : 옥션, and keyword : 고양이영양제 and last priority : 0(2018-02-28 16:44:45)
+MINING LOG : store : 11번가, and keyword : 차량용매트 and last priority : 0(2018-02-28 16:45:08)
+MINING LOG : store : G마켓, and keyword : 차량용매트 and last priority : 0(2018-02-28 16:46:04)
+MINING LOG : store : 옥션, and keyword : 차량용매트 and last priority : 0(2018-02-28 16:55:15)
+MINING LOG : store : 11번가, and keyword : 차량용경보기 and last priority : 0(2018-02-28 16:55:39)
+MINING LOG : store : G마켓, and keyword : 차량용경보기 and last priority : 0(2018-02-28 16:55:51)
+MINING LOG : store : 옥션, and keyword : 차량용경보기 and last priority : 0(2018-02-28 17:05:22)
+MINING LOG : store : 11번가, and keyword : 사무용가구 and last priority : 0(2018-02-28 17:05:40)
+MINING LOG : store : G마켓, and keyword : 사무용가구 and last priority : 0(2018-02-28 17:06:17)
+MINING LOG : store : 옥션, and keyword : 사무용가구 and last priority : 0(2018-02-28 17:16:09)
+MINING LOG : store : 11번가, and keyword : PC타이틀 and last priority : 0(2018-02-28 17:16:30)
+MINING LOG : store : G마켓, and keyword : PC타이틀 and last priority : 0(2018-02-28 17:16:41)
+MINING LOG : store : 옥션, and keyword : PC타이틀 and last priority : 0(2018-02-28 17:24:41)
+MINING LOG : store : 11번가, and keyword : 차량용거치대 and last priority : 0(2018-02-28 17:24:59)
+MINING LOG : store : G마켓, and keyword : 차량용거치대 and last priority : 0(2018-02-28 17:26:25)
+MINING LOG : store : 옥션, and keyword : 차량용거치대 and last priority : 0(2018-02-28 17:33:36)
+MINING LOG : store : 11번가, and keyword : 차량성능용품 and last priority : 0(2018-02-28 17:33:58)
+MINING LOG : store : G마켓, and keyword : 차량성능용품 and last priority : 0(2018-02-28 17:34:54)
+MINING LOG : store : 옥션, and keyword : 차량성능용품 and last priority : 0(2018-02-28 17:45:11)
+MINING LOG : store : 11번가, and keyword : 찌개 and last priority : 0(2018-02-28 17:45:14)
+MINING LOG : store : G마켓, and keyword : 찌개 and last priority : 0(2018-02-28 17:47:39)
+MINING LOG : store : 옥션, and keyword : 찌개 and last priority : 0(2018-02-28 17:59:47)
+MINING LOG : store : 11번가, and keyword : 농기계 and last priority : 0(2018-02-28 18:00:08)
+MINING LOG : store : G마켓, and keyword : 농기계 and last priority : 0(2018-02-28 18:00:19)
+MINING LOG : store : 옥션, and keyword : 농기계 and last priority : 0(2018-02-28 18:07:04)
+MINING LOG : store : 11번가, and keyword : 빵 and last priority : 0(2018-02-28 18:07:23)
+MINING LOG : store : G마켓, and keyword : 빵 and last priority : 0(2018-02-28 18:07:50)
+MINING LOG : store : 옥션, and keyword : 빵 and last priority : 0(2018-02-28 18:08:30)
+MINING LOG : store : 11번가, and keyword : 차량관리 and last priority : 0(2018-02-28 18:08:52)
+MINING LOG : store : G마켓, and keyword : 차량관리 and last priority : 0(2018-02-28 18:10:47)
+MINING LOG : store : 옥션, and keyword : 차량관리 and last priority : 0(2018-02-28 18:20:58)
+MINING LOG : store : 11번가, and keyword : 빨래건조대 and last priority : 0(2018-02-28 18:21:23)
+MINING LOG : store : G마켓, and keyword : 빨래건조대 and last priority : 0(2018-02-28 18:22:12)
+MINING LOG : store : 옥션, and keyword : 빨래건조대 and last priority : 0(2018-02-28 18:30:58)
+MINING LOG : store : 11번가, and keyword : 차 and last priority : 0(2018-02-28 18:31:20)
+MINING LOG : store : G마켓, and keyword : 차 and last priority : 0(2018-02-28 18:31:47)
+MINING LOG : store : 옥션, and keyword : 차 and last priority : 0(2018-02-28 18:39:02)
+MINING LOG : store : 11번가, and keyword : 찜질용품 and last priority : 0(2018-02-28 18:39:28)
+MINING LOG : store : G마켓, and keyword : 찜질용품 and last priority : 0(2018-02-28 18:39:58)
+MINING LOG : store : 옥션, and keyword : 찜질용품 and last priority : 0(2018-02-28 18:51:56)
+MINING LOG : store : 11번가, and keyword : 배추 and last priority : 0(2018-02-28 18:52:20)
+MINING LOG : store : G마켓, and keyword : 배추 and last priority : 0(2018-02-28 18:53:33)
+MINING LOG : store : 옥션, and keyword : 배추 and last priority : 0(2018-02-28 19:03:27)
+MINING LOG : store : 11번가, and keyword : 눈건강 and last priority : 0(2018-02-28 19:03:57)
+MINING LOG : store : G마켓, and keyword : 눈건강 and last priority : 0(2018-02-28 19:08:19)
+MINING LOG : store : 옥션, and keyword : 눈건강 and last priority : 0(2018-02-28 19:17:02)
+MINING LOG : store : 11번가, and keyword : PSvita타이틀 and last priority : 0(2018-02-28 19:17:25)
+MINING LOG : store : G마켓, and keyword : PSvita타이틀 and last priority : 0(2018-02-28 19:20:24)
+MINING LOG : store : 옥션, and keyword : PSvita타이틀 and last priority : 0(2018-02-28 19:26:41)
+MINING LOG : store : 11번가, and keyword : 진공포장기 and last priority : 0(2018-02-28 19:26:47)
+MINING LOG : store : G마켓, and keyword : 진공포장기 and last priority : 0(2018-02-28 19:27:17)
+MINING LOG : store : 옥션, and keyword : 진공포장기 and last priority : 0(2018-02-28 19:34:45)
+MINING LOG : store : 11번가, and keyword : 과즙 and last priority : 0(2018-02-28 19:35:08)
+MINING LOG : store : G마켓, and keyword : 과즙 and last priority : 0(2018-02-28 19:37:20)
+MINING LOG : store : 옥션, and keyword : 과즙 and last priority : 0(2018-02-28 19:48:37)
+MINING LOG : store : 11번가, and keyword : 닌텐도DS and last priority : 0(2018-02-28 19:49:04)
+MINING LOG : store : G마켓, and keyword : 닌텐도DS and last priority : 0(2018-02-28 19:50:51)
+MINING LOG : store : 옥션, and keyword : 닌텐도DS and last priority : 0(2018-02-28 20:04:39)
+MINING LOG : store : 11번가, and keyword : 고구마 and last priority : 0(2018-02-28 20:04:58)
+MINING LOG : store : G마켓, and keyword : 고구마 and last priority : 0(2018-02-28 20:05:26)
+MINING LOG : store : 옥션, and keyword : 고구마 and last priority : 0(2018-02-28 20:13:43)
+MINING LOG : store : 11번가, and keyword : 뿌리채소 and last priority : 0(2018-02-28 20:14:10)
+MINING LOG : store : G마켓, and keyword : 뿌리채소 and last priority : 0(2018-02-28 20:14:46)
+MINING LOG : store : 옥션, and keyword : 뿌리채소 and last priority : 0(2018-02-28 20:21:02)
+MINING LOG : store : 11번가, and keyword : 뉴스포츠용품 and last priority : 0(2018-02-28 20:21:23)
+MINING LOG : store : G마켓, and keyword : 뉴스포츠용품 and last priority : 0(2018-02-28 20:23:05)
+MINING LOG : store : 옥션, and keyword : 뉴스포츠용품 and last priority : 0(2018-02-28 20:32:45)
+MINING LOG : store : 11번가, and keyword : 고양이간식 and last priority : 0(2018-02-28 20:33:09)
+MINING LOG : store : G마켓, and keyword : 고양이간식 and last priority : 0(2018-02-28 20:33:42)
+MINING LOG : store : 옥션, and keyword : 고양이간식 and last priority : 0(2018-02-28 20:41:51)
+MINING LOG : store : 11번가, and keyword : 책상 and last priority : 0(2018-02-28 20:42:17)
+MINING LOG : store : G마켓, and keyword : 책상 and last priority : 0(2018-02-28 20:42:54)
+MINING LOG : store : 옥션, and keyword : 책상 and last priority : 0(2018-02-28 20:57:42)
+MINING LOG : store : 11번가, and keyword : 차량용쿠션 and last priority : 0(2018-02-28 20:58:15)
+MINING LOG : store : G마켓, and keyword : 차량용쿠션 and last priority : 0(2018-02-28 20:58:51)
+MINING LOG : store : 옥션, and keyword : 차량용쿠션 and last priority : 0(2018-02-28 21:07:49)
+MINING LOG : store : 11번가, and keyword : 찹쌀 and last priority : 0(2018-02-28 21:08:18)
+MINING LOG : store : G마켓, and keyword : 찹쌀 and last priority : 0(2018-02-28 21:09:27)
+MINING LOG : store : 옥션, and keyword : 찹쌀 and last priority : 0(2018-02-28 21:22:20)
+MINING LOG : store : 11번가, and keyword : 살균소독기 and last priority : 0(2018-02-28 21:22:51)
+MINING LOG : store : G마켓, and keyword : 살균소독기 and last priority : 0(2018-02-28 21:23:22)
+MINING LOG : store : 옥션, and keyword : 살균소독기 and last priority : 0(2018-02-28 21:33:14)
+MINING LOG : store : 11번가, and keyword : 산업용자재 and last priority : 0(2018-02-28 21:33:38)
+MINING LOG : store : G마켓, and keyword : 산업용자재 and last priority : 0(2018-02-28 21:36:30)
+MINING LOG : store : 옥션, and keyword : 산업용자재 and last priority : 0(2018-02-28 21:41:45)
+MINING LOG : store : 11번가, and keyword : 니트 and last priority : 0(2018-02-28 21:42:07)
+MINING LOG : store : G마켓, and keyword : 니트 and last priority : 0(2018-02-28 21:42:10)
+MINING LOG : store : 옥션, and keyword : 니트 and last priority : 0(2018-02-28 21:51:18)
+MINING LOG : store : 11번가, and keyword : 찻잔 and last priority : 0(2018-02-28 21:52:13)
+MINING LOG : store : G마켓, and keyword : 찻잔 and last priority : 0(2018-02-28 21:57:16)
+MINING LOG : store : 옥션, and keyword : 찻잔 and last priority : 0(2018-02-28 22:06:29)
+MINING LOG : store : 11번가, and keyword : 사회과학 and last priority : 0(2018-02-28 22:07:03)
+MINING LOG : store : G마켓, and keyword : 사회과학 and last priority : 0(2018-02-28 22:08:25)
+MINING LOG : store : 옥션, and keyword : 사회과학 and last priority : 0(2018-02-28 22:18:00)
+MINING LOG : store : 11번가, and keyword : 창문 에어컨 and last priority : 0(2018-02-28 22:18:26)
+MINING LOG : store : G마켓, and keyword : 창문 에어컨 and last priority : 0(2018-02-28 22:18:31)
+MINING LOG : store : 옥션, and keyword : 창문 에어컨 and last priority : 0(2018-02-28 22:28:36)
+MINING LOG : store : 11번가, and keyword : 산업기기 and last priority : 0(2018-02-28 22:29:01)
+MINING LOG : store : G마켓, and keyword : 산업기기 and last priority : 0(2018-02-28 22:29:24)
+MINING LOG : store : 옥션, and keyword : 산업기기 and last priority : 0(2018-02-28 22:42:09)
+MINING LOG : store : 11번가, and keyword : 참고서 and last priority : 0(2018-02-28 22:42:32)
+MINING LOG : store : G마켓, and keyword : 참고서 and last priority : 0(2018-02-28 22:45:15)
+MINING LOG : store : 옥션, and keyword : 참고서 and last priority : 0(2018-02-28 22:53:55)
+MINING LOG : store : 11번가, and keyword : 참기름 and last priority : 0(2018-02-28 22:54:18)
+MINING LOG : store : G마켓, and keyword : 참기름 and last priority : 0(2018-02-28 22:54:42)
+MINING LOG : store : 옥션, and keyword : 참기름 and last priority : 0(2018-02-28 23:03:22)
+MINING LOG : store : 11번가, and keyword : 고양이위생용품 and last priority : 0(2018-02-28 23:03:49)
+MINING LOG : store : G마켓, and keyword : 고양이위생용품 and last priority : 0(2018-02-28 23:05:25)
+MINING LOG : store : 옥션, and keyword : 고양이위생용품 and last priority : 0(2018-02-28 23:14:47)
+MINING LOG : store : 11번가, and keyword : 타이어 and last priority : 0(2018-02-28 23:15:17)
+MINING LOG : store : G마켓, and keyword : 타이어 and last priority : 0(2018-02-28 23:15:27)
+MINING LOG : store : 옥션, and keyword : 타이어 and last priority : 0(2018-02-28 23:22:40)
+MINING LOG : store : 11번가, and keyword : 사무가전 and last priority : 0(2018-02-28 23:23:04)
+MINING LOG : store : G마켓, and keyword : 사무가전 and last priority : 0(2018-02-28 23:25:48)
+MINING LOG : store : 옥션, and keyword : 사무가전 and last priority : 0(2018-02-28 23:34:20)
+MINING LOG : store : 11번가, and keyword : 차음료 and last priority : 0(2018-02-28 23:34:44)
+MINING LOG : store : G마켓, and keyword : 차음료 and last priority : 0(2018-02-28 23:36:46)
+MINING LOG : store : 옥션, and keyword : 차음료 and last priority : 0(2018-02-28 23:45:28)
+MINING LOG : store : 11번가, and keyword : 사무용지 and last priority : 0(2018-02-28 23:45:52)
+MINING LOG : store : G마켓, and keyword : 사무용지 and last priority : 0(2018-02-28 23:50:02)
+MINING LOG : store : 옥션, and keyword : 사무용지 and last priority : 0(2018-03-01 00:00:18)
+MINING LOG : store : 11번가, and keyword : 차량용캠핑장비 and last priority : 0(2018-03-01 00:00:45)
+MINING LOG : store : G마켓, and keyword : 차량용캠핑장비 and last priority : 0(2018-03-01 00:06:33)
+MINING LOG : store : 옥션, and keyword : 차량용캠핑장비 and last priority : 0(2018-03-01 00:09:43)
+MINING LOG : store : 11번가, and keyword : 사전 and last priority : 0(2018-03-01 00:10:07)
+MINING LOG : store : G마켓, and keyword : 사전 and last priority : 0(2018-03-01 00:11:26)
+MINING LOG : store : 옥션, and keyword : 사전 and last priority : 0(2018-03-01 00:15:07)
+MINING LOG : store : 11번가, and keyword : 차량용시트 and last priority : 0(2018-03-01 00:15:29)
+MINING LOG : store : G마켓, and keyword : 차량용시트 and last priority : 0(2018-03-01 00:15:57)
+MINING LOG : store : 옥션, and keyword : 차량용시트 and last priority : 0(2018-03-01 00:19:23)
+MINING LOG : store : 11번가, and keyword : 차량용충전기 and last priority : 0(2018-03-01 00:19:50)
+MINING LOG : store : G마켓, and keyword : 차량용충전기 and last priority : 0(2018-03-01 00:20:35)
+MINING LOG : store : 옥션, and keyword : 차량용충전기 and last priority : 0(2018-03-01 00:23:03)
+MINING LOG : store : 11번가, and keyword : 차량용스마트키 and last priority : 0(2018-03-01 00:23:30)
+MINING LOG : store : G마켓, and keyword : 차량용스마트키 and last priority : 0(2018-03-01 00:23:56)
+MINING LOG : store : 옥션, and keyword : 차량용스마트키 and last priority : 0(2018-03-01 00:26:49)
+MINING LOG : store : 11번가, and keyword : 뉴에이지 and last priority : 0(2018-03-01 00:27:11)
+MINING LOG : store : G마켓, and keyword : 뉴에이지 and last priority : 0(2018-03-01 00:29:35)
+MINING LOG : store : 옥션, and keyword : 뉴에이지 and last priority : 0(2018-03-01 00:32:37)
+MINING LOG : store : 11번가, and keyword : 고양이영양제 and last priority : 0(2018-03-01 00:33:00)
+MINING LOG : store : G마켓, and keyword : 고양이영양제 and last priority : 0(2018-03-01 00:33:59)
+MINING LOG : store : 옥션, and keyword : 고양이영양제 and last priority : 0(2018-03-01 00:37:05)
+MINING LOG : store : 11번가, and keyword : 농기구 and last priority : 0(2018-03-01 00:37:33)
+MINING LOG : store : G마켓, and keyword : 농기구 and last priority : 0(2018-03-01 00:38:14)
+MINING LOG : store : 옥션, and keyword : 농기구 and last priority : 0(2018-03-01 00:41:09)
+MINING LOG : store : 11번가, and keyword : 진열대 and last priority : 0(2018-03-01 00:41:33)
+MINING LOG : store : G마켓, and keyword : 진열대 and last priority : 0(2018-03-01 00:42:29)
+MINING LOG : store : 옥션, and keyword : 진열대 and last priority : 0(2018-03-01 00:45:37)
+MINING LOG : store : 11번가, and keyword : 차량용경보기 and last priority : 0(2018-03-01 00:46:02)
+MINING LOG : store : G마켓, and keyword : 차량용경보기 and last priority : 0(2018-03-01 00:46:07)
+MINING LOG : store : 옥션, and keyword : 차량용경보기 and last priority : 0(2018-03-01 00:49:27)
+MINING LOG : store : 11번가, and keyword : 차량용매트 and last priority : 0(2018-03-01 00:49:47)
+MINING LOG : store : G마켓, and keyword : 차량용매트 and last priority : 0(2018-03-01 00:50:47)
+MINING LOG : store : 옥션, and keyword : 차량용매트 and last priority : 0(2018-03-01 00:53:52)
+MINING LOG : store : 11번가, and keyword : 사무용가구 and last priority : 0(2018-03-01 00:54:17)
+MINING LOG : store : G마켓, and keyword : 사무용가구 and last priority : 0(2018-03-01 00:54:43)
+MINING LOG : store : 옥션, and keyword : 사무용가구 and last priority : 0(2018-03-01 00:57:53)
+MINING LOG : store : 11번가, and keyword : PC타이틀 and last priority : 0(2018-03-01 00:58:19)
+MINING LOG : store : G마켓, and keyword : PC타이틀 and last priority : 0(2018-03-01 00:58:27)
+MINING LOG : store : 옥션, and keyword : PC타이틀 and last priority : 0(2018-03-01 01:01:20)
+MINING LOG : store : 11번가, and keyword : 차량성능용품 and last priority : 0(2018-03-01 01:01:41)
+MINING LOG : store : G마켓, and keyword : 차량성능용품 and last priority : 0(2018-03-01 01:02:37)
+MINING LOG : store : 옥션, and keyword : 차량성능용품 and last priority : 0(2018-03-01 01:07:12)
+MINING LOG : store : 11번가, and keyword : 찌개 and last priority : 0(2018-03-01 01:07:15)
+MINING LOG : store : G마켓, and keyword : 찌개 and last priority : 0(2018-03-01 01:08:00)
+MINING LOG : store : 옥션, and keyword : 찌개 and last priority : 0(2018-03-01 01:11:39)
+MINING LOG : store : 11번가, and keyword : 차량관리 and last priority : 0(2018-03-01 01:12:06)
+MINING LOG : store : G마켓, and keyword : 차량관리 and last priority : 0(2018-03-01 01:13:07)
+MINING LOG : store : 옥션, and keyword : 차량관리 and last priority : 0(2018-03-01 01:16:11)
+MINING LOG : store : 11번가, and keyword : 차량용거치대 and last priority : 0(2018-03-01 01:16:38)
+MINING LOG : store : G마켓, and keyword : 차량용거치대 and last priority : 0(2018-03-01 01:17:38)
+MINING LOG : store : 옥션, and keyword : 차량용거치대 and last priority : 0(2018-03-01 01:20:37)
+MINING LOG : store : 11번가, and keyword : DSLR렌즈 and last priority : 0(2018-03-01 01:21:05)
+MINING LOG : store : G마켓, and keyword : DSLR렌즈 and last priority : 0(2018-03-01 01:23:46)
+MINING LOG : store : 옥션, and keyword : DSLR렌즈 and last priority : 0(2018-03-01 01:34:38)
+MINING LOG : store : 11번가, and keyword : 눈건강 and last priority : 0(2018-03-01 01:34:55)
+MINING LOG : store : G마켓, and keyword : 눈건강 and last priority : 0(2018-03-01 01:37:56)
+MINING LOG : store : 옥션, and keyword : 눈건강 and last priority : 0(2018-03-01 01:40:56)
+MINING LOG : store : 11번가, and keyword : 차 and last priority : 0(2018-03-01 01:41:21)
+MINING LOG : store : G마켓, and keyword : 차 and last priority : 0(2018-03-01 01:41:54)
+MINING LOG : store : 옥션, and keyword : 차 and last priority : 0(2018-03-01 01:44:53)
+MINING LOG : store : 11번가, and keyword : 배추 and last priority : 0(2018-03-01 01:45:26)
+MINING LOG : store : G마켓, and keyword : 배추 and last priority : 0(2018-03-01 01:46:23)
+MINING LOG : store : 옥션, and keyword : 배추 and last priority : 0(2018-03-01 01:49:22)
+MINING LOG : store : 11번가, and keyword : 찜질용품 and last priority : 0(2018-03-01 01:49:47)
+MINING LOG : store : G마켓, and keyword : 찜질용품 and last priority : 0(2018-03-01 01:50:22)
+MINING LOG : store : 옥션, and keyword : 찜질용품 and last priority : 0(2018-03-01 01:53:19)
+MINING LOG : store : 11번가, and keyword : 진공포장기 and last priority : 0(2018-03-01 01:53:44)
+MINING LOG : store : G마켓, and keyword : 진공포장기 and last priority : 0(2018-03-01 01:54:15)
+MINING LOG : store : 옥션, and keyword : 진공포장기 and last priority : 0(2018-03-01 01:57:19)
+MINING LOG : store : 11번가, and keyword : PSvita타이틀 and last priority : 0(2018-03-01 01:57:44)
+MINING LOG : store : G마켓, and keyword : PSvita타이틀 and last priority : 0(2018-03-01 01:58:25)
+MINING LOG : store : 옥션, and keyword : PSvita타이틀 and last priority : 0(2018-03-01 02:01:02)
+MINING LOG : store : 11번가, and keyword : 과즙 and last priority : 0(2018-03-01 02:01:08)
+MINING LOG : store : G마켓, and keyword : 과즙 and last priority : 0(2018-03-01 02:02:13)
+MINING LOG : store : 옥션, and keyword : 과즙 and last priority : 0(2018-03-01 02:05:18)
+MINING LOG : store : 11번가, and keyword : 닌텐도DS and last priority : 0(2018-03-01 02:05:43)
+MINING LOG : store : G마켓, and keyword : 닌텐도DS and last priority : 0(2018-03-01 02:06:27)
+MINING LOG : store : 옥션, and keyword : 닌텐도DS and last priority : 0(2018-03-01 02:09:25)
+MINING LOG : store : 11번가, and keyword : 뿌리채소 and last priority : 0(2018-03-01 02:09:46)
+MINING LOG : store : G마켓, and keyword : 뿌리채소 and last priority : 0(2018-03-01 02:10:18)
+MINING LOG : store : 옥션, and keyword : 뿌리채소 and last priority : 0(2018-03-01 02:13:17)
+MINING LOG : store : 11번가, and keyword : 고구마 and last priority : 0(2018-03-01 02:13:39)
+MINING LOG : store : G마켓, and keyword : 고구마 and last priority : 0(2018-03-01 02:14:07)
+MINING LOG : store : 옥션, and keyword : 고구마 and last priority : 0(2018-03-01 02:17:04)
+MINING LOG : store : 11번가, and keyword : 뉴스포츠용품 and last priority : 0(2018-03-01 02:17:30)
+MINING LOG : store : G마켓, and keyword : 뉴스포츠용품 and last priority : 0(2018-03-01 02:19:10)
+MINING LOG : store : 옥션, and keyword : 뉴스포츠용품 and last priority : 0(2018-03-01 02:22:10)
+MINING LOG : store : 11번가, and keyword : 책상 and last priority : 0(2018-03-01 02:22:33)
+MINING LOG : store : G마켓, and keyword : 책상 and last priority : 0(2018-03-01 02:23:13)
+MINING LOG : store : 옥션, and keyword : 책상 and last priority : 0(2018-03-01 02:26:21)
+MINING LOG : store : 11번가, and keyword : 고양이간식 and last priority : 0(2018-03-01 02:26:48)
+MINING LOG : store : G마켓, and keyword : 고양이간식 and last priority : 0(2018-03-01 02:27:23)
+MINING LOG : store : 옥션, and keyword : 고양이간식 and last priority : 0(2018-03-01 02:30:24)
+MINING LOG : store : 11번가, and keyword : 차량용쿠션 and last priority : 0(2018-03-01 02:30:50)
+MINING LOG : store : G마켓, and keyword : 차량용쿠션 and last priority : 0(2018-03-01 02:31:17)
+MINING LOG : store : 옥션, and keyword : 차량용쿠션 and last priority : 0(2018-03-01 02:34:44)
+MINING LOG : store : 11번가, and keyword : 찹쌀 and last priority : 0(2018-03-01 02:35:13)
+MINING LOG : store : G마켓, and keyword : 찹쌀 and last priority : 0(2018-03-01 02:35:40)
+MINING LOG : store : 옥션, and keyword : 찹쌀 and last priority : 0(2018-03-01 02:40:23)
+MINING LOG : store : 11번가, and keyword : 살균소독기 and last priority : 0(2018-03-01 02:40:47)
+MINING LOG : store : G마켓, and keyword : 살균소독기 and last priority : 0(2018-03-01 02:41:14)
+MINING LOG : store : 옥션, and keyword : 살균소독기 and last priority : 0(2018-03-01 02:44:16)
+MINING LOG : store : 11번가, and keyword : 산업용자재 and last priority : 0(2018-03-01 02:44:42)
+MINING LOG : store : G마켓, and keyword : 산업용자재 and last priority : 0(2018-03-01 02:47:03)
+MINING LOG : store : 옥션, and keyword : 산업용자재 and last priority : 0(2018-03-01 02:50:02)
+MINING LOG : store : 11번가, and keyword : 니트 and last priority : 0(2018-03-01 02:50:24)
+MINING LOG : store : G마켓, and keyword : 니트 and last priority : 0(2018-03-01 02:50:28)
+MINING LOG : store : 옥션, and keyword : 니트 and last priority : 0(2018-03-01 02:53:40)
+MINING LOG : store : 11번가, and keyword : 찻잔 and last priority : 0(2018-03-01 02:54:09)
+MINING LOG : store : G마켓, and keyword : 찻잔 and last priority : 0(2018-03-01 02:57:22)
+MINING LOG : store : 옥션, and keyword : 찻잔 and last priority : 0(2018-03-01 03:00:39)
+MINING LOG : store : 11번가, and keyword : 사회과학 and last priority : 0(2018-03-01 03:01:06)
+MINING LOG : store : G마켓, and keyword : 사회과학 and last priority : 0(2018-03-01 03:01:58)
+MINING LOG : store : 옥션, and keyword : 사회과학 and last priority : 0(2018-03-01 03:05:50)
+MINING LOG : store : 11번가, and keyword : 창문 에어컨 and last priority : 0(2018-03-01 03:06:12)
+MINING LOG : store : G마켓, and keyword : 창문 에어컨 and last priority : 0(2018-03-01 03:06:17)
+MINING LOG : store : 옥션, and keyword : 창문 에어컨 and last priority : 0(2018-03-01 03:09:23)
+MINING LOG : store : 11번가, and keyword : 산업기기 and last priority : 0(2018-03-01 03:09:43)
+MINING LOG : store : G마켓, and keyword : 산업기기 and last priority : 0(2018-03-01 03:10:01)
+MINING LOG : store : 옥션, and keyword : 산업기기 and last priority : 0(2018-03-01 03:13:08)
+MINING LOG : store : 11번가, and keyword : 참고서 and last priority : 0(2018-03-01 03:13:30)
+MINING LOG : store : G마켓, and keyword : 참고서 and last priority : 0(2018-03-01 03:14:11)
+MINING LOG : store : 옥션, and keyword : 참고서 and last priority : 0(2018-03-01 03:17:15)
+MINING LOG : store : 11번가, and keyword : 참기름 and last priority : 0(2018-03-01 03:17:38)
+MINING LOG : store : G마켓, and keyword : 참기름 and last priority : 0(2018-03-01 03:18:00)
+MINING LOG : store : 옥션, and keyword : 참기름 and last priority : 0(2018-03-01 03:21:02)
+MINING LOG : store : 11번가, and keyword : 타이어 and last priority : 0(2018-03-01 03:21:28)
+MINING LOG : store : G마켓, and keyword : 타이어 and last priority : 0(2018-03-01 03:21:38)
+MINING LOG : store : 옥션, and keyword : 타이어 and last priority : 0(2018-03-01 03:24:35)
+MINING LOG : store : 11번가, and keyword : 고양이위생용품 and last priority : 0(2018-03-01 03:24:58)
+MINING LOG : store : G마켓, and keyword : 고양이위생용품 and last priority : 0(2018-03-01 03:26:12)
+MINING LOG : store : 옥션, and keyword : 고양이위생용품 and last priority : 0(2018-03-01 03:29:19)
+MINING LOG : store : 11번가, and keyword : 사무가전 and last priority : 0(2018-03-01 03:29:45)
+MINING LOG : store : G마켓, and keyword : 사무가전 and last priority : 0(2018-03-01 03:32:07)
+MINING LOG : store : 옥션, and keyword : 사무가전 and last priority : 0(2018-03-01 03:35:04)
+MINING LOG : store : 11번가, and keyword : 사무용지 and last priority : 0(2018-03-01 03:35:25)
+MINING LOG : store : G마켓, and keyword : 사무용지 and last priority : 0(2018-03-01 03:37:21)
+MINING LOG : store : 옥션, and keyword : 사무용지 and last priority : 0(2018-03-01 03:40:40)
+MINING LOG : store : 11번가, and keyword : 차량용캠핑장비 and last priority : 0(2018-03-01 03:41:10)
+MINING LOG : store : G마켓, and keyword : 차량용캠핑장비 and last priority : 0(2018-03-01 03:42:55)
+MINING LOG : store : 옥션, and keyword : 차량용캠핑장비 and last priority : 0(2018-03-01 03:45:59)
+MINING LOG : store : 11번가, and keyword : 차음료 and last priority : 0(2018-03-01 03:46:22)
+MINING LOG : store : G마켓, and keyword : 차음료 and last priority : 0(2018-03-01 03:47:32)
+MINING LOG : store : 옥션, and keyword : 차음료 and last priority : 0(2018-03-01 03:50:31)
+MINING LOG : store : 11번가, and keyword : 빵 and last priority : 0(2018-03-01 03:50:57)
+MINING LOG : store : G마켓, and keyword : 빵 and last priority : 0(2018-03-01 03:51:17)
+MINING LOG : store : 옥션, and keyword : 빵 and last priority : 0(2018-03-01 03:55:19)
+MINING LOG : store : 11번가, and keyword : 농기계 and last priority : 0(2018-03-01 03:55:43)
+MINING LOG : store : G마켓, and keyword : 농기계 and last priority : 0(2018-03-01 03:55:52)
+MINING LOG : store : 옥션, and keyword : 농기계 and last priority : 0(2018-03-01 03:58:50)
+MINING LOG : store : 11번가, and keyword : 사전 and last priority : 0(2018-03-01 03:59:14)
+MINING LOG : store : G마켓, and keyword : 사전 and last priority : 0(2018-03-01 03:59:59)
+MINING LOG : store : 옥션, and keyword : 사전 and last priority : 0(2018-03-01 04:03:40)
+MINING LOG : store : 11번가, and keyword : 차량용시트 and last priority : 0(2018-03-01 04:04:02)
+MINING LOG : store : G마켓, and keyword : 차량용시트 and last priority : 0(2018-03-01 04:04:28)
+MINING LOG : store : 옥션, and keyword : 차량용시트 and last priority : 0(2018-03-01 04:08:01)
+MINING LOG : store : 11번가, and keyword : 차량용스마트키 and last priority : 0(2018-03-01 04:08:28)
+MINING LOG : store : G마켓, and keyword : 차량용스마트키 and last priority : 0(2018-03-01 04:08:51)
+MINING LOG : store : 옥션, and keyword : 차량용스마트키 and last priority : 0(2018-03-01 04:11:46)
+MINING LOG : store : 11번가, and keyword : 차량용충전기 and last priority : 0(2018-03-01 04:12:09)
+MINING LOG : store : G마켓, and keyword : 차량용충전기 and last priority : 0(2018-03-01 04:12:35)
+MINING LOG : store : 옥션, and keyword : 차량용충전기 and last priority : 0(2018-03-01 04:15:00)
+MINING LOG : store : 11번가, and keyword : 농기구 and last priority : 0(2018-03-01 04:15:26)
+MINING LOG : store : G마켓, and keyword : 농기구 and last priority : 0(2018-03-01 04:15:57)
+MINING LOG : store : 옥션, and keyword : 농기구 and last priority : 0(2018-03-01 04:18:53)
+MINING LOG : store : 11번가, and keyword : 차량용경보기 and last priority : 0(2018-03-01 04:19:21)
+MINING LOG : store : G마켓, and keyword : 차량용경보기 and last priority : 0(2018-03-01 04:19:28)
+MINING LOG : store : 옥션, and keyword : 차량용경보기 and last priority : 0(2018-03-01 04:22:38)
+MINING LOG : store : 11번가, and keyword : 뉴에이지 and last priority : 0(2018-03-01 04:23:00)
+MINING LOG : store : G마켓, and keyword : 뉴에이지 and last priority : 0(2018-03-01 04:24:55)
+MINING LOG : store : 옥션, and keyword : 뉴에이지 and last priority : 0(2018-03-01 04:27:51)
+MINING LOG : store : 11번가, and keyword : 고양이영양제 and last priority : 0(2018-03-01 04:28:14)
+MINING LOG : store : G마켓, and keyword : 고양이영양제 and last priority : 0(2018-03-01 04:29:09)
+MINING LOG : store : 옥션, and keyword : 고양이영양제 and last priority : 0(2018-03-01 04:32:10)
+MINING LOG : store : 11번가, and keyword : PC타이틀 and last priority : 0(2018-03-01 04:32:36)
+MINING LOG : store : G마켓, and keyword : PC타이틀 and last priority : 0(2018-03-01 04:32:43)
+MINING LOG : store : 옥션, and keyword : PC타이틀 and last priority : 0(2018-03-01 04:35:37)
+MINING LOG : store : 11번가, and keyword : 찌개 and last priority : 0(2018-03-01 04:35:56)
+MINING LOG : store : G마켓, and keyword : 찌개 and last priority : 0(2018-03-01 04:36:37)
+MINING LOG : store : 옥션, and keyword : 찌개 and last priority : 0(2018-03-01 04:40:15)
+MINING LOG : store : 11번가, and keyword : 차량성능용품 and last priority : 0(2018-03-01 04:40:44)
+MINING LOG : store : G마켓, and keyword : 차량성능용품 and last priority : 0(2018-03-01 04:41:31)
+MINING LOG : store : 옥션, and keyword : 차량성능용품 and last priority : 0(2018-03-01 04:45:55)
+MINING LOG : store : 11번가, and keyword : 차량관리 and last priority : 0(2018-03-01 04:45:59)
+MINING LOG : store : G마켓, and keyword : 차량관리 and last priority : 0(2018-03-01 04:46:46)
+MINING LOG : store : 옥션, and keyword : 차량관리 and last priority : 0(2018-03-01 04:49:42)
+MINING LOG : store : 11번가, and keyword : 빨래건조대 and last priority : 0(2018-03-01 04:50:10)
+MINING LOG : store : G마켓, and keyword : 빨래건조대 and last priority : 0(2018-03-01 04:50:34)
+MINING LOG : store : 옥션, and keyword : 빨래건조대 and last priority : 0(2018-03-01 04:53:35)
+MINING LOG : store : 11번가, and keyword : 차량용거치대 and last priority : 0(2018-03-01 04:54:02)
+MINING LOG : store : G마켓, and keyword : 차량용거치대 and last priority : 0(2018-03-01 04:54:47)
+MINING LOG : store : 옥션, and keyword : 차량용거치대 and last priority : 0(2018-03-01 04:57:48)
+MINING LOG : store : 11번가, and keyword : 눈건강 and last priority : 0(2018-03-01 04:58:16)
+MINING LOG : store : G마켓, and keyword : 눈건강 and last priority : 0(2018-03-01 05:00:20)
+MINING LOG : store : 옥션, and keyword : 눈건강 and last priority : 0(2018-03-01 05:03:18)
+MINING LOG : store : 11번가, and keyword : 배추 and last priority : 0(2018-03-01 05:03:46)
+MINING LOG : store : G마켓, and keyword : 배추 and last priority : 0(2018-03-01 05:04:39)
+MINING LOG : store : 옥션, and keyword : 배추 and last priority : 0(2018-03-01 05:07:36)
+MINING LOG : store : 11번가, and keyword : DSLR렌즈 and last priority : 0(2018-03-01 05:08:03)
+MINING LOG : store : G마켓, and keyword : DSLR렌즈 and last priority : 0(2018-03-01 05:10:06)
+MINING LOG : store : 옥션, and keyword : DSLR렌즈 and last priority : 0(2018-03-01 05:21:00)
+MINING LOG : store : 11번가, and keyword : 찜질용품 and last priority : 0(2018-03-01 05:21:21)
+MINING LOG : store : G마켓, and keyword : 찜질용품 and last priority : 0(2018-03-01 05:21:44)
+MINING LOG : store : 옥션, and keyword : 찜질용품 and last priority : 0(2018-03-01 05:29:10)
+MINING LOG : store : 11번가, and keyword : 차 and last priority : 0(2018-03-01 05:29:38)
+MINING LOG : store : G마켓, and keyword : 차 and last priority : 0(2018-03-01 05:30:07)
+MINING LOG : store : 옥션, and keyword : 차 and last priority : 0(2018-03-01 05:33:07)
+MINING LOG : store : 11번가, and keyword : 진공포장기 and last priority : 0(2018-03-01 05:33:39)
+MINING LOG : store : G마켓, and keyword : 진공포장기 and last priority : 0(2018-03-01 05:34:04)
+MINING LOG : store : 옥션, and keyword : 진공포장기 and last priority : 0(2018-03-01 05:42:59)
+MINING LOG : store : 11번가, and keyword : PSvita타이틀 and last priority : 0(2018-03-01 05:43:23)
+MINING LOG : store : G마켓, and keyword : PSvita타이틀 and last priority : 0(2018-03-01 05:44:00)
+MINING LOG : store : 옥션, and keyword : PSvita타이틀 and last priority : 0(2018-03-01 05:48:59)
+MINING LOG : store : 11번가, and keyword : 닌텐도DS and last priority : 0(2018-03-01 05:49:05)
+MINING LOG : store : G마켓, and keyword : 닌텐도DS and last priority : 0(2018-03-01 05:49:44)
+MINING LOG : store : 옥션, and keyword : 닌텐도DS and last priority : 0(2018-03-01 05:55:19)
+MINING LOG : store : 11번가, and keyword : 과즙 and last priority : 0(2018-03-01 05:55:39)
+MINING LOG : store : G마켓, and keyword : 과즙 and last priority : 0(2018-03-01 05:56:25)
+MINING LOG : store : 옥션, and keyword : 과즙 and last priority : 0(2018-03-01 06:00:28)
+MINING LOG : store : 11번가, and keyword : 고구마 and last priority : 0(2018-03-01 06:00:56)
+MINING LOG : store : G마켓, and keyword : 고구마 and last priority : 0(2018-03-01 06:01:21)
+MINING LOG : store : 옥션, and keyword : 고구마 and last priority : 0(2018-03-01 06:06:02)
+MINING LOG : store : 11번가, and keyword : 뿌리채소 and last priority : 0(2018-03-01 06:06:27)
+MINING LOG : store : G마켓, and keyword : 뿌리채소 and last priority : 0(2018-03-01 06:06:56)
+MINING LOG : store : 옥션, and keyword : 뿌리채소 and last priority : 0(2018-03-01 06:10:18)
+MINING LOG : store : 11번가, and keyword : 뉴스포츠용품 and last priority : 0(2018-03-01 06:10:39)
+MINING LOG : store : G마켓, and keyword : 뉴스포츠용품 and last priority : 0(2018-03-01 06:12:29)
+MINING LOG : store : 옥션, and keyword : 뉴스포츠용품 and last priority : 0(2018-03-01 06:15:24)
+MINING LOG : store : 11번가, and keyword : 책상 and last priority : 0(2018-03-01 06:15:47)
+MINING LOG : store : G마켓, and keyword : 책상 and last priority : 0(2018-03-01 06:16:25)
+MINING LOG : store : 옥션, and keyword : 책상 and last priority : 0(2018-03-01 06:19:49)
+MINING LOG : store : 11번가, and keyword : 찹쌀 and last priority : 325(2018-03-01 08:08:38)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 찹쌀 and last priority : 325(2018-03-01 08:09:19)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 찹쌀 and last priority : 325(2018-03-01 08:13:06)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 뿌리채소 and last priority : 294(2018-03-01 08:13:33)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 뿌리채소 and last priority : 294(2018-03-01 08:14:13)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 뿌리채소 and last priority : 294(2018-03-01 08:16:47)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 고양이영양제 and last priority : 266(2018-03-01 08:17:11)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 고양이영양제 and last priority : 266(2018-03-01 08:18:23)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 고양이영양제 and last priority : 266(2018-03-01 08:20:40)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 차량관리 and last priority : 241(2018-03-01 08:21:09)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 차량관리 and last priority : 241(2018-03-01 08:22:03)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 차량관리 and last priority : 241(2018-03-01 08:24:25)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 시공 and last priority : 217(2018-03-01 08:24:53)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 시공 and last priority : 217(2018-03-01 08:25:50)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 시공 and last priority : 217(2018-03-01 08:28:15)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 카메라보관함 and last priority : 195(2018-03-01 08:28:38)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 카메라보관함 and last priority : 195(2018-03-01 08:28:51)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 카메라보관함 and last priority : 195(2018-03-01 08:31:00)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 현미경 and last priority : 175(2018-03-01 08:31:16)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 현미경 and last priority : 175(2018-03-01 08:31:40)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 현미경 and last priority : 175(2018-03-01 08:34:34)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 뉴에이지 and last priority : 158(2018-03-01 08:34:56)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 뉴에이지 and last priority : 158(2018-03-01 08:36:52)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 뉴에이지 and last priority : 158(2018-03-01 08:39:07)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : TV모니터 and last priority : 142(2018-03-01 08:39:32)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : TV모니터 and last priority : 142(2018-03-01 08:40:24)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : TV모니터 and last priority : 142(2018-03-01 08:43:10)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 달력 and last priority : 127(2018-03-01 08:43:38)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 달력 and last priority : 127(2018-03-01 08:44:01)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 달력 and last priority : 127(2018-03-01 08:46:57)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 필링젤 and last priority : 114(2018-03-01 08:47:24)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 필링젤 and last priority : 114(2018-03-01 08:48:06)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 필링젤 and last priority : 114(2018-03-01 08:50:25)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 편지지 and last priority : 102(2018-03-01 08:50:50)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 편지지 and last priority : 102(2018-03-01 08:51:12)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 편지지 and last priority : 102(2018-03-01 08:53:30)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 다트 and last priority : 91(2018-03-01 08:53:50)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 다트 and last priority : 91(2018-03-01 08:54:12)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 다트 and last priority : 91(2018-03-01 08:56:45)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 소포 and last priority : 81(2018-03-01 08:57:07)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 소포 and last priority : 81(2018-03-01 08:57:19)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 소포 and last priority : 81(2018-03-01 08:59:29)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 수입 돼지고기 and last priority : 72(2018-03-01 08:59:50)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 수입 돼지고기 and last priority : 72(2018-03-01 09:00:12)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 수입 돼지고기 and last priority : 72(2018-03-01 09:01:34)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 타워팬 and last priority : 64(2018-03-01 09:01:55)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 타워팬 and last priority : 64(2018-03-01 09:02:07)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 타워팬 and last priority : 64(2018-03-01 09:05:30)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 가정/육아/요리 and last priority : 57(2018-03-01 09:05:48)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 가정/육아/요리 and last priority : 57(2018-03-01 09:06:00)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 가정/육아/요리 and last priority : 57(2018-03-01 09:07:21)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 닌텐도DS타이틀 and last priority : 51(2018-03-01 09:07:25)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 닌텐도DS타이틀 and last priority : 51(2018-03-01 09:10:31)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 닌텐도DS타이틀 and last priority : 51(2018-03-01 09:12:55)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 간식메이커 and last priority : 45(2018-03-01 09:13:10)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 간식메이커 and last priority : 45(2018-03-01 09:13:22)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 간식메이커 and last priority : 45(2018-03-01 09:15:54)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 다리미판 and last priority : 40(2018-03-01 09:16:12)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 다리미판 and last priority : 40(2018-03-01 09:16:58)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 다리미판 and last priority : 40(2018-03-01 09:20:07)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 샴푸 and last priority : 36(2018-03-01 09:20:28)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 샴푸 and last priority : 36(2018-03-01 09:20:56)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 샴푸 and last priority : 36(2018-03-01 09:23:30)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 철분 and last priority : 32(2018-03-01 09:23:51)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 철분 and last priority : 32(2018-03-01 09:24:17)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 철분 and last priority : 32(2018-03-01 09:26:52)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 역사서 and last priority : 28(2018-03-01 09:27:16)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 역사서 and last priority : 28(2018-03-01 09:30:27)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 역사서 and last priority : 28(2018-03-01 09:33:03)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 헬리캠 and last priority : 25(2018-03-01 09:33:26)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 헬리캠 and last priority : 25(2018-03-01 09:35:56)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 헬리캠 and last priority : 25(2018-03-01 09:38:36)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 핸드워시 and last priority : 22(2018-03-01 09:38:54)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 핸드워시 and last priority : 22(2018-03-01 09:39:29)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 핸드워시 and last priority : 22(2018-03-01 09:41:54)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 타프 and last priority : 19(2018-03-01 09:42:16)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 타프 and last priority : 19(2018-03-01 09:42:47)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 타프 and last priority : 19(2018-03-01 09:46:34)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 탁상용 선풍기 and last priority : 17(2018-03-01 09:46:56)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 탁상용 선풍기 and last priority : 17(2018-03-01 09:47:48)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 탁상용 선풍기 and last priority : 17(2018-03-01 09:50:22)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 중고 타이틀 and last priority : 16(2018-03-01 09:50:45)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 중고 타이틀 and last priority : 16(2018-03-01 09:50:59)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 중고 타이틀 and last priority : 16(2018-03-01 09:53:34)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 건전지 and last priority : 14(2018-03-01 09:53:36)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 건전지 and last priority : 14(2018-03-01 09:54:56)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 건전지 and last priority : 14(2018-03-01 10:01:11)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 농기계 and last priority : 12(2018-03-01 10:01:33)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 농기계 and last priority : 12(2018-03-01 10:01:42)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 농기계 and last priority : 12(2018-03-01 10:07:12)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : PC타이틀 and last priority : 10(2018-03-01 10:07:35)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : PC타이틀 and last priority : 10(2018-03-01 10:07:44)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : PC타이틀 and last priority : 10(2018-03-01 10:13:45)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 차량용거치대 and last priority : 9(2018-03-01 10:14:06)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 차량용거치대 and last priority : 9(2018-03-01 10:15:14)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 차량용거치대 and last priority : 9(2018-03-01 10:18:17)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 농기구 and last priority : 8(2018-03-01 10:18:42)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 농기구 and last priority : 8(2018-03-01 10:19:22)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 농기구 and last priority : 8(2018-03-01 10:23:45)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 진공포장기 and last priority : 7(2018-03-01 10:24:13)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 진공포장기 and last priority : 7(2018-03-01 10:24:57)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 진공포장기 and last priority : 7(2018-03-01 10:30:27)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 즉석카메라 and last priority : 6(2018-03-01 10:30:51)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 즉석카메라 and last priority : 6(2018-03-01 10:31:15)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 즉석카메라 and last priority : 6(2018-03-01 10:33:47)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 찻잔 and last priority : 5(2018-03-01 10:34:09)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 찻잔 and last priority : 5(2018-03-01 10:39:25)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 찻잔 and last priority : 5(2018-03-01 10:50:36)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 산업기기 and last priority : 4(2018-03-01 10:51:03)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 산업기기 and last priority : 4(2018-03-01 10:51:24)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 산업기기 and last priority : 4(2018-03-01 11:00:11)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 창문 에어컨 and last priority : 3(2018-03-01 11:00:31)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 창문 에어컨 and last priority : 3(2018-03-01 11:00:36)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 창문 에어컨 and last priority : 3(2018-03-01 11:08:19)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 책상 and last priority : 2(2018-03-01 11:08:39)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 책상 and last priority : 2(2018-03-01 11:09:22)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 책상 and last priority : 2(2018-03-01 11:21:18)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 차량성능용품 and last priority : 1(2018-03-01 11:21:46)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 차량성능용품 and last priority : 1(2018-03-01 11:22:49)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 차량성능용품 and last priority : 1(2018-03-01 11:30:33)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 뉴스포츠용품 and last priority : 0(2018-03-01 11:30:36)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 뉴스포츠용품 and last priority : 0(2018-03-01 11:32:51)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 뉴스포츠용품 and last priority : 0(2018-03-01 11:41:29)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 차량용캠핑장비 and last priority : 0(2018-03-01 11:41:51)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 차량용캠핑장비 and last priority : 0(2018-03-01 11:43:58)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 차량용캠핑장비 and last priority : 0(2018-03-01 11:53:51)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 차량용매트 and last priority : 0(2018-03-01 11:54:15)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 차량용매트 and last priority : 0(2018-03-01 11:55:35)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 차량용매트 and last priority : 0(2018-03-01 12:02:36)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 가발 and last priority : 0(2018-03-01 12:03:02)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 가발 and last priority : 0(2018-03-01 12:03:44)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 가발 and last priority : 0(2018-03-01 12:18:27)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 가르시니아 and last priority : 0(2018-03-01 12:18:48)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 가르시니아 and last priority : 0(2018-03-01 12:19:27)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 가르시니아 and last priority : 0(2018-03-01 12:33:19)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : DSLR렌즈 and last priority : 0(2018-03-01 12:33:40)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : DSLR렌즈 and last priority : 0(2018-03-01 12:38:07)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : DSLR렌즈 and last priority : 0(2018-03-01 12:53:40)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 닌텐도DS and last priority : 0(2018-03-01 12:54:00)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 닌텐도DS and last priority : 0(2018-03-01 12:55:42)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 닌텐도DS and last priority : 0(2018-03-01 13:03:32)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 흙 and last priority : 0(2018-03-01 13:03:51)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 흙 and last priority : 0(2018-03-01 13:04:45)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 흙 and last priority : 0(2018-03-01 13:12:08)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 차음료 and last priority : 0(2018-03-01 13:12:33)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 차음료 and last priority : 0(2018-03-01 13:14:36)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 차음료 and last priority : 0(2018-03-01 13:21:11)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 살균소독기 and last priority : 0(2018-03-01 13:21:36)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 살균소독기 and last priority : 0(2018-03-01 13:22:33)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 살균소독기 and last priority : 0(2018-03-01 13:27:27)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 산업용자재 and last priority : 0(2018-03-01 13:27:50)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 산업용자재 and last priority : 0(2018-03-01 13:30:37)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 산업용자재 and last priority : 0(2018-03-01 13:37:50)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 사회과학 and last priority : 0(2018-03-01 13:38:12)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 사회과학 and last priority : 0(2018-03-01 13:40:06)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 사회과학 and last priority : 0(2018-03-01 13:43:37)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 참기름 and last priority : 0(2018-03-01 13:44:00)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 참기름 and last priority : 0(2018-03-01 13:44:34)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 참기름 and last priority : 0(2018-03-01 13:49:48)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 참고서 and last priority : 0(2018-03-01 13:50:14)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 참고서 and last priority : 0(2018-03-01 13:52:21)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 참고서 and last priority : 0(2018-03-01 13:55:52)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 니트 and last priority : 0(2018-03-01 13:56:15)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 니트 and last priority : 0(2018-03-01 13:56:18)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 니트 and last priority : 0(2018-03-01 14:02:05)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 고양이위생용품 and last priority : 0(2018-03-01 14:02:31)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 고양이위생용품 and last priority : 0(2018-03-01 14:04:56)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 고양이위생용품 and last priority : 0(2018-03-01 14:11:09)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 차량용쿠션 and last priority : 0(2018-03-01 14:11:34)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 차량용쿠션 and last priority : 0(2018-03-01 14:11:59)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 차량용쿠션 and last priority : 0(2018-03-01 14:17:25)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 사전 and last priority : 0(2018-03-01 14:18:14)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 사전 and last priority : 0(2018-03-01 14:19:02)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 사전 and last priority : 0(2018-03-01 14:29:06)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 차량용시트 and last priority : 0(2018-03-01 14:29:35)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 차량용시트 and last priority : 0(2018-03-01 14:30:23)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 차량용시트 and last priority : 0(2018-03-01 14:38:00)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 차량용충전기 and last priority : 0(2018-03-01 14:38:29)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 차량용충전기 and last priority : 0(2018-03-01 14:38:57)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 차량용충전기 and last priority : 0(2018-03-01 14:41:28)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 사무용지 and last priority : 0(2018-03-01 14:41:53)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 사무용지 and last priority : 0(2018-03-01 14:46:18)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 사무용지 and last priority : 0(2018-03-01 14:56:02)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 차량용스마트키 and last priority : 0(2018-03-01 14:56:31)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 차량용스마트키 and last priority : 0(2018-03-01 14:56:52)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 차량용스마트키 and last priority : 0(2018-03-01 15:06:54)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 사무용가구 and last priority : 0(2018-03-01 15:07:18)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 사무용가구 and last priority : 0(2018-03-01 15:07:59)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 사무용가구 and last priority : 0(2018-03-01 15:20:16)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 차량용경보기 and last priority : 0(2018-03-01 15:20:44)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 차량용경보기 and last priority : 0(2018-03-01 15:21:00)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 차량용경보기 and last priority : 0(2018-03-01 15:27:53)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 현미경 and last priority : 0(2018-03-01 15:28:15)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 현미경 and last priority : 0(2018-03-01 15:28:58)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 현미경 and last priority : 0(2018-03-01 15:37:36)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 사무가전 and last priority : 0(2018-03-01 15:38:03)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 사무가전 and last priority : 0(2018-03-01 15:41:53)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 사무가전 and last priority : 0(2018-03-01 15:48:28)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 눈건강 and last priority : 0(2018-03-01 15:48:51)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 눈건강 and last priority : 0(2018-03-01 15:51:38)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 눈건강 and last priority : 0(2018-03-01 16:01:04)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 찌개 and last priority : 0(2018-03-01 16:01:31)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 찌개 and last priority : 0(2018-03-01 16:02:58)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 찌개 and last priority : 0(2018-03-01 16:12:07)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 차 and last priority : 0(2018-03-01 16:12:34)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 차 and last priority : 0(2018-03-01 16:13:00)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 차 and last priority : 0(2018-03-01 16:23:51)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 찹쌀 and last priority : 0(2018-03-01 16:24:23)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 찹쌀 and last priority : 0(2018-03-01 16:24:48)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 찹쌀 and last priority : 0(2018-03-01 16:34:17)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 찜질용품 and last priority : 0(2018-03-01 16:34:42)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 찜질용품 and last priority : 0(2018-03-01 16:35:19)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 찜질용품 and last priority : 0(2018-03-01 16:45:25)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 타프 and last priority : 0(2018-03-01 16:45:52)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 타프 and last priority : 0(2018-03-01 16:46:22)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 타프 and last priority : 0(2018-03-01 16:56:14)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 빵 and last priority : 0(2018-03-01 16:56:42)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 빵 and last priority : 0(2018-03-01 16:57:12)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 빵 and last priority : 0(2018-03-01 17:05:58)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 빨래건조대 and last priority : 0(2018-03-01 17:06:23)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 빨래건조대 and last priority : 0(2018-03-01 17:06:51)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 빨래건조대 and last priority : 0(2018-03-01 17:16:39)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 진열대 and last priority : 0(2018-03-01 17:17:05)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 진열대 and last priority : 0(2018-03-01 17:17:42)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 진열대 and last priority : 0(2018-03-01 17:33:46)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 탁상용 선풍기 and last priority : 0(2018-03-01 17:34:17)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 탁상용 선풍기 and last priority : 0(2018-03-01 17:35:10)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 탁상용 선풍기 and last priority : 0(2018-03-01 17:47:40)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 농기계 and last priority : 0(2018-03-01 17:48:08)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 농기계 and last priority : 0(2018-03-01 17:48:15)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 농기계 and last priority : 0(2018-03-01 17:53:50)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : PC타이틀 and last priority : 0(2018-03-01 17:54:13)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : PC타이틀 and last priority : 0(2018-03-01 17:54:25)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : PC타이틀 and last priority : 0(2018-03-01 18:00:17)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 차량용거치대 and last priority : 0(2018-03-01 18:00:37)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 차량용거치대 and last priority : 0(2018-03-01 18:01:38)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 차량용거치대 and last priority : 0(2018-03-01 18:10:27)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 농기구 and last priority : 0(2018-03-01 18:10:52)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 농기구 and last priority : 0(2018-03-01 18:11:34)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 농기구 and last priority : 0(2018-03-01 18:27:15)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 즉석카메라 and last priority : 0(2018-03-01 18:27:43)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 즉석카메라 and last priority : 0(2018-03-01 18:29:01)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 즉석카메라 and last priority : 0(2018-03-01 18:35:54)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 진공포장기 and last priority : 0(2018-03-01 18:36:17)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 진공포장기 and last priority : 0(2018-03-01 18:38:17)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 진공포장기 and last priority : 0(2018-03-01 18:47:07)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 산업기기 and last priority : 0(2018-03-01 18:47:31)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 산업기기 and last priority : 0(2018-03-01 18:48:02)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 산업기기 and last priority : 0(2018-03-01 18:55:18)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 창문 에어컨 and last priority : 0(2018-03-01 18:55:40)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 창문 에어컨 and last priority : 0(2018-03-01 18:58:37)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 창문 에어컨 and last priority : 0(2018-03-01 19:07:43)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 책상 and last priority : 0(2018-03-01 19:08:10)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 책상 and last priority : 0(2018-03-01 19:08:51)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 책상 and last priority : 0(2018-03-01 19:15:59)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 찻잔 and last priority : 0(2018-03-01 19:16:27)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 찻잔 and last priority : 0(2018-03-01 19:21:42)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 찻잔 and last priority : 0(2018-03-01 19:25:13)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 차량용매트 and last priority : 0(2018-03-01 19:25:42)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 차량용매트 and last priority : 0(2018-03-01 19:27:14)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 차량용매트 and last priority : 0(2018-03-01 19:30:17)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 차량용캠핑장비 and last priority : 0(2018-03-01 19:30:54)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 차량용캠핑장비 and last priority : 0(2018-03-01 19:33:02)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 차량용캠핑장비 and last priority : 0(2018-03-01 19:35:54)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 뉴스포츠용품 and last priority : 0(2018-03-01 19:36:18)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 뉴스포츠용품 and last priority : 0(2018-03-01 19:38:44)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 뉴스포츠용품 and last priority : 0(2018-03-01 19:41:26)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 가발 and last priority : 0(2018-03-01 19:41:50)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 가발 and last priority : 0(2018-03-01 19:43:15)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 가발 and last priority : 0(2018-03-01 19:46:16)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 가르시니아 and last priority : 0(2018-03-01 19:46:42)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 가르시니아 and last priority : 0(2018-03-01 19:47:07)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 가르시니아 and last priority : 0(2018-03-01 19:49:58)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : DSLR렌즈 and last priority : 0(2018-03-01 19:50:25)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : DSLR렌즈 and last priority : 0(2018-03-01 19:55:34)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : DSLR렌즈 and last priority : 0(2018-03-01 20:14:14)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 닌텐도DS and last priority : 0(2018-03-01 20:14:35)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 닌텐도DS and last priority : 0(2018-03-01 20:15:42)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 닌텐도DS and last priority : 0(2018-03-01 20:24:18)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 흙 and last priority : 0(2018-03-01 20:24:40)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 흙 and last priority : 0(2018-03-01 20:25:34)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 흙 and last priority : 0(2018-03-01 20:38:19)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 차음료 and last priority : 0(2018-03-01 20:38:46)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 차음료 and last priority : 0(2018-03-01 20:41:07)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 차음료 and last priority : 0(2018-03-01 20:50:30)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 살균소독기 and last priority : 0(2018-03-01 20:50:56)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 살균소독기 and last priority : 0(2018-03-01 20:52:11)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 살균소독기 and last priority : 0(2018-03-01 21:02:28)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 산업용자재 and last priority : 0(2018-03-01 21:02:55)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 산업용자재 and last priority : 0(2018-03-01 21:07:48)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 산업용자재 and last priority : 0(2018-03-01 21:10:31)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 사회과학 and last priority : 0(2018-03-01 21:10:53)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 사회과학 and last priority : 0(2018-03-01 21:12:48)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 사회과학 and last priority : 0(2018-03-01 21:15:35)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 참고서 and last priority : 0(2018-03-01 21:15:59)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 참고서 and last priority : 0(2018-03-01 21:16:38)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 참고서 and last priority : 0(2018-03-01 21:19:25)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 참기름 and last priority : 0(2018-03-01 21:19:52)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 참기름 and last priority : 0(2018-03-01 21:20:42)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 참기름 and last priority : 0(2018-03-01 21:23:23)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 니트 and last priority : 0(2018-03-01 21:23:52)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 니트 and last priority : 0(2018-03-01 21:23:55)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 니트 and last priority : 0(2018-03-01 21:26:51)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 고양이위생용품 and last priority : 0(2018-03-01 21:27:18)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 고양이위생용품 and last priority : 0(2018-03-01 21:28:37)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 고양이위생용품 and last priority : 0(2018-03-01 21:31:27)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 차량용쿠션 and last priority : 0(2018-03-01 21:31:52)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 차량용쿠션 and last priority : 0(2018-03-01 21:32:39)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 차량용쿠션 and last priority : 0(2018-03-01 21:36:10)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 사전 and last priority : 0(2018-03-01 21:36:38)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 사전 and last priority : 0(2018-03-01 21:37:41)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 사전 and last priority : 0(2018-03-01 21:40:59)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 건전지 and last priority : 0(2018-03-01 21:41:23)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 건전지 and last priority : 0(2018-03-01 21:41:52)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 건전지 and last priority : 0(2018-03-01 21:44:37)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 차량용충전기 and last priority : 0(2018-03-01 21:45:05)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 차량용충전기 and last priority : 0(2018-03-01 21:45:50)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 차량용충전기 and last priority : 0(2018-03-01 21:48:01)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 차량용시트 and last priority : 0(2018-03-01 21:48:28)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 차량용시트 and last priority : 0(2018-03-01 21:48:57)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 차량용시트 and last priority : 0(2018-03-01 21:52:36)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 카메라보관함 and last priority : 0(2018-03-01 21:53:31)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 카메라보관함 and last priority : 0(2018-03-01 21:54:55)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 카메라보관함 and last priority : 0(2018-03-01 21:57:35)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 차량성능용품 and last priority : 0(2018-03-01 21:58:00)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 차량성능용품 and last priority : 0(2018-03-01 21:58:53)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 차량성능용품 and last priority : 0(2018-03-01 22:03:09)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 사무가전 and last priority : 0(2018-03-01 22:03:11)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 사무가전 and last priority : 0(2018-03-01 22:07:17)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 사무가전 and last priority : 0(2018-03-01 22:09:59)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 사무용지 and last priority : 0(2018-03-01 22:10:22)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 사무용지 and last priority : 0(2018-03-01 22:14:33)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 사무용지 and last priority : 0(2018-03-01 22:17:24)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 차량용스마트키 and last priority : 0(2018-03-01 22:17:50)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 차량용스마트키 and last priority : 0(2018-03-01 22:18:39)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 차량용스마트키 and last priority : 0(2018-03-01 22:21:34)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 차량용경보기 and last priority : 0(2018-03-01 22:21:56)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 차량용경보기 and last priority : 0(2018-03-01 22:22:01)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 차량용경보기 and last priority : 0(2018-03-01 22:25:12)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 사무용가구 and last priority : 0(2018-03-01 22:25:35)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 사무용가구 and last priority : 0(2018-03-01 22:26:06)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 사무용가구 and last priority : 0(2018-03-01 22:29:10)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 빙수기 and last priority : 0(2018-03-01 22:29:39)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 빙수기 and last priority : 0(2018-03-01 22:30:07)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 빙수기 and last priority : 0(2018-03-01 22:33:27)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 찜질용품 and last priority : 0(2018-03-01 22:33:48)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 찜질용품 and last priority : 0(2018-03-01 22:35:07)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 찜질용품 and last priority : 0(2018-03-01 22:38:45)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 타프 and last priority : 0(2018-03-01 22:39:36)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 타프 and last priority : 0(2018-03-01 22:40:13)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 타프 and last priority : 0(2018-03-01 22:43:17)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 차 and last priority : 0(2018-03-01 22:43:46)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 차 and last priority : 0(2018-03-01 22:44:28)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 차 and last priority : 0(2018-03-01 22:47:33)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 빵 and last priority : 0(2018-03-01 22:48:07)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 빵 and last priority : 0(2018-03-01 22:48:56)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 빵 and last priority : 0(2018-03-01 22:53:03)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 빨래건조대 and last priority : 0(2018-03-01 22:53:30)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 빨래건조대 and last priority : 0(2018-03-01 22:54:12)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 빨래건조대 and last priority : 0(2018-03-01 22:57:05)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 진열대 and last priority : 0(2018-03-01 22:57:30)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 진열대 and last priority : 0(2018-03-01 22:58:15)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 진열대 and last priority : 0(2018-03-01 23:01:11)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 탁상용 선풍기 and last priority : 0(2018-03-01 23:01:40)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 탁상용 선풍기 and last priority : 0(2018-03-01 23:02:24)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 탁상용 선풍기 and last priority : 0(2018-03-01 23:05:00)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 농기계 and last priority : 0(2018-03-01 23:05:27)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 농기계 and last priority : 0(2018-03-01 23:05:39)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 농기계 and last priority : 0(2018-03-01 23:08:32)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 찌개 and last priority : 0(2018-03-01 23:08:56)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 찌개 and last priority : 0(2018-03-01 23:10:28)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 찌개 and last priority : 0(2018-03-01 23:13:38)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : PC타이틀 and last priority : 0(2018-03-01 23:14:03)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : PC타이틀 and last priority : 0(2018-03-01 23:14:13)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : PC타이틀 and last priority : 0(2018-03-01 23:16:46)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 차량용거치대 and last priority : 0(2018-03-01 23:17:06)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 차량용거치대 and last priority : 0(2018-03-01 23:19:23)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 차량용거치대 and last priority : 0(2018-03-01 23:22:06)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 농기구 and last priority : 0(2018-03-01 23:22:33)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 농기구 and last priority : 0(2018-03-01 23:23:33)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 농기구 and last priority : 0(2018-03-01 23:26:13)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 산업기기 and last priority : 0(2018-03-01 23:26:42)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 산업기기 and last priority : 0(2018-03-01 23:27:08)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 산업기기 and last priority : 0(2018-03-01 23:29:44)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 즉석카메라 and last priority : 0(2018-03-01 23:30:06)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 즉석카메라 and last priority : 0(2018-03-01 23:30:32)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 즉석카메라 and last priority : 0(2018-03-01 23:33:09)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 진공포장기 and last priority : 0(2018-03-01 23:33:32)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 진공포장기 and last priority : 0(2018-03-01 23:34:00)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 진공포장기 and last priority : 0(2018-03-01 23:36:44)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 책상 and last priority : 0(2018-03-01 23:37:10)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 책상 and last priority : 0(2018-03-01 23:37:40)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 책상 and last priority : 0(2018-03-01 23:40:27)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 찻잔 and last priority : 0(2018-03-01 23:40:55)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 찻잔 and last priority : 0(2018-03-01 23:45:37)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 찻잔 and last priority : 0(2018-03-01 23:56:05)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 창문 에어컨 and last priority : 0(2018-03-01 23:58:18)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 창문 에어컨 and last priority : 0(2018-03-02 00:06:33)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 창문 에어컨 and last priority : 0(2018-03-02 00:17:34)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 차량용캠핑장비 and last priority : 0(2018-03-02 00:18:46)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 차량용캠핑장비 and last priority : 0(2018-03-02 00:24:33)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 차량용캠핑장비 and last priority : 0(2018-03-02 00:42:10)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 차량용매트 and last priority : 0(2018-03-02 00:42:34)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 차량용매트 and last priority : 0(2018-03-02 00:44:46)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 차량용매트 and last priority : 0(2018-03-02 01:10:38)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 뉴스포츠용품 and last priority : 0(2018-03-02 01:11:40)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 뉴스포츠용품 and last priority : 0(2018-03-02 01:18:54)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 뉴스포츠용품 and last priority : 0(2018-03-02 01:32:38)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 가발 and last priority : 0(2018-03-02 01:35:00)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 가발 and last priority : 0(2018-03-02 01:35:44)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 가발 and last priority : 0(2018-03-02 01:42:28)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 가르시니아 and last priority : 0(2018-03-02 01:42:54)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 가르시니아 and last priority : 0(2018-03-02 01:43:39)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 가르시니아 and last priority : 0(2018-03-02 01:48:50)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : DSLR렌즈 and last priority : 0(2018-03-02 01:49:16)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : DSLR렌즈 and last priority : 0(2018-03-02 01:51:52)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : DSLR렌즈 and last priority : 0(2018-03-02 02:02:40)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 닌텐도DS and last priority : 0(2018-03-02 02:03:01)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 닌텐도DS and last priority : 0(2018-03-02 02:03:42)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 닌텐도DS and last priority : 0(2018-03-02 02:06:39)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 차음료 and last priority : 0(2018-03-02 02:07:00)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 차음료 and last priority : 0(2018-03-02 02:08:20)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 차음료 and last priority : 0(2018-03-02 02:11:33)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 살균소독기 and last priority : 0(2018-03-02 02:12:04)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 살균소독기 and last priority : 0(2018-03-02 02:12:28)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 살균소독기 and last priority : 0(2018-03-02 02:15:32)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 사회과학 and last priority : 0(2018-03-02 02:16:00)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 사회과학 and last priority : 0(2018-03-02 02:16:55)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 사회과학 and last priority : 0(2018-03-02 02:20:14)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 흙 and last priority : 0(2018-03-02 02:20:36)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 흙 and last priority : 0(2018-03-02 02:21:21)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 흙 and last priority : 0(2018-03-02 02:25:07)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 산업용자재 and last priority : 0(2018-03-02 02:25:50)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 산업용자재 and last priority : 0(2018-03-02 02:28:47)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 산업용자재 and last priority : 0(2018-03-02 02:31:54)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 니트 and last priority : 0(2018-03-02 02:32:19)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 니트 and last priority : 0(2018-03-02 02:32:22)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 니트 and last priority : 0(2018-03-02 02:35:42)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 참기름 and last priority : 0(2018-03-02 02:36:10)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 참기름 and last priority : 0(2018-03-02 02:36:33)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 참기름 and last priority : 0(2018-03-02 02:39:51)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 현미경 and last priority : 0(2018-03-02 02:40:18)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 현미경 and last priority : 0(2018-03-02 02:40:44)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 현미경 and last priority : 0(2018-03-02 02:44:12)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 눈건강 and last priority : 0(2018-03-02 02:44:44)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 눈건강 and last priority : 0(2018-03-02 02:46:52)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 눈건강 and last priority : 0(2018-03-02 02:49:48)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 사전 and last priority : 0(2018-03-02 02:50:15)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 사전 and last priority : 0(2018-03-02 02:51:04)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 사전 and last priority : 0(2018-03-02 02:54:37)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 참고서 and last priority : 0(2018-03-02 02:55:01)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 참고서 and last priority : 0(2018-03-02 02:55:43)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 참고서 and last priority : 0(2018-03-02 02:58:39)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 차량용쿠션 and last priority : 0(2018-03-02 02:59:05)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 차량용쿠션 and last priority : 0(2018-03-02 02:59:28)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 차량용쿠션 and last priority : 0(2018-03-02 03:03:07)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 고양이위생용품 and last priority : 0(2018-03-02 03:03:35)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 고양이위생용품 and last priority : 0(2018-03-02 03:04:28)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 고양이위생용품 and last priority : 0(2018-03-02 03:07:28)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 건전지 and last priority : 0(2018-03-02 03:07:59)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 건전지 and last priority : 0(2018-03-02 03:08:22)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 건전지 and last priority : 0(2018-03-02 03:11:27)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 사무가전 and last priority : 0(2018-03-02 03:11:55)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 사무가전 and last priority : 0(2018-03-02 03:14:15)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 사무가전 and last priority : 0(2018-03-02 03:17:26)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 사무용지 and last priority : 0(2018-03-02 03:18:01)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 사무용지 and last priority : 0(2018-03-02 03:20:10)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 사무용지 and last priority : 0(2018-03-02 03:22:58)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 차량용경보기 and last priority : 0(2018-03-02 03:23:23)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 차량용경보기 and last priority : 0(2018-03-02 03:23:27)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 차량용경보기 and last priority : 0(2018-03-02 03:26:32)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 차량용충전기 and last priority : 0(2018-03-02 03:26:54)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 차량용충전기 and last priority : 0(2018-03-02 03:27:24)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 차량용충전기 and last priority : 0(2018-03-02 03:29:27)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 찹쌀 and last priority : 0(2018-03-02 03:29:54)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 찹쌀 and last priority : 0(2018-03-02 03:30:16)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 찹쌀 and last priority : 0(2018-03-02 03:34:36)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 사무용가구 and last priority : 0(2018-03-02 03:35:03)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 사무용가구 and last priority : 0(2018-03-02 03:35:27)
+===============================================
+
+MINING LOG : store : 옥션, and keyword : 사무용가구 and last priority : 0(2018-03-02 03:38:23)
+===============================================
+
+MINING LOG : store : 11번가, and keyword : 빙수기 and last priority : 0(2018-03-02 03:38:51)
+===============================================
+
+MINING LOG : store : G마켓, and keyword : 빙수기 and last priority : 0(2018-03-02 03:39:14)
+===============================================
+
