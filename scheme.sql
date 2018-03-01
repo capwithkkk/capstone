@@ -3,7 +3,7 @@ CREATE TABLE category(
 	category_name	varchar(128) unique,
 	parent_name	varchar(128),
 	foreign key(parent_name) references category(category_name)
-);
+) CHARSET=utf8 COLLATE utf8_bin;
 
 CREATE TABLE product(
     	pro_index	integer	AUTO_INCREMENT,
@@ -18,7 +18,7 @@ CREATE TABLE product(
 	foreign key(category_id) references category(category_id),
 	primary key(pro_index),
 	unique(name,store,price)
-);
+) CHARSET=utf8 COLLATE utf8_bin;
 
 CREATE TABLE parse_rule(
 	store    varchar(128)    not null,
@@ -35,20 +35,20 @@ CREATE TABLE parse_rule(
 	pic_url_attr	 varchar(128),
 	price_attr	 varchar(128),
 	primary key(store)
-);
+) CHARSET=utf8 COLLATE utf8_bin;
 
 CREATE TABLE store_info(
 	store    varchar(128)    not null,
 	url   	 varchar(256),
 	flag	integer,
 	primary key(store)
-);
+) CHARSET=utf8 COLLATE utf8_bin;
 
 CREATE TABLE keyword(
 	name    varchar(128)    not null,
 	priority   	 integer,
 	primary key(name)
-);
+) CHARSET=utf8 COLLATE utf8_bin;
 
 CREATE TABLE parse_rule_extra(
 	store    varchar(128)    not null,
@@ -57,12 +57,12 @@ CREATE TABLE parse_rule_extra(
 	brand   	 varchar(128),
 	is_inlink	integer,
 	primary key(store)
-);
+) CHARSET=utf8 COLLATE utf8_bin;
 CREATE TABLE category_convergence(
 	origin_name    varchar(128)    not null,
 	category	varchar(128),
 	primary key(origin_name)
-);
+) CHARSET=utf8 COLLATE utf8_bin;
 
 
 
