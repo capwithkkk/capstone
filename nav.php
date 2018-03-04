@@ -11,11 +11,11 @@
                     ?><li><a href="<?=$search_page?>?page=<?=$page-1?>&maxItem=<?=$maxItem?>&sort=<?=$sort?>&category=<?=$category?>&query=<?=$query?>"><이전</a></li><?php
                 }
                 $last_page = $maxpage<$start_page+10?$maxpage:$start_page+10;
-                if($maxpage <= $page){
+                if($maxpage < $page){
                     ?><li class="active"><a href="#"><?=$page?></a></li><?php
                 }
                 else{
-                    for($i = $start_page; $i < $last_page; $i++){
+                    for($i = $start_page; $i <= $last_page; $i++){
                         if($i == $page){
                             ?><li class="active"><a href="#"><?=$i?></a></li><?php
                         }
@@ -24,16 +24,12 @@
                         }
                     }
                 }
-                if($last_page < $maxpage){
+                if($page < $maxpage){
             ?><li><a href="<?=$search_page?>?page=<?=$page+1?>&maxItem=<?=$maxItem?>&sort=<?=$sort?>&category=<?=$category?>&query=<?=$query?>">다음></a></li>
             <?php
                 }
-
-
             }
         }
-
         ?>
-
     </ul>
 </nav>

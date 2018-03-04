@@ -81,6 +81,12 @@ div.list-group{
     margin: 0 auto;
 }
 
+#category_label{
+    color: White;
+    font-size: 6px;
+    display: inline-block;
+}
+
 legend{
     display: none;
 }

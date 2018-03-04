@@ -19,6 +19,7 @@ function categoryLoad(data,status){
 
 function setCategory(name) {
     $('#search_param_category').val(name);
+    $("#category_label").text("카테고리 : " + name)
     $("#popup_category").modal('hide');
 }
 

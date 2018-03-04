@@ -1,22 +1,25 @@
 <header>
     <div class="container">
         <div id="logo" class="row">
-            <a id="logo_link" href="">
+            <a id="logo_link" href="/capstone">
                 <img id="logo_image" src="image/logo.png" alt="Logo">
             </a>
         </div>
         <div id="search" class="row">
             <div class="col-xs-1">
+                <span></span>
     			<a id="search_option_category" href="#" data-toggle="modal" data-target="#popup_category" >
     				<img id="category_image_small" src="image/category.png">
     			</a>
     		</div>
     		<div class="col-xs-1">
+                <span></span>
     			<a id="search_option_setting" href="#" data-toggle="modal" data-target="#popup_setting">
     				<img id="setting_image_small" src="image/page_option.png">
     			</a>
     		</div>
             <div class="col-xs-4">
+                <span class="label label-default" id="category_label">카테고리 : <?=$category?></span>
                 <form id="search_form" action="search.php" onsubmit="setHTTPGetParam('search')" metohd="get">
                     <fieldset>
                         <legend>SEARCH</legend>

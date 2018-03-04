@@ -25,18 +25,22 @@
 
 			<div id="search" class="row">
 				<div class="col-xs-1">
+					<span></span>
 					<a id="search_option_category" href="#" data-toggle="modal" data-target="#popup_category" >
 						<img id="category_image_big" src="image/category.png">
 					</a>
 				</div>
 				<div class="col-xs-1">
+					<span></span>
 					<a id="search_option_setting" href="#" data-toggle="modal" data-target="#popup_setting" >
 						<img id="setting_image_big" src="image/page_option.png">
 					</a>
 				</div>
 				<span class="col-xs-1">
 				</span>
+
 		        <div class="col-xs-9">
+					<span class="label label-default" id="category_label">카테고리 : 전체</span>
 		            <form id="search_form" action="search.php" metohd="get">
 		                <fieldset>
 		                    <legend>SEARCH</legend>
@@ -46,7 +50,7 @@
 		                    <input type="hidden" name="sort" value="0" id="search_param_sort">
 				    		<input type="hidden" name="category" value="전체" id="search_param_category">
 
-		                    <div class="input-group input-group-lg">
+		                    <div class="input-group input-group-xs">
 		                        <input class="form-control" type="text" name="query" value="" id="search_param_input" placeholder="Search..." maxlength="255" autocomplete="off">
 		                        <span class="input-group-btn">
 		                            <button id="search_button" class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
