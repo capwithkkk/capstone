@@ -1,21 +1,21 @@
-g¸¶ÄÏ:
+ï»¿gë§ˆì¼“:
 
 categories: //*[@class="location-navi"]/ul/li
 category_core: a
-brand : //*[@id="vip-tab_detail"]/*[@class="vip-detailarea_productinfo"]/*[@class="table_productinfo"][1]/tbody/tr[th = "ºê·£µå"]/td
+brand : //*[@id="vip-tab_detail"]/*[@class="vip-detailarea_productinfo"]/*[@class="table_productinfo"][1]/tbody/tr[th = "ë¸Œëžœë“œ"]/td
 onlink : 1
 
 
-11¹ø°¡:
+11ë²ˆê°€:
 
 
 categories: //*[@id="wrapBody"]/*[@class="location_wrap"]/div
 category_core: button[@class="arrow"]
-brand : //*[@id="tabProductInfo"]/*[@class="prdc_detail_table"]/tbody/tr[th = "ºê·£µå"]/td
+brand : //*[@id="tabProductInfo"]/*[@class="prdc_detail_table"]/tbody/tr[th = "ë¸Œëžœë“œ"]/td
 onlink : 1
 
 
-¿Á¼Ç:
+ì˜¥ì…˜:
 
 
 categories: *[@class="layout_left"]/*[@class="item_title_info"]/*[@class="category"]/a

@@ -1,4 +1,4 @@
-G¸¶ÄÏ:
+ï»¿Gë§ˆì¼“:
 search: //*[@id="keyword"]
 section: //*[@id="searchListItems"]
 articles: li
@@ -15,7 +15,7 @@ price_attr: null
 
 
 
-¿Á¼Ç:
+ì˜¥ì…˜:
 
 search: //*[@id="txtKeyword"]
 section: //*[@id="ucItemList_listview"]
@@ -32,7 +32,7 @@ price_attr: null
 
 
 
-11¹ø°¡:
+11ë²ˆê°€:
 
 search: //*[@id="AKCKwd"]
 section: //*[@class="plus_prd"]/*[@class="total_listing_wrap"]/*[@class="tt_listbox"]

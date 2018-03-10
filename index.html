@@ -7,9 +7,10 @@
 	<meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
 
 	<link rel="stylesheet" href="css/main.css" type="text/css"/>
+	<link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png">
 	<script src="js/custom.js"></script>
 	<head>
-		<title>Client Side</title>
+		<title>MarketExplorer</title>
 	</head>
 
 
@@ -45,10 +46,9 @@
 		                <fieldset>
 		                    <legend>SEARCH</legend>
 
-		                    <input type="hidden" name="page" value="1" id="search_param_page">
 		                    <input type="hidden" name="maxItem" value="8" id="search_param_maxItem">
 		                    <input type="hidden" name="sort" value="0" id="search_param_sort">
-				    		<input type="hidden" name="category" value="전체" id="search_param_category">
+				    		<input type="hidden" name="category[]" value="전체" id="search_param_category">
 
 		                    <div class="input-group input-group-xs">
 		                        <input class="form-control" type="text" name="query" value="" id="search_param_input" placeholder="Search..." maxlength="255" autocomplete="off">

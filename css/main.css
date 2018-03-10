@@ -1,4 +1,4 @@
-/* Global */
+﻿/* Global */
 span{
 	display: inline-block;
 	margin: auto;
@@ -138,8 +138,16 @@ li.tagged a{
 /* Article */
 /*** options */
 
+#section_options{
+    width: 1200px;
+}
+
+#advanced_option_selector .active{
+    font-weight: bold;
+}
+
 #advanced_option_selector{
-    width: 100%;
+    width: 1200px;
     padding: 5px;
     margin-bottom: 100px;
 }
@@ -152,13 +160,28 @@ li.tagged a{
     height: 20px;
 }
 
+#option_selector_category_labels a{
+    color: White;
+    font-size: 14px;
+}
+
+#option_selector_category_labels span{
+    margin: 5px;
+}
+
+#option_selector_error{
+    color: Red;
+    font-size: 10px;
+    font-weight: bold;
+}
+
 
 
 
 /*** section */
 #item_contents{
-    width: 80%;
-    margin: auto;
+    width: 1200px;
+    margin-left: auto;
 }
 
 /***** No Item */

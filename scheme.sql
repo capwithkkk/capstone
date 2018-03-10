@@ -17,8 +17,9 @@ CREATE TABLE product(
 	brand	varchar(256),
 	foreign key(category_id) references category(category_id),
 	primary key(pro_index),
-	unique(name,store,price)
-) CHARSET=utf8 COLLATE utf8_bin;
+	unique(name,store,price),
+	FULLTEXT (name, brand)
+) ENGINE=InnoDB CHARSET=utf8 COLLATE utf8_bin;
 
 CREATE TABLE parse_rule(
 	store    varchar(128)    not null,
@@ -58,6 +59,7 @@ CREATE TABLE parse_rule_extra(
 	is_inlink	integer,
 	primary key(store)
 ) CHARSET=utf8 COLLATE utf8_bin;
+
 CREATE TABLE category_convergence(
 	origin_name    varchar(128)    not null,
 	category	varchar(128),

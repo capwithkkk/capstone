@@ -19,16 +19,15 @@
     			</a>
     		</div>
             <div class="col-xs-4">
-                <span class="label label-default" id="category_label">카테고리 : <?=$category?></span>
+                <span class="label label-default" id="category_label">카테고리 : <?=$category[0]?></span>
                 <form id="search_form" action="search.php" onsubmit="setHTTPGetParam('search')" metohd="get">
                     <fieldset>
                         <legend>SEARCH</legend>
-                        <input type="hidden" name="page" value="1" id="search_param_page">
-                        <input type="hidden" name="maxItem" value="10" id="search_param_maxItem">
-                        <input type="hidden" name="sort" value="0" id="search_param_sort">
-                        <input type="hidden" name="category" value="<?= $category ?>" id="search_param_category">
+                        <input type="hidden" name="maxItem" value="<?=$maxItem?>" id="search_param_maxItem">
+                        <input type="hidden" name="sort" value="<?=$sort?>" id="search_param_sort">
+                        <input type="hidden" name="category[]" value="<?=$category[0]?>" id="search_param_category">
                         <div class="input-group input-group-sm">
-                            <input class="form-control" type="text" name="query" value="<?= $query ?>" id="search_param_input" placeholder="Search..." maxlength="255" autocomplete="off">
+                            <input class="form-control" type="text" name="query" value="<?=$query?>" id="search_param_input" placeholder="Search..." maxlength="255" autocomplete="off">
                             <span class="input-group-btn">
                                 <button id="search_button" class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
                             </span>
@@ -66,7 +65,22 @@
                     <div class="dropdown">
                         <label for="search_option_sort" class="col-xs-4">정렬옵션 :</label>
                         <div class="col-xs-4">
-                            <button class="btn dropdown-toggle" id="search_option_sort" type="button" data-toggle="dropdown" value="new_date">최신 등록순 <span class="caret"></span></button>
+                            <?php
+                                $dropdown_text = "N/A";
+                                switch($sort){
+                                    case "new_date":
+                                        $dropdown_text = "최신 등록순";
+                                        break;
+                                    case "low_price":
+                                        $dropdown_text = "낮은 가격순";
+                                        break;
+                                    case "high_price":
+                                        $dropdown_text = "높은 가격순";
+                                        break;
+
+                                }
+                            ?>
+                            <button class="btn dropdown-toggle" id="search_option_sort" type="button" data-toggle="dropdown" value="<?=$sort?>"><?=$dropdown_text?> <span class="caret"></span></button>
                             <ul class="dropdown-menu">
                                 <li><a href="javascript:void(0)" class="search_option_sort_item" title="new_date">최신 등록순</a></li>
                                 <li><a href="javascript:void(0)" class="search_option_sort_item" title="low_price">낮은 가격순</a></li>
@@ -79,7 +93,7 @@
                     <div class="dropdown">
                         <label for="search_option_maxItem" class="col-xs-4">페이지 당 표시 :</label>
                         <div class="col-xs-4">
-                            <button class="btn dropdown-toggle" id="search_option_maxItem" type="button" data-toggle="dropdown" value="8">8개 <span class="caret"></span></button>
+                            <button class="btn dropdown-toggle" id="search_option_maxItem" type="button" data-toggle="dropdown" value="<?=$maxItem?>"><?=$maxItem?>개 <span class="caret"></span></button>
                             <ul class="dropdown-menu">
                                 <li><a href="javascript:void(0)" class="search_option_maxItem_item" title="8">8개</a></li>
                                 <li><a href="javascript:void(0)" class="search_option_maxItem_item" title="16">16개</a></li>

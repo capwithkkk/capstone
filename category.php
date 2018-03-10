@@ -49,7 +49,7 @@
 
 
 
-    $rows = http_get_category();
+    $rows = http_get_category(null);
     $rows = $rows->fetchAll();
     foreach($rows as $row){
         if($row['parent_name'] === $row['category_name']){

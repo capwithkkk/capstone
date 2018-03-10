@@ -2,8 +2,8 @@
 
 
     <?php
-        if($page != null && $maxItem != null && $query != null && $sort != null){
-            $rows = http_print_prod(($page - 1) * $maxItem,$maxItem,$query,$sort,$category);
+        if($page != null && $maxItem != null && $query != null && $sort != null && $minPrice !== null && $maxPrice !== null && $minPrice <= $maxPrice ){
+            $rows = http_print_prod(($page - 1) * $maxItem,$maxItem,$query,$sort,$category,$minPrice,$maxPrice);
             ?><br><?php
             if($rows->rowCount() <= 0){
                 ?>
@@ -14,36 +14,55 @@
                 <?php
             }
             else{
+
+
                 ?>
                     <div id="section_options" class="container">
-                        <!-- <div id="advanced_option_selector" class="row">
+                        <div id="advanced_option_selector" class="row">
                             <span class="col-xs-12">
-                                <div class="list-group list-group-horizontal">
-                                    <span class="list-group-item active">카테고리:</span>
+                                <div class="list-group">
+                                    <span class="list-group-item active">카테고리 (최대 6개 까지 선택가능):</span>
                                 </div>
                                 <div id="option_selector_category_list" class="list-group list-group-horizontal">
-                                    <a href="javascript:;" class="list-group-item">카테고리1</a>
-                                    <a href="javascript:;" class="list-group-item">카테고리2</a>
-                                    <a href="javascript:;" class="list-group-item">카테고리3</a>
+                                    <?php
+                                        $category_rows = http_get_category($category);
+                                        $category_rows = $category_rows->fetchAll();
+                                        foreach($category_rows as $category_row){
+                                            $temp_category = $category_row['category_name'];
+                                            if($temp_category != "전체"){
+                                            $temp_id = $category_row['category_id'];
+                                                ?><a href="javascript:addAdvancedCategoryLabel('<?=$temp_category?>',<?=$temp_id?>);" class="list-group-item"><?=$temp_category?></a><?php
+                                            }
+                                        }
+                                    ?>
                                 </div>
                                 <br>
                                 <div id="option_selector_price_list" class="list-group list-group-horizontal">
-                                    <label class="list-group-item active" for="price_input_min">가격범위:</label>
-                                    <div class="list-group-item">
-                                        <span><input type="text" class="form-control input-sm" id="price_input_min"></span>
-                                        <span>~</span>
-                                        <span><input type="text" class="form-control input-sm" id="price_input_max"></span>
-                                    </div>
-                                    <label class="list-group-item active" for="product_input_name">브랜드/제품명:</label>
-                                    <div class="list-group-item">
-                                        <span><input type="text" class="form-control" id="price_input_min"></span>
-                                    </div>
-                                    <span>
-                                        <button id="option_selector_prodict_button" class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
-                                    </span>
+                                    <form id="advanced_option_form">
+                                        <input type="hidden" name="maxItem" value="<?=$maxItem?>" id="adv_search_param_maxItem">
+                                        <input type="hidden" name="sort" value="<?=$sort?>" id="adv_search_param_sort">
+                                        <label class="list-group-item active" for="price_input_min">가격범위:</label>
+                                        <div class="list-group-item">
+                                            <span><input type="text" name="minPrice" class="form-control input-sm number_only" id="price_input_min"></span>
+                                            <span>~</span>
+                                            <span><input type="text" name="maxPrice" class="form-control input-sm number_only" id="price_input_max"></span>
+                                        </div>
+                                        <label class="list-group-item active" for="product_input_name">제품명:</label>
+                                        <div class="list-group-item">
+                                            <span><input class="form-control" type="text" name="query" id="adv_search_param_input" placeholder="Search..." maxlength="255" autocomplete="off"></span>
+                                        </div>
+                                        <span>
+                                            <legend>SEARCH</legend>
+                                            <button id="option_selector_search_button" class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                                        </span>
+                                        <div id="option_selector_category_labels">
+                                        </div>
+                                        <span id="option_selector_error">
+                                        </span>
+                                    </form>
                                 </div>
                             </span>
-                        </div> -->
+                        </div>
                     </div>
                     <div id="item_contents" class="container">
                 <?php
@@ -57,7 +76,7 @@
                             <div>판매처 : <span class="content_store"><?=$row['store']?></span></div>
                             <?php
                                 $category_name = $row['category_name'];
-                                $category_url = "search.php?page=1&maxItem=$maxItem&sort=$sort&category=$category_name&query=$query"
+                                $category_url = "search.php?page=1&maxItem=$maxItem&sort=$sort&category%5B%5D=$category_name&query=$query"
                             ?>
                             <div>카테고리 : <a href="<?=$category_url?>" class="content_category"><?=$category_name?></a></div>
                         </span>
@@ -79,7 +98,7 @@
             ?>
             <div id="no_item">
                 <img id="image_forbidden" src="image/forbidden.png" alt="search">
-                <p>잘못된 키워드입니다. 다시 입력해주세요.</p>
+                <p>잘못된 요청입니다. 빠진 키워드나 필수 입력 사항이 있는지 확인하시고, 다시 입력해주세요.</p>
             </div>
             <?php
         }
