@@ -1,5 +1,6 @@
 import abc
 import time
+import urllib.parse
 from repeater import Repeater
 from insert import Database
 from selenium import webdriver
@@ -181,20 +182,19 @@ class ParserImpl(ParserInterface):
     def parse_to_list(self, driver: webdriver) -> []:
         rule_list = []
         try:
-
-            section = driver.find_element_by_xpath(self.parser_unit.section)
-            articles = section.find_elements_by_xpath(self.parser_unit.articles)
-
+            section = Repeater.repeat_function(driver.find_element_by_xpath,{self.parser_unit.section},StaleElementReferenceException,6)
+            articles = Repeater.repeat_function(section.find_elements_by_xpath,{self.parser_unit.articles},StaleElementReferenceException,6)
             for article in articles:
-                name0 = Repeater.repeat_function(article.find_element_by_xpath,{self.parser_unit.name},StaleElementReferenceException,2)
+                name0 = Repeater.repeat_function(article.find_element_by_xpath,{self.parser_unit.name},StaleElementReferenceException,6)
                 name = ParserImpl.determine_attr_val(name0, self.parser_unit.name_attr)
                 name = name.strip("\"\'\r\n")
-                url0 = Repeater.repeat_function(article.find_element_by_xpath,{self.parser_unit.url},StaleElementReferenceException,2)
+                url0 = Repeater.repeat_function(article.find_element_by_xpath,{self.parser_unit.url},StaleElementReferenceException,6)
                 url = ParserImpl.determine_attr_val(url0, self.parser_unit.url_attr)
-                pic_url0 = Repeater.repeat_function(article.find_element_by_xpath,{self.parser_unit.pic_url},StaleElementReferenceException,2)
+                pic_url0 = Repeater.repeat_function(article.find_element_by_xpath,{self.parser_unit.pic_url},StaleElementReferenceException,6)
                 pic_url = ParserImpl.determine_attr_val(pic_url0, self.parser_unit.pic_url_attr)
-                price0 = Repeater.repeat_function(article.find_element_by_xpath,{self.parser_unit.price},StaleElementReferenceException,2)
+                price0 = Repeater.repeat_function(article.find_element_by_xpath,{self.parser_unit.price},StaleElementReferenceException,6)
                 price = ParserImpl.determine_attr_val(price0, self.parser_unit.price_attr)
+                price = "".join(filter(lambda x: x.isdigit(), price))
                 if self.parser_unit.in_link:
                     #root = lhtml.fromstring(requests.get(url).text)
                     root = DriverHelper.instance().get_driver()
@@ -210,7 +210,6 @@ class ParserImpl(ParserInterface):
                     brand = ParserImpl.find_item_info(article, self.parser_unit.brand)
                 if brand is None or brand is "" or brand in "상품상세설명 참조":
                     brand = "N/A"
-
                 print("""
                     name    : %s
                     url     : %s
@@ -222,7 +221,8 @@ class ParserImpl(ParserInterface):
                       )
 
                 rule_list.append(Data(name, url, pic_url, price, category, brand))
-        except NoSuchElementException:
+        except NoSuchElementException as e:
+            ExceptionWriter.instance().append_exception(e)
             pass
         return rule_list
 
@@ -256,7 +256,7 @@ class ParserImpl(ParserInterface):
             empty_sub_category_name = "미분류"
             for i in range(len(loaded_categories)-1, -1, -1):
                 loaded_category_units = ParserImpl.out_from_xpath(loaded_categories[i], category_unit)
-                category = loaded_category_units[0].text.strip("()[]{} \r\n")
+                category = loaded_category_units[0].text.strip("[]{} \r\n")
                 if category is not "전체" and category in CategoryDict.instance().categories:
                     return category
                 else:
@@ -286,7 +286,7 @@ class ParserImpl(ParserInterface):
     # 출력 : htmlElement
     # 예외 : NoSuchElementException
     @staticmethod
-    def out_from_xpath(root, xpath: str) -> object:
+    def out_from_xpath(root, xpath: str) -> []:
         try:
             if isinstance(root, WebElement) or isinstance(root, WebDriver):
                 return root.find_elements_by_xpath(xpath)
@@ -369,13 +369,15 @@ class DriverHelper(SingletonInstance):
 
 # 클레스
 # MinerInterface 를 구현한 클레스이다. selenium webdriver를 이용하였다. limit 값은 사이트당 수집량의 사용자 정의 한계값이다.
-# 필드 : driver: webdriver, store: str, url: str, parser: ParserInterface, limit: int
+# 필드 : driver: webdriver, store: str, url: str, flag: int, parser: ParserInterface, limit: int, page: int
 class MinerImpl(MinerInterface):
 
-    def __init__(self, driver: webdriver, store: str, url: str, parser: ParserInterface, limit: int):
+    def __init__(self, driver: webdriver, store: str, url: str, flag: int, parser: ParserInterface, limit: int):
         self.store = store
         self.url = url
+        self.flag = flag
         self.limit = limit
+        self.page = 1
         if parser is None and store is not None:
             self.parser = MinerImpl.get_parser(self.store)
         else:
@@ -418,10 +420,11 @@ class MinerImpl(MinerInterface):
 
     # 프로시저
     # store, url, parser 를 초기화한다.
-    # 입력 : store: str, url: str, parser: ParserInterface
-    def set_store(self, store: str, url: str, parser: ParserInterface):
+    # 입력 : store: str, url: str, flag: int, parser: ParserInterface
+    def set_store(self, store: str, url: str, flag: int, parser: ParserInterface):
         self.store = store
         self.url = url
+        self.flag = flag
         self.parser = parser
 
     # 함수
@@ -434,10 +437,13 @@ class MinerImpl(MinerInterface):
     # 함수
     # MinerInterface 부터 Implement
     def do_next_page(self) -> bool:
-        page_element = self.get_next_button_element()
-        if page_element is None:
-            return False
-        self.driver.execute_script("arguments[0].click()", page_element)
+        if self.flag & 2 != 0:
+            page_element = self.get_next_button_element()
+            if page_element is None:
+                return False
+            self.driver.execute_script("arguments[0].click()", page_element)
+        else:
+            self.driver.get(self.get_pagination_url(self.page))
         return True
 
     # 함수
@@ -459,13 +465,38 @@ class MinerImpl(MinerInterface):
         Database.instance().make_insert_query(data.name, self.store, data.url, data.pic_url, data.price, CategoryDict.instance().categories[data.category], data.brand)
 
     # 프로시저
+    # '$keyword' 를 keyword로 치환.
+    # Search_init 메소드 대신 준비된 url 로 진입.
+    # 입력 : keyword: str
+    def substitute_keyword(self, keyword):
+        self.url = self.url.replace("$keyword", urllib.parse.quote(keyword))
+
+    # 함수
+    # '$page' 을 치환한 형태로, page 값에 따라 페이지가 념겨진 url 을 반환.
+    # 입력 : page : int
+    # 출력 : 페이지 값이 변경 된 URL
+    def get_pagination_url(self, page: int):
+        return self.url.replace("$page", str(page))
+
+    # 프로시저
+    # 드라이브를 초기 url 값에 따라 초기화 한다.
+    # 입력 : keyword: str, driver: webdriver
+    def init_drive(self, keyword):
+        if self.flag & 1 != 0:
+            self.substitute_keyword(keyword)
+            self.driver.get(self.get_pagination_url(1))
+        else:
+            self.driver.get(self.url)
+            self.search_init(keyword)
+
+    # 프로시저
     # 크롤링을 시작한다. pagination 이 끝날 때 까지 혹은 수집 상품 Data량이 limit 값을 초과할때 까지 무한 반복한다.
     # 입력 : keyword: str
     def mining(self, keyword: str):
         try:
+            self.init_drive(keyword)
             driver = self.driver
-            driver.get(self.url)
-            self.search_init(keyword)
+
         except WebDriverException as e:
             print("WebDriverException occurred during init process. "
                   "The site is may carrying out temporary- or regular inspection.")
@@ -504,3 +535,31 @@ class MinerImpl(MinerInterface):
                 print("WebDriverException occurred. The crawling has been postponed until next keyword routine")
                 ExceptionWriter.instance().append_exception(e)
                 break
+
+
+miner = MinerImpl(None, None, None, 0, None, 50)
+
+# name = "G마켓"
+# url = "http://www.gmarket.co.kr/"
+# flag = 0
+
+# name = "인터파크"
+# url = "http://shopping.interpark.com/shopSearch.do?q=$keyword"
+# flag = 1
+
+# name = "위메프"
+# url = "http://www.wemakeprice.com/"
+# flag = 0
+
+# name = "쿠팡"
+# url = "http://www.coupang.com/"
+# flag = 0
+
+name = "티몬"
+url = "http://www.ticketmonster.co.kr/"
+flag = 0
+
+
+parser = ParserImpl(name)
+miner.set_store(name, url, flag, parser)
+miner.mining("염색약")

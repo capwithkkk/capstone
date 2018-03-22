@@ -1,6 +1,7 @@
-from singleton import SingletonInstance
+﻿from singleton import SingletonInstance
 import datetime
 import traceback
+import sys
 
 
 class BaseWriter(SingletonInstance):
@@ -12,7 +13,7 @@ class BaseWriter(SingletonInstance):
         self.io_append(string)
 
     def io_append(self, string: str):
-        file = open(self.file,"a")
+        file = open(self.file,"a",encoding='utf8')
         file.write(string + "\n")
         file.close()
 
@@ -61,7 +62,7 @@ class SubstitutionTrialWriter(BaseWriter):
             self.io_write()
 
     def io_load(self):
-        file = open(self.file,"r")
+        file = open(self.file, "r", encoding='utf8')
         while True:
             line = file.readline()
             if not line:
@@ -70,7 +71,7 @@ class SubstitutionTrialWriter(BaseWriter):
         file.close()
 
     def io_write(self):
-        file = open(self.file, "w")
+        file = open(self.file, "w", encoding='utf8')
         file.truncate()
         for item in self.set:
             file.write(item + "\n")

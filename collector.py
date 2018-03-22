@@ -7,9 +7,10 @@ from log import ExceptionWriter, LogWriter
 
 class StoreInfo:
 
-    def __init__(self, store, url):
+    def __init__(self, store, url, flag):
         self.store = store
         self.url = url
+        self.flag = flag
         self.parser = ParserImpl(store)
 
 
@@ -52,12 +53,12 @@ class AbstractCollector(abc.ABC):
     def run(self):
         self.init_keyword()
         store_info_list = self.get_all_store_info()
-        miner = MinerImpl(None, None, None, None, 50)
+        miner = MinerImpl(None, None, None, 0, None, 50)
         while True:
             try:
                 keyword = self.choose_keyword()
                 for store_info in store_info_list:
-                    miner.set_store(store_info.store, store_info.url, store_info.parser)
+                    miner.set_store(store_info.store, store_info.url, store_info.flag, store_info.parser)
                     state_str = "store : " + store_info.store + ", and keyword : " + keyword.name + " and last priority : " + str(keyword.priority)
                     LogWriter.instance().append("MINING LOG : " + state_str)
                     miner.mining(keyword.name)
@@ -91,9 +92,9 @@ class BaseCollector(AbstractCollector):
 
     def get_all_store_info(self) -> []:
         store_list = []
-        stores = Database.instance().take_query("SELECT store,url FROM store_info WHERE flag = " + str(self.flag) + "")
+        stores = Database.instance().take_query("SELECT store,url,flag FROM store_info WHERE flag = " + str(self.flag) + "")
         for store in stores:
-            store_list.append(StoreInfo(store[0],store[1]))
+            store_list.append(StoreInfo(store[0],store[1],store[2]))
         return store_list
 
     def refresh_keyword(self,keyword:Keyword):
