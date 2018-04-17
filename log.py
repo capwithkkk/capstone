@@ -1,7 +1,6 @@
 ﻿from singleton import SingletonInstance
 import datetime
 import traceback
-import sys
 
 
 class BaseWriter(SingletonInstance):
@@ -13,7 +12,7 @@ class BaseWriter(SingletonInstance):
         self.io_append(string)
 
     def io_append(self, string: str):
-        file = open(self.file,"a",encoding='utf8')
+        file = open(self.file, "a", encoding='utf8')
         file.write(string + "\n")
         file.close()
 

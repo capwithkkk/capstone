@@ -1,0 +1,3 @@
+flag & 1 = On인 경우 keword_search script 스킵
+flag & 2 = On인 경우 pagination script 스킵
+flag & 4 = On인 경우 new page for category/brand script 스킵

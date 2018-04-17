@@ -1,7 +1,7 @@
 import pymysql
 import datetime
 from singleton import SingletonInstance
-
+from log import ExceptionWriter
 
 class Database(SingletonInstance):
 
@@ -18,8 +18,9 @@ class Database(SingletonInstance):
             print(sql)
             self.curs.execute(sql)
             self.conn.commit()
-        except pymysql.err.IntegrityError:
+        except pymysql.err.IntegrityError as e:
             print("INTEGRITY 에러 감지")
+            ExceptionWriter.instance().append_exception(e)
             pass
 
     def make_insert_query(self, name, store, url, pic_url, price, category, brand):
@@ -36,7 +37,7 @@ class Database(SingletonInstance):
             sql = 'DELETE FROM product WHERE name = ' + "'" + name + "'"
             self.curs.execute(sql)
             self.conn.commit()
-            self.make_insert_query(name, store, url, pic_url, price)
+            self.make_insert_query(name, store, url, pic_url, price, category, brand)
 
     def take_query(self, sql):
         try:
