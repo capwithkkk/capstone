@@ -1,1 +1,748 @@
-﻿
+﻿Initial Search failed on store : G마켓(2018-04-20 04:41:34)
+===========================================================
+
+Exceptions: ('no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="keyword"]"}\n  (Session info: headless chrome=65.0.3325.181)\n  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)', None, None) traceback : Traceback (most recent call last):
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 564, in mining
+    self.init_drive(keyword)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 557, in init_drive
+    self.search_init(keyword)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 493, in search_init
+    driver_element = self.get_query_input_element()
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 513, in get_query_input_element
+    return self.driver.find_element_by_xpath(self.parser.parser_unit.search)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 385, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 955, in find_element
+    'value': value})['value']
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="keyword"]"}
+  (Session info: headless chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)
+
+
+(2018-04-20 04:41:34)
+===========================================================
+
+Crawling failed on store : 11번가(2018-04-20 04:41:40)
+===========================================================
+
+Exceptions: ('no such session\n  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)', None, None) traceback : Traceback (most recent call last):
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 578, in mining
+    data_list = self.parser.parse_to_list(self.driver)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 241, in parse_to_list
+    root.get(url)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: no such session
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)
+
+
+(2018-04-20 04:41:40)
+===========================================================
+
+Crawling failed on store : 쿠팡(2018-04-20 04:41:52)
+===========================================================
+
+Exceptions: ('no such session\n  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)', None, None) traceback : Traceback (most recent call last):
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 578, in mining
+    data_list = self.parser.parse_to_list(self.driver)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 241, in parse_to_list
+    root.get(url)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: no such session
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)
+
+
+(2018-04-20 04:41:52)
+===========================================================
+
+StaleElementReferenceException on store : 티몬(2018-04-20 04:42:53)
+===========================================================
+
+Exceptions: () traceback : Traceback (most recent call last):
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 578, in mining
+    data_list = self.parser.parse_to_list(self.driver)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 243, in parse_to_list
+    category = Repeater.repeat_function(ParserImpl.find_category_info, (root, self.parser_unit.categories, self.parser_unit.category_core), StaleElementReferenceException, 6)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\repeater.py", line 31, in repeat_function
+    raise e
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\repeater.py", line 27, in repeat_function
+    out = func(*params)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 292, in find_category_info
+    raise StaleElementReferenceException
+selenium.common.exceptions.StaleElementReferenceException: Message: None
+
+
+(2018-04-20 04:42:53)
+===========================================================
+
+Initial Search failed on store : G마켓(2018-04-20 04:44:10)
+===========================================================
+
+Exceptions: ('no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="keyword"]"}\n  (Session info: headless chrome=65.0.3325.181)\n  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)', None, None) traceback : Traceback (most recent call last):
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 564, in mining
+    self.init_drive(keyword)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 557, in init_drive
+    self.search_init(keyword)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 493, in search_init
+    driver_element = self.get_query_input_element()
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 513, in get_query_input_element
+    return self.driver.find_element_by_xpath(self.parser.parser_unit.search)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 385, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 955, in find_element
+    'value': value})['value']
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="keyword"]"}
+  (Session info: headless chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)
+
+
+(2018-04-20 04:44:10)
+===========================================================
+
+Crawling failed on store : 11번가(2018-04-20 04:44:17)
+===========================================================
+
+Exceptions: ('no such session\n  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)', None, None) traceback : Traceback (most recent call last):
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 578, in mining
+    data_list = self.parser.parse_to_list(self.driver)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 241, in parse_to_list
+    root.get(url)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: no such session
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)
+
+
+(2018-04-20 04:44:17)
+===========================================================
+
+Crawling failed on store : 쿠팡(2018-04-20 04:44:33)
+===========================================================
+
+Exceptions: ('no such session\n  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)', None, None) traceback : Traceback (most recent call last):
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 578, in mining
+    data_list = self.parser.parse_to_list(self.driver)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 241, in parse_to_list
+    root.get(url)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: no such session
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)
+
+
+(2018-04-20 04:44:33)
+===========================================================
+
+StaleElementReferenceException on store : 위메프(2018-04-20 04:47:52)
+===========================================================
+
+Exceptions: () traceback : Traceback (most recent call last):
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 578, in mining
+    data_list = self.parser.parse_to_list(self.driver)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 243, in parse_to_list
+    category = Repeater.repeat_function(ParserImpl.find_category_info, (root, self.parser_unit.categories, self.parser_unit.category_core), StaleElementReferenceException, 6)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\repeater.py", line 31, in repeat_function
+    raise e
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\repeater.py", line 27, in repeat_function
+    out = func(*params)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 292, in find_category_info
+    raise StaleElementReferenceException
+selenium.common.exceptions.StaleElementReferenceException: Message: None
+
+
+(2018-04-20 04:47:52)
+===========================================================
+
+Initial Search failed on store : G마켓(2018-04-20 04:48:00)
+===========================================================
+
+Exceptions: ('no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="keyword"]"}\n  (Session info: headless chrome=65.0.3325.181)\n  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)', None, None) traceback : Traceback (most recent call last):
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 564, in mining
+    self.init_drive(keyword)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 557, in init_drive
+    self.search_init(keyword)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 493, in search_init
+    driver_element = self.get_query_input_element()
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 513, in get_query_input_element
+    return self.driver.find_element_by_xpath(self.parser.parser_unit.search)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 385, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 955, in find_element
+    'value': value})['value']
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="keyword"]"}
+  (Session info: headless chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)
+
+
+(2018-04-20 04:48:00)
+===========================================================
+
+Crawling failed on store : 11번가(2018-04-20 04:48:07)
+===========================================================
+
+Exceptions: ('no such session\n  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)', None, None) traceback : Traceback (most recent call last):
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 578, in mining
+    data_list = self.parser.parse_to_list(self.driver)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 241, in parse_to_list
+    root.get(url)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: no such session
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)
+
+
+(2018-04-20 04:48:07)
+===========================================================
+
+Crawling failed on store : 쿠팡(2018-04-20 04:48:18)
+===========================================================
+
+Exceptions: ('no such session\n  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)', None, None) traceback : Traceback (most recent call last):
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 578, in mining
+    data_list = self.parser.parse_to_list(self.driver)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 241, in parse_to_list
+    root.get(url)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: no such session
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)
+
+
+(2018-04-20 04:48:18)
+===========================================================
+
+StaleElementReferenceException on store : 티몬(2018-04-20 04:48:49)
+===========================================================
+
+Exceptions: () traceback : Traceback (most recent call last):
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 578, in mining
+    data_list = self.parser.parse_to_list(self.driver)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 243, in parse_to_list
+    category = Repeater.repeat_function(ParserImpl.find_category_info, (root, self.parser_unit.categories, self.parser_unit.category_core), StaleElementReferenceException, 6)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\repeater.py", line 31, in repeat_function
+    raise e
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\repeater.py", line 27, in repeat_function
+    out = func(*params)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 292, in find_category_info
+    raise StaleElementReferenceException
+selenium.common.exceptions.StaleElementReferenceException: Message: None
+
+
+(2018-04-20 04:48:49)
+===========================================================
+
+Initial Search failed on store : G마켓(2018-04-20 04:52:27)
+===========================================================
+
+Exceptions: ('no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="keyword"]"}\n  (Session info: headless chrome=65.0.3325.181)\n  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)', None, None) traceback : Traceback (most recent call last):
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 564, in mining
+    self.init_drive(keyword)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 557, in init_drive
+    self.search_init(keyword)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 493, in search_init
+    driver_element = self.get_query_input_element()
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 513, in get_query_input_element
+    return self.driver.find_element_by_xpath(self.parser.parser_unit.search)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 385, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 955, in find_element
+    'value': value})['value']
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="keyword"]"}
+  (Session info: headless chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)
+
+
+(2018-04-20 04:52:27)
+===========================================================
+
+Crawling failed on store : 11번가(2018-04-20 04:52:33)
+===========================================================
+
+Exceptions: ('no such session\n  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)', None, None) traceback : Traceback (most recent call last):
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 578, in mining
+    data_list = self.parser.parse_to_list(self.driver)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 241, in parse_to_list
+    root.get(url)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: no such session
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)
+
+
+(2018-04-20 04:52:33)
+===========================================================
+
+Crawling failed on store : 쿠팡(2018-04-20 04:52:45)
+===========================================================
+
+Exceptions: ('no such session\n  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)', None, None) traceback : Traceback (most recent call last):
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 578, in mining
+    data_list = self.parser.parse_to_list(self.driver)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 241, in parse_to_list
+    root.get(url)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: no such session
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)
+
+
+(2018-04-20 04:52:45)
+===========================================================
+
+StaleElementReferenceException on store : 위메프(2018-04-20 04:54:33)
+===========================================================
+
+Exceptions: () traceback : Traceback (most recent call last):
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 578, in mining
+    data_list = self.parser.parse_to_list(self.driver)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 243, in parse_to_list
+    category = Repeater.repeat_function(ParserImpl.find_category_info, (root, self.parser_unit.categories, self.parser_unit.category_core), StaleElementReferenceException, 6)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\repeater.py", line 31, in repeat_function
+    raise e
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\repeater.py", line 27, in repeat_function
+    out = func(*params)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 292, in find_category_info
+    raise StaleElementReferenceException
+selenium.common.exceptions.StaleElementReferenceException: Message: None
+
+
+(2018-04-20 04:54:33)
+===========================================================
+
+Initial Search failed on store : G마켓(2018-04-20 04:56:07)
+===========================================================
+
+Exceptions: ('no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="keyword"]"}\n  (Session info: headless chrome=65.0.3325.181)\n  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)', None, None) traceback : Traceback (most recent call last):
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 564, in mining
+    self.init_drive(keyword)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 557, in init_drive
+    self.search_init(keyword)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 493, in search_init
+    driver_element = self.get_query_input_element()
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 513, in get_query_input_element
+    return self.driver.find_element_by_xpath(self.parser.parser_unit.search)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 385, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 955, in find_element
+    'value': value})['value']
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="keyword"]"}
+  (Session info: headless chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)
+
+
+(2018-04-20 04:56:07)
+===========================================================
+
+Initial Search failed on store : 위메프(2018-04-20 04:56:12)
+===========================================================
+
+Exceptions: ('unknown error: session deleted because of page crash\nfrom tab crashed\n  (Session info: headless chrome=65.0.3325.181)\n  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)', None, None) traceback : Traceback (most recent call last):
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 564, in mining
+    self.init_drive(keyword)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 557, in init_drive
+    self.search_init(keyword)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 495, in search_init
+    driver_element.submit()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webelement.py", line 91, in submit
+    self._execute(Command.SUBMIT_ELEMENT)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webelement.py", line 628, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: session deleted because of page crash
+from tab crashed
+  (Session info: headless chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)
+
+
+(2018-04-20 04:56:12)
+===========================================================
+
+Crawling failed on store : 옥션(2018-04-20 04:56:12)
+===========================================================
+
+Exceptions: ('unknown error: session deleted because of page crash\nfrom tab crashed\n  (Session info: headless chrome=65.0.3325.181)\n  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)', None, None) traceback : Traceback (most recent call last):
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 578, in mining
+    data_list = self.parser.parse_to_list(self.driver)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 247, in parse_to_list
+    category = Repeater.repeat_function(ParserImpl.find_category_info, (article, self.parser_unit.categories, self.parser_unit.category_core), StaleElementReferenceException, 6)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\repeater.py", line 27, in repeat_function
+    out = func(*params)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 294, in find_category_info
+    loaded_category_units = ParserImpl.out_from_xpath(loaded_categories[i], category_unit)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 332, in out_from_xpath
+    return root.find_elements_by_xpath(xpath)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webelement.py", line 381, in find_elements_by_xpath
+    return self.find_elements(by=By.XPATH, value=xpath)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webelement.py", line 662, in find_elements
+    {"using": by, "value": value})['value']
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webelement.py", line 628, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: session deleted because of page crash
+from tab crashed
+  (Session info: headless chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)
+
+
+(2018-04-20 04:56:12)
+===========================================================
+
+Initial Search failed on store : 11번가(2018-04-20 04:56:12)
+===========================================================
+
+Exceptions: ('unknown error: session deleted because of page crash\nfrom unknown error: cannot determine loading status\nfrom tab crashed\n  (Session info: headless chrome=65.0.3325.181)\n  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)', None, None) traceback : Traceback (most recent call last):
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 564, in mining
+    self.init_drive(keyword)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 557, in init_drive
+    self.search_init(keyword)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 495, in search_init
+    driver_element.submit()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webelement.py", line 91, in submit
+    self._execute(Command.SUBMIT_ELEMENT)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webelement.py", line 628, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: session deleted because of page crash
+from unknown error: cannot determine loading status
+from tab crashed
+  (Session info: headless chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)
+
+
+(2018-04-20 04:56:12)
+===========================================================
+
+Initial Search failed on store : 쿠팡(2018-04-20 04:56:19)
+===========================================================
+
+Exceptions: ('no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="headerSearchKeyword"]"}\n  (Session info: headless chrome=65.0.3325.181)\n  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)', None, None) traceback : Traceback (most recent call last):
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 564, in mining
+    self.init_drive(keyword)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 557, in init_drive
+    self.search_init(keyword)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 493, in search_init
+    driver_element = self.get_query_input_element()
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 513, in get_query_input_element
+    return self.driver.find_element_by_xpath(self.parser.parser_unit.search)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 385, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 955, in find_element
+    'value': value})['value']
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="headerSearchKeyword"]"}
+  (Session info: headless chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)
+
+
+(2018-04-20 04:56:19)
+===========================================================
+
+Initial Search failed on store : 티몬(2018-04-20 04:56:20)
+===========================================================
+
+Exceptions: ('unknown error: session deleted because of page crash\nfrom tab crashed\n  (Session info: headless chrome=65.0.3325.181)\n  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)', None, None) traceback : Traceback (most recent call last):
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 564, in mining
+    self.init_drive(keyword)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 556, in init_drive
+    self.driver.get(self.url)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: session deleted because of page crash
+from tab crashed
+  (Session info: headless chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)
+
+
+(2018-04-20 04:56:20)
+===========================================================
+
+Element was not found on : 인터파크(2018-04-20 04:56:20)
+===========================================================
+
+Exceptions: ('no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class="productSortingList listViewType"]"}\n  (Session info: headless chrome=65.0.3325.181)\n  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)', None, None) traceback : Traceback (most recent call last):
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 217, in parse_to_list
+    section = Repeater.repeat_function(driver.find_element_by_xpath, (self.parser_unit.section,), StaleElementReferenceException, 6)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\repeater.py", line 27, in repeat_function
+    out = func(*params)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 385, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 955, in find_element
+    'value': value})['value']
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class="productSortingList listViewType"]"}
+  (Session info: headless chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)
+
+
+(2018-04-20 04:56:20)
+===========================================================
+
+Initial Search failed on store : G마켓(2018-04-20 04:59:30)
+===========================================================
+
+Exceptions: ('no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="keyword"]"}\n  (Session info: headless chrome=65.0.3325.181)\n  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)', None, None) traceback : Traceback (most recent call last):
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 565, in mining
+    self.init_drive(keyword)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 558, in init_drive
+    self.search_init(keyword)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 494, in search_init
+    driver_element = self.get_query_input_element()
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 514, in get_query_input_element
+    return self.driver.find_element_by_xpath(self.parser.parser_unit.search)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 385, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 955, in find_element
+    'value': value})['value']
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="keyword"]"}
+  (Session info: headless chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)
+
+
+(2018-04-20 04:59:30)
+===========================================================
+
+Crawling failed on store : 11번가(2018-04-20 04:59:36)
+===========================================================
+
+Exceptions: ('no such session\n  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)', None, None) traceback : Traceback (most recent call last):
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 579, in mining
+    data_list = self.parser.parse_to_list(self.driver)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 241, in parse_to_list
+    root.get(url)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: no such session
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)
+
+
+(2018-04-20 04:59:36)
+===========================================================
+
+Crawling failed on store : 쿠팡(2018-04-20 04:59:47)
+===========================================================
+
+Exceptions: ('no such session\n  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)', None, None) traceback : Traceback (most recent call last):
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 579, in mining
+    data_list = self.parser.parse_to_list(self.driver)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 241, in parse_to_list
+    root.get(url)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: no such session
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)
+
+
+(2018-04-20 04:59:47)
+===========================================================
+
+Crawling failed on store : 티몬(2018-04-20 05:00:03)
+===========================================================
+
+Exceptions: ('unknown error: session deleted because of page crash\nfrom tab crashed\n  (Session info: headless chrome=65.0.3325.181)\n  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)', None, None) traceback : Traceback (most recent call last):
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 579, in mining
+    data_list = self.parser.parse_to_list(self.driver)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 220, in parse_to_list
+    name0 = Repeater.repeat_function(article.find_element_by_xpath, (self.parser_unit.name,), StaleElementReferenceException, 6)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\repeater.py", line 27, in repeat_function
+    out = func(*params)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webelement.py", line 351, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webelement.py", line 645, in find_element
+    {"using": by, "value": value})['value']
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webelement.py", line 628, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: session deleted because of page crash
+from tab crashed
+  (Session info: headless chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)
+
+
+(2018-04-20 05:00:03)
+===========================================================
+
+Crawling failed on store : 위메프(2018-04-20 05:00:07)
+===========================================================
+
+Exceptions: ('unknown error: session deleted because of page crash\nfrom unknown error: cannot determine loading status\nfrom tab crashed\n  (Session info: headless chrome=65.0.3325.181)\n  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)', None, None) traceback : Traceback (most recent call last):
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 579, in mining
+    data_list = self.parser.parse_to_list(self.driver)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 226, in parse_to_list
+    price = ParserImpl.determine_attr_val(price0, self.parser_unit.price_attr)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 208, in determine_attr_val
+    return driver.text
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webelement.py", line 76, in text
+    return self._execute(Command.GET_ELEMENT_TEXT)['value']
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webelement.py", line 628, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: session deleted because of page crash
+from unknown error: cannot determine loading status
+from tab crashed
+  (Session info: headless chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)
+
+
+(2018-04-20 05:00:07)
+===========================================================
+
+Initial Search failed on store : G마켓(2018-04-20 05:02:57)
+===========================================================
+
+Exceptions: ('no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="keyword"]"}\n  (Session info: headless chrome=65.0.3325.181)\n  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)', None, None) traceback : Traceback (most recent call last):
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 565, in mining
+    self.init_drive(keyword)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 558, in init_drive
+    self.search_init(keyword)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 494, in search_init
+    driver_element = self.get_query_input_element()
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 514, in get_query_input_element
+    return self.driver.find_element_by_xpath(self.parser.parser_unit.search)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 385, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 955, in find_element
+    'value': value})['value']
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="keyword"]"}
+  (Session info: headless chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)
+
+
+(2018-04-20 05:02:57)
+===========================================================
+
+Crawling failed on store : 11번가(2018-04-20 05:03:03)
+===========================================================
+
+Exceptions: ('no such session\n  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)', None, None) traceback : Traceback (most recent call last):
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 579, in mining
+    data_list = self.parser.parse_to_list(self.driver)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 241, in parse_to_list
+    root.get(url)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: no such session
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)
+
+
+(2018-04-20 05:03:03)
+===========================================================
+
+Crawling failed on store : 쿠팡(2018-04-20 05:03:12)
+===========================================================
+
+Exceptions: ('no such session\n  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)', None, None) traceback : Traceback (most recent call last):
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 579, in mining
+    data_list = self.parser.parse_to_list(self.driver)
+  File "C:\Users\admin\IdeaProjects\py-myweb_crawler\crawler.py", line 241, in parse_to_list
+    root.get(url)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: no such session
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64)
+
+
+(2018-04-20 05:03:12)
+===========================================================
+

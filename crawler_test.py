@@ -7,9 +7,9 @@ miner = MinerImpl(None, None, None, 0, None, 50)
 # url = "http://www.gmarket.co.kr/"
 # flag = 0
 
-# name = "11번가"
-# url = "http://www.11st.co.kr/"
-# flag = 4
+name = "11번가"
+url = "http://www.11st.co.kr/"
+flag = 0
 
 # name = "옥션"
 # url = "http://www.auction.co.kr/"
@@ -27,11 +27,11 @@ miner = MinerImpl(None, None, None, 0, None, 50)
 # url = "http://www.coupang.com/"
 # flag = 0
 
-name = "티몬"
-url = "http://www.ticketmonster.co.kr/"
-flag = 4
+# name = "티몬"
+# url = "http://www.ticketmonster.co.kr/"
+# flag = 4
 
 
 parser = ParserImpl(name, flag)
 miner.set_store(name, url, flag, parser)
-miner.mining("염색약")
+miner.mining("티셔츠")

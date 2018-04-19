@@ -220,7 +220,6 @@ class ParserImpl(ParserInterface):
                 name0 = Repeater.repeat_function(article.find_element_by_xpath, (self.parser_unit.name,), StaleElementReferenceException, 6)
                 name = ParserImpl.determine_attr_val(name0, self.parser_unit.name_attr)
                 name = name.strip("\"\'\r\n	 ")
-
                 pic_url0 = Repeater.repeat_function(article.find_element_by_xpath, (self.parser_unit.pic_url,), StaleElementReferenceException, 6)
                 pic_url = ParserImpl.determine_attr_val(pic_url0, self.parser_unit.pic_url_attr)
                 price0 = Repeater.repeat_function(article.find_element_by_xpath, (self.parser_unit.price,), StaleElementReferenceException, 6)
@@ -228,6 +227,12 @@ class ParserImpl(ParserInterface):
                 price = "".join(filter(lambda x: x.isdigit(), price))
                 url0 = Repeater.repeat_function(article.find_element_by_xpath, (self.parser_unit.url,), StaleElementReferenceException,6)
                 url = ParserImpl.determine_attr_val(url0, self.parser_unit.url_attr)
+                print("""
+                    name    : %s
+                    url     : %s
+                    pic_url : %s
+                    price   : %s""" % (name, url, pic_url, price)
+                      )
                 if self.parser_unit.in_link:
                     if self.flag & 4 != 0:
                         root = lhtml.fromstring(requests.get(url).content)
@@ -239,21 +244,17 @@ class ParserImpl(ParserInterface):
                     brand = ParserImpl.find_item_info(root, self.parser_unit.brand)
                     brand = brand.strip("\"\'\r\n	 ")
                 else:
-                    category = Repeater.repeat_function(ParserImpl.find_category_info, (root, self.parser_unit.categories, self.parser_unit.category_core), StaleElementReferenceException, 6)
+                    category = Repeater.repeat_function(ParserImpl.find_category_info, (article, self.parser_unit.categories, self.parser_unit.category_core), StaleElementReferenceException, 6)
                     brand = ParserImpl.find_item_info(article, self.parser_unit.brand)
                 if brand is None or brand is "" or "상품상세설명" in brand or '상세페이지' in brand:
                     brand = "N/A"
-                print("""
-                    name    : %s
-                    url     : %s
-                    pic_url : %s
-                    price   : %s
-                    category: %s
+                print("""                    category: %s
                     brand   : %s
-                    """ % (name, url, pic_url, price, category, brand)
+                    """ % (category, brand)
                       )
                 rule_list.append(Data(name, url, pic_url, price, category, brand))
         except NoSuchElementException as e:
+            print("Element was not found")
             ExceptionWriter.instance().append("Element was not found on : " + self.store)
             ExceptionWriter.instance().append_exception(e)
             pass
@@ -268,7 +269,7 @@ class ParserImpl(ParserInterface):
         try:
             elem = ParserImpl.out_from_xpath(driver, parse_rule)
             text = elem[0].text
-            text = text.strip("()[]{}	 \r\n")
+            text = text.strip("()[]{}\"\'\r\n	 ")
             return text
         except IndexError:
             return "N/A"
@@ -405,6 +406,9 @@ class DriverHelper(SingletonInstance):
     def get_driver(self):
         return self.driver
 
+    def destroy(self):
+        self.driver.close()
+
 
 # 클레스
 # MinerInterface 를 구현한 클레스이다. selenium webdriver를 이용하였다. limit 값은 사이트당 수집량의 사용자 정의 한계값이다.
@@ -434,8 +438,26 @@ class MinerImpl(MinerInterface):
     def create_driver() -> webdriver:
         option = webdriver.ChromeOptions()
         option.add_argument('headless')
+        option.add_argument('window-size=1920x1080')
+        option.add_argument("disable-gpu")
         option.add_argument("--disable-extensions")
-        prefs = {"profile.managed_default_content_settings.images":2}
+        option.add_argument("--no-sandbox")
+        option.add_argument("--disable-impl-side-painting")
+        option.add_argument("--disable-setuid-sandbox")
+        option.add_argument("--disable-seccomp-filter-sandbox")
+        option.add_argument("--disable-breakpad")
+        option.add_argument("--disable-client-side-phishing-detection")
+        option.add_argument("--disable-cast")
+        option.add_argument("--disable-cast-streaming-hw-encoding")
+        option.add_argument("--disable-cloud-import")
+        option.add_argument("--disable-popup-blocking")
+        option.add_argument("--ignore-certificate-errors")
+        option.add_argument("--disable-session-crashed-bubble")
+        option.add_argument("--disable-ipv6")
+        option.add_argument("--allow-http-screen-capture")
+        option.add_argument("--start-maximized")
+        option.add_argument("--log-level=2")
+        prefs = {"profile.managed_default_content_settings.images": 2}
         option.add_experimental_option("prefs", prefs)
         return webdriver.Chrome(chrome_options=option, executable_path="./chrome/chromedriver")
 
@@ -483,6 +505,7 @@ class MinerImpl(MinerInterface):
             self.driver.execute_script("arguments[0].click()", page_element)
         else:
             self.driver.get(self.get_pagination_url(self.page))
+        print("Next Page")
         return True
 
     # 함수
@@ -498,8 +521,10 @@ class MinerImpl(MinerInterface):
                 return None
             else:
                 return self.driver.find_element_by_xpath(self.parser.parser_unit.button)
-        except NoSuchElementException:
+        except NoSuchElementException as e:
+            print("Pagination Button was not found")
             ExceptionWriter.instance().append("Pagination Button was not found on : " + self.store)
+            ExceptionWriter.instance().append_exception(e)
             return None
 
     # 함수
@@ -539,6 +564,7 @@ class MinerImpl(MinerInterface):
         try:
             self.init_drive(keyword)
         except WebDriverException as e:
+            print("Initial Search failed")
             ExceptionWriter.instance().append("Initial Search failed on store : " + self.store)
             ExceptionWriter.instance().append_exception(e)
             return
@@ -562,6 +588,7 @@ class MinerImpl(MinerInterface):
                             self.insert_to_db(data)
                             limit_count += 1
                         except (KeyError, Error) as e:
+                            print("Insertion failed")
                             ExceptionWriter.instance().append("Insertion failed on store : " + self.store)
                             ExceptionWriter.instance().append_exception(e)
                 if not self.do_next_page():
@@ -570,8 +597,15 @@ class MinerImpl(MinerInterface):
                     break
                 page += 1
                 page_parsing_flag = False
-            except StaleElementReferenceException:
-                time.sleep(0.1)
+            except StaleElementReferenceException as e:
+                if alert_count < 6:
+                    alert_count += 1
+                    time.sleep(0.1)
+                else:
+                    print("StaleElementReferenceException occurred. The crawling has been postponed until next keyword routine")
+                    ExceptionWriter.instance().append("StaleElementReferenceException on store : " + self.store)
+                    ExceptionWriter.instance().append_exception(e)
+                    break
             except UnexpectedAlertPresentException as e:
                 if alert_count < 6:
                     alert_count += 1
@@ -580,11 +614,16 @@ class MinerImpl(MinerInterface):
                     print("UnexpectedAlertPresentException occurred. The crawling has been postponed until next keyword routine")
                     ExceptionWriter.instance().append("UnexpectedAlertProcess failed on store : " + self.store)
                     ExceptionWriter.instance().append_exception(e)
+                    break
             except WebDriverException as e:
                 print("WebDriverException occurred. The crawling has been postponed until next keyword routine")
                 ExceptionWriter.instance().append("Crawling failed on store : " + self.store)
                 ExceptionWriter.instance().append_exception(e)
                 break
+
+    def close(self):
+        self.driver.close()
+        DriverHelper.instance().destroy()
 
 
 

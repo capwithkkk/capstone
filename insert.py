@@ -2,6 +2,8 @@ import pymysql
 import datetime
 from singleton import SingletonInstance
 from log import ExceptionWriter
+from synchronize import synchronized
+
 
 class Database(SingletonInstance):
 
@@ -13,6 +15,7 @@ class Database(SingletonInstance):
                                charset = 'utf8')
         self.curs = self.conn.cursor()
 
+    @synchronized
     def make_query(self, sql):
         try:
             print(sql)
@@ -23,6 +26,7 @@ class Database(SingletonInstance):
             ExceptionWriter.instance().append_exception(e)
             pass
 
+    @synchronized
     def make_insert_query(self, name, store, url, pic_url, price, category, brand):
         time = datetime.datetime.now()
         nowdays = time + datetime.timedelta(days=30)
@@ -39,6 +43,7 @@ class Database(SingletonInstance):
             self.conn.commit()
             self.make_insert_query(name, store, url, pic_url, price, category, brand)
 
+    @synchronized
     def take_query(self, sql):
         try:
             self.curs.execute(sql)
@@ -46,6 +51,7 @@ class Database(SingletonInstance):
         except pymysql.err.IntegrityError:
             pass
 
+    @synchronized
     def take_exe(self,sql):
         try:
             self.curs.execute(sql)

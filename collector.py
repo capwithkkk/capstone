@@ -2,12 +2,13 @@ import abc,random,heapq,time
 from insert import Database
 from crawler import MinerImpl
 from crawler import ParserImpl
-from crawler import ParserUnit
 from crawler import DriverHelper
 from repeater import Repeater
-from selenium.common.exceptions import StaleElementReferenceException
+from selenium.common.exceptions import StaleElementReferenceException,WebDriverException
 from log import ExceptionWriter, LogWriter, BaseWriter
+from concurrent.futures.thread import ThreadPoolExecutor
 from Lib.queue import Queue
+import signal
 
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
@@ -51,39 +52,54 @@ class AbstractCollector(abc.ABC):
         raise NotImplementedError()
 
     @abc.abstractclassmethod
-    def refresh_keyword(self,keyword:Keyword):
+    def refresh_keyword(self, keyword:Keyword):
         raise NotImplementedError()
 
     @abc.abstractclassmethod
     def update_keyword_list(self):
         raise NotImplementedError()
 
-    def run(self):
+    @abc.abstractclassmethod
+    def interrupt(self):
+        raise NotImplementedError()
+
+    def run(self, max_thread: int=1):
         self.init_keyword()
         store_info_list = self.get_all_store_info()
-        miner = MinerImpl(None, None, None, 0, None, 50)
+        signal.signal(signal.SIGINT, self.interrupt)
         while True:
-            try:
-                keyword = self.choose_keyword()
-                for store_info in store_info_list:
-                    miner.set_store(store_info.store, store_info.url, store_info.flag, store_info.parser)
-                    state_str = "store : " + store_info.store + ", and keyword : " + keyword.name + " and last priority : " + str(keyword.priority)
-                    LogWriter.instance().append("MINING LOG : " + state_str)
-                    miner.mining(keyword.name)
-                self.nice(keyword)
-                self.refresh_keyword(keyword)
-                self.update_keyword_list()
-            except RuntimeError as e:
-                ExceptionWriter.instance().append_exception(e)
-                pass
+            with ThreadPoolExecutor(max_workers=max_thread) as executor:
+                try:
+                    keyword = self.choose_keyword()
+                    for store_info in store_info_list:
+                        executor.submit(AbstractCollector.miner_routine, store_info, keyword)
+                    self.nice(keyword)
+                    self.refresh_keyword(keyword)
+                    self.update_keyword_list()
+                except RuntimeError as e:
+                    ExceptionWriter.instance().append_exception(e)
+                    pass
+
+    @staticmethod
+    def miner_routine(store_info, keyword):
+        miner = MinerImpl(None, None, None, 0, None, 50)
+        miner.set_store(store_info.store, store_info.url, store_info.flag, store_info.parser)
+        state_str = "store : " + store_info.store + ", and keyword : " + keyword.name + " and last priority : " + str(keyword.priority)
+        LogWriter.instance().append("MINING LOG : " + state_str)
+        miner.mining(keyword.name)
+        miner.close()
+        del miner
 
 
 class BaseCollector(AbstractCollector):
 
-    def __init__(self,flag):
+    def __init__(self):
         self.priority_queue = []
         self.update_required = []
-        self.flag = flag
+
+    def __del__(self):
+        del self.priority_queue
+        del self.update_required
 
     def init_keyword(self):
         keywords = Database.instance().take_query("SELECT * FROM keyword")
@@ -98,9 +114,13 @@ class BaseCollector(AbstractCollector):
         random.seed(a=None)
         keyword.priority += random.randint(320, 450)
 
+    def interrupt(self):
+        print("process end. (SIGINT)")
+        self.__del__()
+
     def get_all_store_info(self) -> []:
         store_list = []
-        stores = Database.instance().take_query("SELECT store,url,flag FROM store_info WHERE flag = " + str(self.flag) + "")
+        stores = Database.instance().take_query("SELECT store,url,flag FROM store_info")
         for store in stores:
             store_list.append(StoreInfo(store[0],store[1],store[2]))
         return store_list
@@ -119,7 +139,9 @@ class BaseCollector(AbstractCollector):
 
 class CategoryCollector:
 
-    def __init__(self, store: str, category_link: str, sub_categories: str, section: str, articles: str, url: str, url_attr: str, categories: str):
+    max_query_for_category = 3
+
+    def __init__(self, store: str, category_link: str, sub_categories: str, section: str, articles: str, url: str, url_attr: str, categories: str, limit: int=5):
         self.store = store
         self.sub_categories = sub_categories
         self.category_link = category_link
@@ -130,49 +152,81 @@ class CategoryCollector:
         self.categories = categories
         self.button = '.'
         self.is_button_activator = False
+        self.limit = limit
+
+    def __del__(self):
+        DriverHelper.instance().destroy()
 
     def set_button(self, button):
         self.button = button
         self.is_button_activator = True
 
-    def collect_category(self, init_page: str, init_category: str, init_layer: int, real_category: str):
+    def set_limit(self, limit):
+        self.limit = limit
+
+    def collect_category(self, init_page: str, init_category: str, init_layer: int, real_category: str, is_replace_mode: bool):
         print("START COLEECT")
         queue = Queue()
         queue.put([init_page,init_category, init_layer])
         driver = DriverHelper.instance().get_driver()
+        CategoryCollector.add_category_convergence(init_category,real_category, is_replace_mode)
         while queue.empty() is False:
-            elem = queue.get()
-            page = elem[0]
-            category = elem[1]
-            layer= elem[2]
-            CategoryCollector.add_category_convergence(category,real_category)
-            print("페이지 조회 : " + page)
-            if 'javascript:' in page:
-                driver.execute_script(page)
-            else:
-                driver.get(page)
-            section = Repeater.repeat_function(driver.find_element_by_xpath,(self.section,),StaleElementReferenceException,6)
-            articles = Repeater.repeat_function(section.find_elements_by_xpath,(self.articles,),StaleElementReferenceException,6)
-            url0 = Repeater.repeat_function(articles[0].find_element_by_xpath,(self.url,),StaleElementReferenceException,6)
-            url = ParserImpl.determine_attr_val(url0, self.url_attr)
-            driver.get(url)
-            categories = Repeater.repeat_function(driver.find_elements_by_xpath,(self.categories,),StaleElementReferenceException,6)
-            if len(categories) > layer+1:
-                button = Repeater.repeat_function(categories[layer+1].find_element_by_xpath,(self.button,),StaleElementReferenceException,6)
-                if self.is_button_activator is True:
-                    driver.execute_script("arguments[0].click()", button)
-                    BaseWriter.instance("./temp").append(driver.page_source)
-                sub_categories = Repeater.repeat_function(categories[layer+1].find_elements_by_xpath,(self.sub_categories,),StaleElementReferenceException,6)
-                for sub_category in sub_categories:
-                    page_elem = Repeater.repeat_function(sub_category.find_element_by_xpath,(self.category_link,),StaleElementReferenceException,6)
-                    page = page_elem.get_attribute("href")
-                    category = page_elem.get_attribute("innerHTML").strip("[]{} \r\n")
-                    queue.put([page,category,layer+1])
-                    print("큐 삽입 : " + category + ", layer : " + str(layer+1))
+            try:
+                elem = queue.get()
+                page = elem[0]
+                layer= elem[2]
+                print("페이지 조회 : " + page)
+                if 'javascript:' in page:
+                    driver.execute_script(page)
+                else:
+                    driver.get(page)
+                section = Repeater.repeat_function(driver.find_element_by_xpath,(self.section,), StaleElementReferenceException,6)
+                articles = Repeater.repeat_function(section.find_elements_by_xpath,(self.articles,), StaleElementReferenceException,6)
+            except WebDriverException:
+                continue
+            unit = 0
+            while True:
+                try:
+                    url0 = Repeater.repeat_function(articles[unit].find_element_by_xpath,(self.url,), StaleElementReferenceException,6)
+                    url = ParserImpl.determine_attr_val(url0, self.url_attr)
+                    driver.get(url)
+                    categories = Repeater.repeat_function(driver.find_elements_by_xpath,(self.categories,),StaleElementReferenceException,6)
+                    if len(categories) > layer+1:
+                        button = Repeater.repeat_function(categories[layer+1].find_element_by_xpath,(self.button,),StaleElementReferenceException,6)
+                        if self.is_button_activator is True:
+                            driver.execute_script("arguments[0].click()", button)
+                        sub_categories = Repeater.repeat_function(categories[layer+1].find_elements_by_xpath,(self.sub_categories,),StaleElementReferenceException,6)
+                        for sub_category in sub_categories:
+                            page_elem = Repeater.repeat_function(sub_category.find_element_by_xpath,(self.category_link,),StaleElementReferenceException,6)
+                            page = page_elem.get_attribute("href")
+                            category = page_elem.get_attribute("innerHTML").strip("[]{}\r\n 		").replace("<em>", "").replace("</em>", "")
+                            CategoryCollector.add_category_convergence(category, real_category, is_replace_mode)
+                            category_list = category.split("/")
+                            for subcategory in category_list:
+                                CategoryCollector.add_category_convergence(subcategory, real_category, is_replace_mode)
+                            if layer < self.limit-1:
+                                queue.put([page,category,layer+1])
+                                print("큐 삽입 : " + category + ", layer : " + str(layer+1))
+                    break
+                except WebDriverException as e:
+                    if unit > CategoryCollector.max_query_for_category:
+                        break
+                    else:
+                        unit += 1
 
     @staticmethod
-    def add_category_convergence(name, real_category):
+    def add_category_convergence(name, real_category, is_replace: bool):
         print("수집 : " + name + "->" + real_category)
-        Database.instance().make_query("INSERT INTO `category_convergence` (`origin_name`, `category`) VALUES ('" + name + "', '" + real_category + "');")
+        if is_replace:
+            Database.instance().make_query("REPLACE INTO `category_convergence` (`origin_name`, `category`) VALUES ('" + name + "', '" + real_category + "');")
+        else:
+            Database.instance().make_query("INSERT INTO `category_convergence` (`origin_name`, `category`) VALUES ('" + name + "', '" + real_category + "');")
 
+    @staticmethod
+    def spliter_insert():
+        categories = Database.instance().take_query("SELECT * FROM `category_convergence` WHERE origin_name LIKE '%/%'")
+        for category in categories:
+            category_list = category[0].split("/")
+            for subcategory in category_list:
+                Database.instance().make_query("INSERT INTO `category_convergence` (`origin_name`, `category`) VALUES ('" + subcategory + "', '" + category[1] + "');")
 

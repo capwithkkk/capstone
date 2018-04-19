@@ -1,6 +1,7 @@
+import threading
 
 class SingletonInstance:
-    __instance = None
+    __instance = threading.local()
 
     @classmethod
     def __getInstance(cls):

@@ -28,16 +28,21 @@ class LogWriter(BaseWriter):
     def append(self, string: str):
         date = datetime.datetime.now()
         date_str_form = date.strftime('%Y-%m-%d %H:%M:%S')
-        self.io_append(string + "(" + date_str_form + ")\n===============================================\n")
+        self.io_append(string + "(" + date_str_form + ")")
 
 
-class ExceptionWriter(LogWriter):
+class ExceptionWriter(BaseWriter):
 
     def __init__(self):
         BaseWriter.__init__(self, "./Exceptions.txt")
 
     def append_exception(self, exception: Exception):
         self.append("Exceptions: " + str(exception.args) + " traceback : " + traceback.format_exc() + "\n")
+
+    def append(self, string: str):
+        date = datetime.datetime.now()
+        date_str_form = date.strftime('%Y-%m-%d %H:%M:%S')
+        self.io_append(string + "(" + date_str_form + ")\n===========================================================\n")
 
 
 class SubstitutionTrialWriter(BaseWriter):
