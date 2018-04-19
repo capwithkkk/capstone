@@ -1,0 +1,74 @@
+CREATE TABLE parse_rule_extra(
+	store    varchar(128)    not null,
+	categories	varchar(128),
+	category_core	varchar(128),
+	brand   	 varchar(128),
+	is_inlink	integer,
+	primary key(store)
+) CHARSET=utf8 COLLATE utf8_bin;
+
+
+
+REPLACE INTO parse_rule_extra VALUES(
+'G마켓',
+'//*[@class="location-navi"]/ul/li',
+'a',
+'//*[@id="vip-tab_detail"]/*[@class="vip-detailarea_productinfo"]/*[@class="table_productinfo"][1]/tbody/tr[th = "브랜드"]/td',
+1
+);
+
+REPLACE INTO parse_rule_extra VALUES(
+'11번가',
+'//*[@class="location_wrap"]/div',
+'button',
+'//*[@id="tabProductInfo"]/*[@class="prdc_detail_table"]/tbody/tr[th = "브랜드"]/td',
+1
+);
+
+REPLACE INTO parse_rule_extra VALUES(
+'옥션',
+'*[@class="layout_left"]/*[@class="item_title_info"]/*[@class="category"]/a',
+'.',
+'*[@class="layout_left"]/*[@class="item_title_info"]/*[@class="item_title_wrap"]/*[@class="promotion"]/*[@class="pmtxt"]',
+0
+);
+
+REPLACE INTO parse_rule_extra VALUES(
+'인터파크',
+'//ul[@class="location"]/li',
+'a',
+'//*[@id="productInfoProvideNotification"]/*[@class="infoContent noline"]/dl[dt = "브랜드"]/dd',
+1
+);
+
+REPLACE INTO parse_rule_extra VALUES(
+'위메프',
+'//*[@class="section-navigation"]/div',
+'ul[@class="action-select"]',
+'null',
+1
+);
+
+REPLACE INTO parse_rule_extra VALUES(
+'쿠팡',
+'//*[@id="breadcrumb"]/li',
+'*[@class="breadcrumb-link"]',
+'null',
+1
+);
+
+REPLACE INTO parse_rule_extra VALUES(
+'티몬',
+'//*[@class="path_nav"]/div',
+'a',
+'null',
+1
+);
+
+REPLACE INTO parse_rule_extra VALUES(
+'GS SHOP',
+'//*[@id="breadcrumb"]/*[class="item"]',
+'*[@class="hoverline"]',
+'null',
+1
+);

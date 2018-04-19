@@ -1,24 +1,50 @@
 ﻿g마켓:
 
-categories: //*[@class="location-navi"]/ul/li
-category_core: a
-brand : //*[@id="vip-tab_detail"]/*[@class="vip-detailarea_productinfo"]/*[@class="table_productinfo"][1]/tbody/tr[th = "브랜드"]/td
+categories: '//*[@class="location-navi"]/ul/li'
+category_core: 'a'
+brand : '//*[@id="vip-tab_detail"]/*[@class="vip-detailarea_productinfo"]/*[@class="table_productinfo"][1]/tbody/tr[th = "브랜드"]/td'
 onlink : 1
 
 
 11번가:
 
-
-categories: //*[@id="wrapBody"]/*[@class="location_wrap"]/div
-category_core: button[@class="arrow"]
-brand : //*[@id="tabProductInfo"]/*[@class="prdc_detail_table"]/tbody/tr[th = "브랜드"]/td
+categories: '//*[@id="wrapBody"]/*[@class="location_wrap"]/div'
+category_core: 'button[@class="arrow"]'
+brand : '//*[@id="tabProductInfo"]/*[@class="prdc_detail_table"]/tbody/tr[th = "브랜드"]/td'
 onlink : 1
 
 
 옥션:
 
-
-categories: *[@class="layout_left"]/*[@class="item_title_info"]/*[@class="category"]/a
-category_core: .
-brand: *[@class="layout_left"]/*[@class="item_title_info"]/*[@class="item_title_wrap"]/*[@class="promotion"]/*[@class="pmtxt"]
+categories: '*[@class="layout_left"]/*[@class="item_title_info"]/*[@class="category"]/a'
+category_core: '.'
+brand: '*[@class="layout_left"]/*[@class="item_title_info"]/*[@class="item_title_wrap"]/*[@class="promotion"]/*[@class="pmtxt"]'
 onlink : 0
+
+인터파크:
+
+categories: '//ul[@class="location"]/li'
+category_core: 'a'
+brand: '//*[@id="productInfoProvideNotification"]/*[@class="infoContent noline"]/dl[dt = "브랜드"]/dd'
+onlink : 1
+
+
+위메프:
+categories: '//*[@id="breadcrumb"]/li'
+category_core: 'ul[@class="action-select"]'
+brand: 'null'
+onlink : 1
+
+
+쿠팡:
+categories: '//*[@class="section-navigation"]/li'
+category_core: '*[@class="breadcrumb-link"]'
+brand: 'null'
+onlink : 1
+
+
+티몬:
+categories: '//*[@class="path_nav"]/div'
+category_core: 'a'
+brand: 'null'
+onlink : 1

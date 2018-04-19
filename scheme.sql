@@ -70,7 +70,7 @@ CREATE TABLE category_convergence(
 
 
 
-INSERT INTO parse_rule VALUES(
+REPLACE INTO parse_rule VALUES(
 "G마켓",
 '//*[@id="keyword"]',
 '//*[@id="searchListItems"]',
@@ -88,7 +88,7 @@ null
 );
 
 
-INSERT INTO parse_rule VALUES(
+REPLACE INTO parse_rule VALUES(
 "옥션",
 '//*[@id="txtKeyword"]',
 '//*[@id="ucItemList_listview"]',
@@ -106,17 +106,17 @@ null
 );
 
 
-INSERT INTO parse_rule VALUES(
+REPLACE INTO parse_rule VALUES(
 '11번가',
 '//*[@id="AKCKwd"]',
-'//*[@id="product_listing"]/div/*[@class="total_listing_wrap"]/*[@class="tt_listbox"]',
+'//*[@id="product_listing"]//ul',
 'li',
-'*[@class="total_listitem"]/*[@class="list_info"]/*[@class="info_tit"]/a',
-'*[@class="total_listitem"]/*[@class="list_info"]/*[@class="info_tit"]/a',
-'*[@class="total_listitem"]/*[@class="photo_wrap"]/a/img',
-'*[@class="total_listitem"]/*[@class="list_price"]/*[@class="price_box"]/*[@class="price_detail"]/strong',
-'//*[@id="list_paging"]/span/strong/following::a[contains(@onclick,"goPageNum")][1]',
-null,
+'div//img[@class="lazy"]',
+'div//a[@data-log-actionid-label="product"]',
+'div//img[@class="lazy"]',
+'div//strong[@class="sale_price"]',
+'//*[@id="list_paging"]/span/strong/following::a[contains(@onclick,"페이지")][1]',
+'alt',
 'href',
 'data-original',
 null
@@ -124,12 +124,90 @@ null
 );
 
 
-INSERT INTO store_info VALUES("G마켓","http://www.gmarket.co.kr/",0);
-INSERT INTO store_info VALUES("11번가","http://www.11st.co.kr/",0);
-INSERT INTO store_info VALUES("옥션","http://www.auction.co.kr/",0);
+REPLACE INTO parse_rule VALUES(
+'인터파크',
+null,
+'//*[@class="productSortingList listViewType"]',
+'div/ul/li[@class="goods  "]',
+'*[@class="info"]/*[@class="name"]',
+'*[@class="info"]/*[@class="name"]',
+'*[@class="imgBox"]/a/img',
+'*[@class="priceArea"]/*[@class="price"]/a/*[@class="won"]/strong',
+'//*[@class="pagingWrap"]/*[@class="nextBox active"]/a[1]',
+null,
+'href',
+'src',
+null
+
+);
 
 
-INSERT INTO parse_rule_extra VALUES(
+REPLACE INTO parse_rule VALUES(
+'위메프',
+'//*[@id="searchKeyword"]',
+'//*[@id="search_deal_area"]',
+'li',
+'span/a/*[@class="box_desc"]/*[@class="tit_desc"]',
+'span/a',
+'span/a/*[@class="box_thumb"]/img',
+'span/a/*[@class="box_desc"]/*[@class="txt_info"]/*[@class="price"]/*[@class="sale"]',
+null,
+null,
+'href',
+'src',
+null
+
+);
+
+REPLACE INTO parse_rule VALUES(
+'쿠팡',
+'//*[@id="headerSearchKeyword"]',
+'//*[@id="productList"]',
+'li',
+'a/*[@class="search-product-wrap"]/*[@class="descriptions"]/*[@class="descriptions-inner"]/*[@class="name"]',
+'*[@class="search-product-link"]',
+'a/*[@class="search-product-wrap"]/*[@class="image"]/img',
+'a/*[@class="search-product-wrap"]/*[@class="descriptions"]/*[@class="descriptions-inner"]/*[@class="price-area"]/*[@class="price-wrap"]//*[@class="price-value"]',
+'//*[@class="search-pagination"]/a[@class="btn-next"]',
+null,
+'href',
+'src',
+null
+
+);
+
+
+REPLACE INTO parse_rule VALUES(
+'티몬',
+'//*[@id="top_srch"]',
+'//*[@id="_resultDeals"]',
+'li',
+'*[@class="deal_item_anchor"]/*[@class="deal_item_body"]/*[@class="deal_item_body_top"]/strong',
+'*[@class="deal_item_anchor"]',
+'*[@class="deal_item_anchor"]/*[@class="deal_item_thumb"]/img',
+'*[@class="deal_item_anchor"]/*[@class="deal_item_body"]/*[@class="deal_item_body_middle"]/*[@class="deal_item_price"]/em',
+null,
+null,
+'href',
+'src',
+null
+
+);
+
+
+REPLACE INTO store_info VALUES("G마켓","http://www.gmarket.co.kr/",0);
+REPLACE INTO store_info VALUES("11번가","http://www.11st.co.kr/",0);
+REPLACE INTO store_info VALUES("옥션","http://www.auction.co.kr/",0);
+REPLACE INTO store_info VALUES("인터파크","http://shopping.interpark.com/shopSearch.do?q=$keyword",5);
+REPLACE INTO store_info VALUES("위메프","http://www.wemakeprice.com/",4);
+REPLACE INTO store_info VALUES("쿠팡","http://www.coupang.com/",0);
+REPLACE INTO store_info VALUES("티몬","http://www.ticketmonster.co.kr/",4);
+
+
+
+
+
+REPLACE INTO parse_rule_extra VALUES(
 'G마켓',
 '//*[@class="location-navi"]/ul/li',
 'a',
@@ -137,18 +215,50 @@ INSERT INTO parse_rule_extra VALUES(
 1
 );
 
-INSERT INTO parse_rule_extra VALUES(
+REPLACE INTO parse_rule_extra VALUES(
 '11번가',
-'//*[@id="wrapBody"]/*[@class="location_wrap"]/div',
+''//*[@class="location_wrap"]/div'',
 'button',
 '//*[@id="tabProductInfo"]/*[@class="prdc_detail_table"]/tbody/tr[th = "브랜드"]/td',
 1
 );
 
-INSERT INTO parse_rule_extra VALUES(
+REPLACE INTO parse_rule_extra VALUES(
 '옥션',
 '*[@class="layout_left"]/*[@class="item_title_info"]/*[@class="category"]/a',
 '.',
 '*[@class="layout_left"]/*[@class="item_title_info"]/*[@class="item_title_wrap"]/*[@class="promotion"]/*[@class="pmtxt"]',
 0
+);
+
+REPLACE INTO parse_rule_extra VALUES(
+'인터파크',
+'//ul[@class="location"]/li',
+'a',
+'//*[@id="productInfoProvideNotification"]/*[@class="infoContent noline"]/dl[dt = "브랜드"]/dd',
+1
+);
+
+REPLACE INTO parse_rule_extra VALUES(
+'위메프',
+'//*[@class="page-navigation"]/*[@class="select-list-group"]',
+'*[@class="action-select"]',
+'null',
+1
+);
+
+REPLACE INTO parse_rule_extra VALUES(
+'쿠팡',
+'//*[@id="breadcrumb"]/li',
+'*[@class="breadcrumb-link"]',
+'null',
+1
+);
+
+REPLACE INTO parse_rule_extra VALUES(
+'티몬',
+'//*[@class="path_nav"]/div',
+'a',
+'null',
+1
 );

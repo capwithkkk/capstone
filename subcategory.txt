@@ -1,0 +1,30 @@
+g마켓:
+
+categories : //*[@class="location-navi"]/ul/li
+
+sub_categories : div[@class="loc-catewrap uxerollover"]/*[@class="layer_loc-cate"]/a
+category_link  : "."
+
+홈의 layer : 0
+
+
+
+
+11번가:
+
+categories : //*[@id="wrapBody"]/*[@class="location_wrap"]/div
+
+sub_categories : div//ul/li
+category_link : a
+
+홈의 layer : -1
+
+
+옥션:
+
+categories : //*[@class="loc"]/*[@class="category_wrap"]
+
+sub_categories : *[@class="categorylayer"]/*[@class="categorylayerin"]/child::ul/li
+category_link : a
+
+홈의 layer : -1

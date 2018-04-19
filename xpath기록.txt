@@ -1,4 +1,7 @@
-﻿G마켓:
+﻿== 오픈마켓 계열 ==
+
+G마켓:
+
 search: //*[@id="keyword"]
 section: //*[@id="searchListItems"]
 articles: li
@@ -11,9 +14,6 @@ name_attr: null
 url_attr: href
 pic_url_attr: src
 price_attr: null
-
-
-
 
 옥션:
 
@@ -30,19 +30,113 @@ url_attr: href
 pic_url_attr: data-original
 price_attr: null
 
-
-
 11번가:
 
 search: //*[@id="AKCKwd"]
-section: //*[@class="plus_prd"]/*[@class="total_listing_wrap"]/*[@class="tt_listbox"]
+section: //*[@id="product_listing"]//ul
 articles: li
-name: *[@class="total_listitem"]/*[@class="list_info"]/*[@class="info_tit"]/a
-url: *[@class="total_listitem"]/*[@class="list_info"]/*[@class="info_tit"]/a
-pic_url: *[@class="total_listitem"]/*[@class="photo_wrap"]/a/img
-price: *[@class="total_listitem"]/*[@class="list_price"]/*[@class="price_box"]/*[@class="price_detail"]/strong
-button: //*[@id="list_paging"]/span/strong/following::a[contains(@onclick,"goPageNum")][1]
+name: div//img[@class="lazy"]
+url: div//a[@data-log-actionid-label="product"]
+pic_url: div//img[@class="lazy"]
+price: div//strong[@class="sale_price"]
+button: //*[@id="list_paging"]/span/strong/following::a[contains(@onclick,"페이지")][1]
 name_attr: null
 url_attr: href
 pic_url_attr: data-original
 price_attr: null
+
+
+인터파크:
+
+search: null
+section: //*[@class="productSortingList listViewType"]
+articles: div/ul/li[@class="goods  "]
+name: *[@class="info"]/*[@class="name"]
+url: *[@class="info"]/*[@class="name"]
+pic_url: *[@class="imgBox"]/a/img
+price: *[@class="priceArea"]/*[@class="price"]/a/*[@class="won"]/strong
+button: //*[@class="pagingWrap"]/*[@class="nextBox active"]/a[1]
+name_attr: null
+url_attr: href
+pic_url_attr: src
+price_attr: null
+
+
+== 소셜 커머스 계열 ==
+
+
+위메프:
+
+search: //*[@id="searchKeyword"]
+section: //*[@id="search_deal_area"]
+articles: li
+name: span/a/*[@class="box_desc"]/*[@class="tit_desc"]
+url: span/a
+pic_url: span/a/*[@class="box_thumb"]/img
+price: span/a/*[@class="box_desc"]/*[@class="txt_info"]/*[@class="price"]/*[@class="sale"]
+button: null
+name_attr: null
+url_attr: href
+pic_url_attr: src
+price_attr: null
+
+
+쿠팡:
+
+search: //*[@id="headerSearchKeyword"]
+section: //*[@id="productList"]
+articles: li
+name: a/*[@class="search-product-wrap"]/*[@class="descriptions"]/*[@class="descriptions-inner"]/*[@class="name"]
+url: *[@class="search-product-link"]
+pic_url: a/*[@class="search-product-wrap"]/*[@class="image"]/img
+price: a/*[@class="search-product-wrap"]/*[@class="descriptions"]/*[@class="descriptions-inner"]/*[@class="price-area"]/*[@class="price-wrap"]//*[@class="price-value"]
+button: //*[@class="search-pagination"]/a[@class="btn-next"]
+name_attr: null
+url_attr: href
+pic_url_attr: src
+price_attr: null
+
+
+티몬:
+
+search: //*[@id="top_srch"]
+section: //*[@id="_resultDeals"]
+articles: li
+name: *[@class="deal_item_anchor"]/*[@class="deal_item_body"]/*[@class="deal_item_body_top"]/strong
+url: *[@class="deal_item_anchor"]
+pic_url: *[@class="deal_item_anchor"]/*[@class="deal_item_thumb"]/img
+price: *[@class="deal_item_anchor"]/*[@class="deal_item_body"]/*[@class="deal_item_body_middle"]/*[@class="deal_item_price"]/em
+button: null
+name_attr: null
+url_attr: href
+pic_url_attr: src
+price_attr: null
+
+
+== 클로즈드 마켓 계열 ==
+
+GS SHOP:
+
+search: //*[@id="gnb_tq"]
+section: //*[@id="searchPrdList"]/*[@class="prd-list"]/ul
+articles: li
+name: *[@class="prd-item"]/*[@class="prd-info"]/*[@class="prd-name"]
+url: *[@class="prd-item"]
+pic_url: *[@class="prd-item"]/*[@class="prd-img"]/img
+price: *[@class="prd-item"]/*[@class="prd-info"]/*[@class="price-info"]/*[@class="price"]/*[@class="set-price"]/strong
+button: //*[@id="small-pg-ctrl"]/*[@class="gui-btn small icon next"]
+name_attr: null
+url_attr: href
+pic_url_attr: src
+price_attr: null
+
+이마트몰:
+아이쇼핑:
+
+
+== 통합 비교사이트 계열 (사이트 개수가 너무 많은 관계로 제외) ==
+
+다나와:
+네이버 지식쇼핑:
+
+
