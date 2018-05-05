@@ -5,7 +5,6 @@ class ParsingRule:
 
     @staticmethod
     def parse_wildcard_id_selector(string: str) -> str:
-        target_id = ""
         id = string.index("#")
 
         print(string)
@@ -26,11 +25,7 @@ class ParsingRule:
         for substring in strings[1:-1]:
             out += tag+"[id*=\"" + substring + "\"]"+conc + ","
 
-        out += tag+"[id$=\"" + substring + "\"]"+conc + ","
-
         return out
 
-    def __init__(self):
-        parseDict = []
 
 

@@ -7,7 +7,7 @@ from repeater import Repeater
 from selenium.common.exceptions import StaleElementReferenceException,WebDriverException
 from log import ExceptionWriter, LogWriter, BaseWriter
 from concurrent.futures.thread import ThreadPoolExecutor
-from Lib.queue import Queue
+from queue import Queue
 import signal
 
 import os

@@ -6,6 +6,10 @@ __pycache__/
 # C extensions
 *.so
 
+#driver
+chrome/
+phantomjs/
+
 # Distribution / packaging
 .Python
 env/

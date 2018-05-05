@@ -1,5 +1,5 @@
 import time
-from Lib.types import TracebackType
+from types import TracebackType
 
 
 class Repeater:

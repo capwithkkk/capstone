@@ -149,7 +149,7 @@ class CategoryConverger(SingletonInstance):
     # 출력 : str[]
     @staticmethod
     def category_split(name: str) -> []:
-        return str.split(" << ")
+        return name.split(" << ")
 
     # 함수
     # 데이터베이스의 임시카테고리를 limit 만큼 추출하여 이에 해당되는 상품을 전부 치환한다.
@@ -162,12 +162,14 @@ class CategoryConverger(SingletonInstance):
             category_id = category[0]
             sub_categories = CategoryConverger.category_split(category[1])
             for sub_category in sub_categories:
+                print("검사대상 : " + sub_category)
                 if sub_category is not "미분류":
                     converted_category = self.substitute_category(sub_category)
                     if converted_category is not None:
+                        print("치환대상 : " + converted_category)
                         target_id = CategoryDict.instance().categories[converted_category]
-                        Database.instance().make_query("UPDATE product SET category_id = " + target_id + " WHERE category_id = " + category_id)
-                        Database.instance().make_query("DELETE FROM category WHERE category_id = " + category_id)
+                        Database.instance().make_query("UPDATE product SET category_id = " + str(target_id) + " WHERE category_id = " + str(category_id))
+                        Database.instance().make_query("DELETE FROM category WHERE category_id = " + str(category_id))
                         modification_count += 1
                         break
 
@@ -289,6 +291,7 @@ class ParserImpl(ParserInterface):
             loaded_categories = ParserImpl.out_from_xpath(driver, categories)
             empty_sub_category_name = "미분류"
             if len(loaded_categories) < 2:
+                print("No Category found.")
                 raise StaleElementReferenceException
             for i in range(len(loaded_categories)-1, -1, -1):
                 loaded_category_units = ParserImpl.out_from_xpath(loaded_categories[i], category_unit)
@@ -436,30 +439,31 @@ class MinerImpl(MinerInterface):
     # 출력 : selenium webdriver
     @staticmethod
     def create_driver() -> webdriver:
-        option = webdriver.ChromeOptions()
-        option.add_argument('headless')
-        option.add_argument('window-size=1920x1080')
-        option.add_argument("disable-gpu")
-        option.add_argument("--disable-extensions")
-        option.add_argument("--no-sandbox")
-        option.add_argument("--disable-impl-side-painting")
-        option.add_argument("--disable-setuid-sandbox")
-        option.add_argument("--disable-seccomp-filter-sandbox")
-        option.add_argument("--disable-breakpad")
-        option.add_argument("--disable-client-side-phishing-detection")
-        option.add_argument("--disable-cast")
-        option.add_argument("--disable-cast-streaming-hw-encoding")
-        option.add_argument("--disable-cloud-import")
-        option.add_argument("--disable-popup-blocking")
-        option.add_argument("--ignore-certificate-errors")
-        option.add_argument("--disable-session-crashed-bubble")
-        option.add_argument("--disable-ipv6")
-        option.add_argument("--allow-http-screen-capture")
-        option.add_argument("--start-maximized")
-        option.add_argument("--log-level=2")
-        prefs = {"profile.managed_default_content_settings.images": 2}
-        option.add_experimental_option("prefs", prefs)
-        return webdriver.Chrome(chrome_options=option, executable_path="./chrome/chromedriver")
+        # option = webdriver.ChromeOptions()
+        # option.add_argument('headless')
+        # option.add_argument('window-size=1920x1080')
+        # option.add_argument("disable-gpu")
+        # option.add_argument("--disable-extensions")
+        # option.add_argument("--no-sandbox")
+        # option.add_argument("--disable-impl-side-painting")
+        # option.add_argument("--disable-setuid-sandbox")
+        # option.add_argument("--disable-seccomp-filter-sandbox")
+        # option.add_argument("--disable-breakpad")
+        # option.add_argument("--disable-client-side-phishing-detection")
+        # option.add_argument("--disable-cast")
+        # option.add_argument("--disable-cast-streaming-hw-encoding")
+        # option.add_argument("--disable-cloud-import")
+        # option.add_argument("--disable-popup-blocking")
+        # option.add_argument("--ignore-certificate-errors")
+        # option.add_argument("--disable-session-crashed-bubble")
+        # option.add_argument("--disable-ipv6")
+        # option.add_argument("--allow-http-screen-capture")
+        # option.add_argument("--start-maximized")
+        # option.add_argument("--log-level=2")
+        # prefs = {"profile.managed_default_content_settings.images": 2}
+        # option.add_experimental_option("prefs", prefs)
+        # return webdriver.Chrome(chrome_options=option, executable_path="./chrome/chromedriver")
+        return webdriver.PhantomJS(executable_path="phantomjs/phantomjs")
 
     # 함수
     # store 이름과 flag 설정을 통해 파셔 객체를 생성한다
@@ -598,7 +602,8 @@ class MinerImpl(MinerInterface):
                 page += 1
                 page_parsing_flag = False
             except StaleElementReferenceException as e:
-                if alert_count < 6:
+                if alert_count < 2:
+                    print("StaleElementWait!.")
                     alert_count += 1
                     time.sleep(0.1)
                 else:

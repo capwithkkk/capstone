@@ -8,9 +8,9 @@ from synchronize import synchronized
 class Database(SingletonInstance):
 
     def __init__(self):
-        self.conn = pymysql.connect(host = 'localhost',
-                               user = 'admin',
-                               password = 'admin',
+        self.conn = pymysql.connect(host = '119.205.221.27',
+                               user = 'kang',
+                               password = 'UJ9ImOvgRCkdffWX',
                                db = 'capstone',
                                charset = 'utf8')
         self.curs = self.conn.cursor()
