@@ -6,13 +6,14 @@ from insert import Database
 from selenium import webdriver
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.remote.webdriver import WebDriver
-from selenium.common.exceptions import StaleElementReferenceException, NoSuchElementException, UnexpectedAlertPresentException, WebDriverException
+from selenium.common.exceptions import StaleElementReferenceException, NoSuchElementException, UnexpectedAlertPresentException, WebDriverException, NoSuchWindowException
 from singleton import SingletonInstance
 from pymysql.err import Error
 import lxml.html as lhtml
 import requests
 from lxml.html import HtmlElement
 from log import SubstitutionTrialWriter, ExceptionWriter, LogWriter
+import random
 
 
 # 클레스
@@ -241,12 +242,20 @@ class ParserImpl(ParserInterface):
                     else:
                         root = DriverHelper.instance().get_driver()
                         root.get(url)
-                        url = DriverHelper.instance().get_driver().current_url
-                    category = Repeater.repeat_function(ParserImpl.find_category_info, (root, self.parser_unit.categories, self.parser_unit.category_core), StaleElementReferenceException, 6)
+                        url2 = DriverHelper.instance().get_driver().current_url
+                        if url2 is not "about:blank":
+                            url = url2
+                    try:
+                        category = Repeater.repeat_function(ParserImpl.find_category_info, (root, self.parser_unit.categories, self.parser_unit.category_core), StaleElementReferenceException, 6)
+                    except StaleElementReferenceException:
+                        continue
                     brand = ParserImpl.find_item_info(root, self.parser_unit.brand)
                     brand = brand.strip("\"\'\r\n	 ")
                 else:
-                    category = Repeater.repeat_function(ParserImpl.find_category_info, (article, self.parser_unit.categories, self.parser_unit.category_core), StaleElementReferenceException, 6)
+                    try:
+                        category = Repeater.repeat_function(ParserImpl.find_category_info, (article, self.parser_unit.categories, self.parser_unit.category_core), StaleElementReferenceException, 6)
+                    except StaleElementReferenceException:
+                        continue
                     brand = ParserImpl.find_item_info(article, self.parser_unit.brand)
                 if brand is None or brand is "" or "상품상세설명" in brand or '상세페이지' in brand:
                     brand = "N/A"
@@ -404,6 +413,7 @@ class MinerInterface(abc.ABC):
 class DriverHelper(SingletonInstance):
 
     def __init__(self):
+        self.num = random.randrange(1,1000)
         self.driver = MinerImpl.create_driver()
 
     def get_driver(self):

@@ -1,4 +1,4 @@
 from collector import BaseCollector
 
 collector = BaseCollector()
-collector.run(4)
+collector.run(6)

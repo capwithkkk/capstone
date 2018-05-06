@@ -1,4 +1,4 @@
-import abc,random,heapq,time
+﻿import abc,random,heapq,time
 from insert import Database
 from crawler import MinerImpl
 from crawler import ParserImpl
@@ -88,7 +88,7 @@ class AbstractCollector(abc.ABC):
         LogWriter.instance().append("MINING LOG : " + state_str)
         miner.mining(keyword.name)
         miner.close()
-        del miner
+        # del miner
 
 
 class BaseCollector(AbstractCollector):
@@ -114,7 +114,7 @@ class BaseCollector(AbstractCollector):
         random.seed(a=None)
         keyword.priority += random.randint(320, 450)
 
-    def interrupt(self):
+    def interrupt(self, signum, frame):
         print("process end. (SIGINT)")
         self.__del__()
 
