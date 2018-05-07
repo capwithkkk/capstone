@@ -1,17 +1,24 @@
-﻿import abc,random,heapq,time
+﻿import abc,random,heapq,time,copyreg,types
 from insert import Database
 from crawler import MinerImpl
 from crawler import ParserImpl
 from crawler import DriverHelper
 from repeater import Repeater
 from selenium.common.exceptions import StaleElementReferenceException,WebDriverException
-from log import ExceptionWriter, LogWriter, BaseWriter
+from log import ExceptionWriter, LogWriter
 from concurrent.futures.thread import ThreadPoolExecutor
 from queue import Queue
 import signal
-
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
+
+def _pickle_method(m):
+    if m.im_self is None:
+        return getattr, (m.im_class, m.im_func.func_name)
+    else:
+        return getattr, (m.im_self, m.im_func.func_name)
+
+copyreg.pickle(types.MethodType, _pickle_method)
 
 
 class StoreInfo:
@@ -60,34 +67,51 @@ class AbstractCollector(abc.ABC):
         raise NotImplementedError()
 
     @abc.abstractclassmethod
-    def interrupt(self):
+    def interrupt(self, signum, frame):
+        raise NotImplementedError()
+
+    @abc.abstractclassmethod
+    def get_future_list(self) -> []:
         raise NotImplementedError()
 
     def run(self, max_thread: int=1):
         self.init_keyword()
         store_info_list = self.get_all_store_info()
         signal.signal(signal.SIGINT, self.interrupt)
+        signal.signal(signal.SIGTERM, self.interrupt)
+        executor = ThreadPoolExecutor(max_workers=max_thread)
+        future_list = self.get_future_list()
         while True:
-            with ThreadPoolExecutor(max_workers=max_thread) as executor:
-                try:
-                    keyword = self.choose_keyword()
-                    for store_info in store_info_list:
-                        executor.submit(AbstractCollector.miner_routine, store_info, keyword)
-                    self.nice(keyword)
-                    self.refresh_keyword(keyword)
-                    self.update_keyword_list()
-                except RuntimeError as e:
-                    ExceptionWriter.instance().append_exception(e)
-                    pass
+            try:
+                keyword = self.choose_keyword()
+                for store_info in store_info_list:
+                    while len(future_list) >= max_thread:
+                        for future in future_list:
+                            if future.done() and (future.result() is None or future.result() is 0):
+                                print("Result param : " + str(future.result()))
+                                future_list.remove(future)
+                        time.sleep(1)
+                    print("Coroutine " + str(len(future_list)))
+                    f = executor.submit(AbstractCollector.miner_routine, store_info, keyword)
+                    future_list.append(f)
+                # self.nice(keyword)
+                # self.refresh_keyword(keyword)
+                # self.update_keyword_list()
+                print("Next Keywords")
+            except RuntimeError as e:
+                ExceptionWriter.instance().append_exception(e)
+                pass
 
     @staticmethod
     def miner_routine(store_info, keyword):
+        print("Routine Start...")
         miner = MinerImpl(None, None, None, 0, None, 50)
         miner.set_store(store_info.store, store_info.url, store_info.flag, store_info.parser)
         state_str = "store : " + store_info.store + ", and keyword : " + keyword.name + " and last priority : " + str(keyword.priority)
         LogWriter.instance().append("MINING LOG : " + state_str)
         miner.mining(keyword.name)
-        miner.close()
+        print("Mining End...")
+        # miner.close()
         # del miner
 
 
@@ -96,10 +120,13 @@ class BaseCollector(AbstractCollector):
     def __init__(self):
         self.priority_queue = []
         self.update_required = []
+        self.futures = []
 
     def __del__(self):
         del self.priority_queue
         del self.update_required
+        for future in self.futures:
+            future.cancel()
 
     def init_keyword(self):
         keywords = Database.instance().take_query("SELECT * FROM keyword")
@@ -115,8 +142,10 @@ class BaseCollector(AbstractCollector):
         keyword.priority += random.randint(320, 450)
 
     def interrupt(self, signum, frame):
-        print("process end. (SIGINT)")
         self.__del__()
+
+    def get_future_list(self) -> []:
+        return self.futures
 
     def get_all_store_info(self) -> []:
         store_list = []

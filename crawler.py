@@ -14,6 +14,7 @@ import requests
 from lxml.html import HtmlElement
 from log import SubstitutionTrialWriter, ExceptionWriter, LogWriter
 import random
+from timeout import timeout, TimeoutError
 
 
 # 클레스
@@ -246,15 +247,15 @@ class ParserImpl(ParserInterface):
                         if url2 is not "about:blank":
                             url = url2
                     try:
-                        category = Repeater.repeat_function(ParserImpl.find_category_info, (root, self.parser_unit.categories, self.parser_unit.category_core), StaleElementReferenceException, 6)
-                    except StaleElementReferenceException:
+                        category = ParserImpl.find_category_info(root, self.parser_unit.categories, self.parser_unit.category_core)
+                    except (StaleElementReferenceException, TimeoutError):
                         continue
                     brand = ParserImpl.find_item_info(root, self.parser_unit.brand)
                     brand = brand.strip("\"\'\r\n	 ")
                 else:
                     try:
-                        category = Repeater.repeat_function(ParserImpl.find_category_info, (article, self.parser_unit.categories, self.parser_unit.category_core), StaleElementReferenceException, 6)
-                    except StaleElementReferenceException:
+                        category = ParserImpl.find_category_info(article, self.parser_unit.categories, self.parser_unit.category_core)
+                    except (StaleElementReferenceException, TimeoutError):
                         continue
                     brand = ParserImpl.find_item_info(article, self.parser_unit.brand)
                 if brand is None or brand is "" or "상품상세설명" in brand or '상세페이지' in brand:
@@ -294,6 +295,7 @@ class ParserImpl(ParserInterface):
     # 입력 : driver: selenium webdriver htmlElement, categories: str, category_unit: str
     # 출력 : str
     # 예외 : NoSuchElementException
+    # @timeout(10)
     @staticmethod
     def find_category_info(driver: webdriver, categories: str, category_unit: str) -> str:
         try:
@@ -581,7 +583,7 @@ class MinerImpl(MinerInterface):
             print("Initial Search failed")
             ExceptionWriter.instance().append("Initial Search failed on store : " + self.store)
             ExceptionWriter.instance().append_exception(e)
-            return
+            return 0
         front_item_name = ""
         page = 1
         limit_count = 0
@@ -635,6 +637,7 @@ class MinerImpl(MinerInterface):
                 ExceptionWriter.instance().append("Crawling failed on store : " + self.store)
                 ExceptionWriter.instance().append_exception(e)
                 break
+        return 0
 
     def close(self):
         self.driver.close()
