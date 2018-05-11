@@ -1,6 +1,4 @@
 <section>
-
-
     <?php
         if($page != null && $maxItem != null && $query != null && $sort != null && $minPrice !== null && $maxPrice !== null && $minPrice <= $maxPrice ){
             $rows = http_print_prod(($page - 1) * $maxItem,$maxItem,$query,$sort,$category,$minPrice,$maxPrice);
@@ -14,8 +12,6 @@
                 <?php
             }
             else{
-
-
                 ?>
                     <div id="section_options" class="container">
                         <div id="advanced_option_selector" class="row">
@@ -25,7 +21,7 @@
                                 </div>
                                 <div id="option_selector_category_list" class="list-group list-group-horizontal">
                                     <?php
-                                        $category_rows = http_get_category($category);
+                                        $category_rows = http_get_category(array_diff($category,['미분류',"전체"]));
                                         $category_rows = $category_rows->fetchAll();
                                         foreach($category_rows as $category_row){
                                             $temp_category = $category_row['category_name'];
@@ -75,7 +71,7 @@
                             <div><a href=<?=$row['url']?> tartet = "_blank"><span class="content_name"><?=$row["name"]?></span></a></div>
                             <div>판매처 : <span class="content_store"><?=$row['store']?></span></div>
                             <?php
-                                $category_name = $row['category_name'];
+                                $category_name = (strpos($row['category_name'],"미분류") === false)?$row['category_name']:"미분류";
                                 $category_url = "search.php?page=1&maxItem=$maxItem&sort=$sort&category%5B%5D=$category_name&query=$query"
                             ?>
                             <div>카테고리 : <a href="<?=$category_url?>" class="content_category"><?=$category_name?></a></div>

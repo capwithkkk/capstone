@@ -18,12 +18,12 @@ price_attr: null
 옥션:
 
 search: //*[@id="txtKeyword"]
-section: //*[@id="ucItemList_listview"]
-articles: *[@class="list_view "]
-name: *[@class="layout_left"]/*[@class="item_title_info"]/*[@class="item_title_wrap"]/*[@class="item_title"]/a
-url:  *[@class="layout_left"]/*[@class="item_title_info"]/*[@class="item_title_wrap"]/*[@class="item_title"]/a
-pic_url: *[@class="layout_left"]/*[@class="image_info"]/*[@class="image"]/a/img
-price:  *[@class="layout_right"]/*[@class="item_price_info"]/*[@class="item_price"]/strong
+section: //*[@id="ucItemList_listview"]|//*[@id="ucItemList_photoview"]
+articles: *[@class="list_view "]|*[@class="gallery_view"]|*[@class="gallery_wrap title_none"]
+name: div//div[@class="item_title"]/a
+url:  div//div[@class="item_title"]/a
+pic_url: div//div[@class="image"]/a/img
+price:  div//div[@class="item_price"]/strong
 button: //*[@class="paginate"]/span/a[@class="on"]/following-sibling::a[1]
 name_attr: null
 url_attr: href

@@ -89,7 +89,7 @@
             $first = substr($first,0,-3);
             $full_query =  "SELECT * FROM category WHERE parent_name IN (SELECT parent_name FROM category WHERE $first)";
         }else{
-            $full_query =  "SELECT * FROM category";
+            $full_query =  "SELECT * FROM category WHERE parent_name != '미분류'";
         }
         $rows = $db->query($full_query);
         return $rows;

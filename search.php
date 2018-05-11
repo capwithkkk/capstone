@@ -14,8 +14,6 @@
 	<head>
 		<title>MarketExplorer</title>
 	</head>
-
-
 	<body>
         <?php
 			try{
@@ -23,7 +21,10 @@
 				$maxItem = isset($_GET['maxItem'])?$_GET['maxItem']:null;
 				$sort = isset($_GET['sort'])?$_GET['sort']:null;
 				$query = isset($_GET['query'])?$_GET['query']:null;
-				$category = isset($_GET['category'])&&!empty($_GET['category'])?$_GET['category']:array("전체");
+				$category = isset($_GET['category'])&&!empty($_GET['category'])?$_GET['category']:array('전체');
+				if(in_array("전체",$category) !== false){
+					array_push($category, "미분류");
+				}
 				$minPrice = isset($_GET['minPrice'])?$_GET['minPrice']:0;
 				$maxPrice = isset($_GET['maxPrice'])?$_GET['maxPrice']:2147483647;
 				include 'database.php';
@@ -32,6 +33,7 @@
 	            include 'nav.php';
 	            include 'footer.php';
 			}catch(Exception $e){
+				echo $e;
 				errorFunction(500 ,"Internal Server Error");
 			}
         ?>
