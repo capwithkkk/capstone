@@ -14,7 +14,8 @@ import requests
 from lxml.html import HtmlElement
 from log import SubstitutionTrialWriter, ExceptionWriter, LogWriter
 import random
-from timeout import timeout, TimeoutError
+import asyncio
+from concurrent.futures import TimeoutError
 
 
 # 클레스
@@ -159,6 +160,7 @@ class CategoryConverger(SingletonInstance):
     # 출력 : int
     def converge(self, limit: int) -> int:
         modification_count = 0
+        chain = False
         categories = Database.instance().take_query("SELECT category_id, category_name from category WHERE parent_name = '미분류' limit " + str(limit))
         for category in categories:
             category_id = category[0]
@@ -176,6 +178,43 @@ class CategoryConverger(SingletonInstance):
                         break
 
         return modification_count
+
+    # 함수
+    # origin_name에 해당되는 임시카테고리를 찾아 chain-rule을 적용시켜 전부 카테고리 치환식으로 변경시킨다. 추가된 치환식만큼 리턴한다.
+    # 입력 : origin_name: str, category: str
+    # 출력 : int
+    def converge_chain(self, origin_name: str, category_name: str) -> int:
+        c = Database.instance().take_query("SELECT category_id from category WHERE category_name = '" + category_name + "'")
+        target_id = c[0][0]
+        modification_count = 0
+        categories = Database.instance().take_query("SELECT category_id, category_name from category WHERE parent_name = '미분류' and category_name LIKE '%" + origin_name + "%'")
+        for category in categories:
+            chain = True
+            category_id = category[0]
+            sub_categories = CategoryConverger.category_split(category[1])
+            for sub_category in sub_categories:
+                if sub_category == "미분류":
+                    continue
+                if "홈" in sub_category:
+                    continue
+                print("검사대상 : " + sub_category)
+                if origin_name in sub_category:
+                    chain = False
+                    Database.instance().make_query(
+                        'INSERT INTO category_convergence VALUES("' + sub_category + '","' + category_name + '")'
+                    )
+                    print("치환자 등록")
+                if chain is True:
+                    Database.instance().make_query(
+                        'INSERT INTO category_convergence VALUES("' + sub_category + '","' + category_name + '")'
+                    )
+                    print("치환대상 : " + sub_category)
+                    modification_count += 1
+            Database.instance().make_query("UPDATE product SET category_id = " + str(target_id) + " WHERE category_id = " + str(category_id))
+            Database.instance().make_query("DELETE FROM category WHERE category_id = " + str(category_id))
+        return modification_count
+
+
 
 
 # 인터페이스
@@ -215,7 +254,7 @@ class ParserImpl(ParserInterface):
 
     # 함수
     # ParserInterface로 부터 Implement
-    def parse_to_list(self, driver: webdriver) -> []:
+    async def parse_to_list(self, driver: webdriver) -> []:
         rule_list = []
         try:
             section = Repeater.repeat_function(driver.find_element_by_xpath, (self.parser_unit.section,), StaleElementReferenceException, 6)
@@ -592,7 +631,8 @@ class MinerImpl(MinerInterface):
         while True:
             try:
                 print("page : " + str(page))
-                data_list = self.parser.parse_to_list(self.driver)
+                future = asyncio.ensure_future(self.parser.parse_to_list(self.driver))
+                data_list = future.result(180)
                 if (not page_parsing_flag) and len(data_list) == 0 or front_item_name == data_list[0].name:
                     print("Crawling has been finished.")
                     break
@@ -613,7 +653,7 @@ class MinerImpl(MinerInterface):
                     break
                 page += 1
                 page_parsing_flag = False
-            except StaleElementReferenceException as e:
+            except (StaleElementReferenceException, TimeoutError) as e:
                 if alert_count < 2:
                     print("StaleElementWait!.")
                     alert_count += 1

@@ -10,16 +10,8 @@ from concurrent.futures.thread import ThreadPoolExecutor
 from queue import Queue
 import signal
 import os
+import asyncio
 os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
-
-def _pickle_method(m):
-    if m.im_self is None:
-        return getattr, (m.im_class, m.im_func.func_name)
-    else:
-        return getattr, (m.im_self, m.im_func.func_name)
-
-copyreg.pickle(types.MethodType, _pickle_method)
-
 
 class StoreInfo:
 
@@ -79,7 +71,7 @@ class AbstractCollector(abc.ABC):
         store_info_list = self.get_all_store_info()
         signal.signal(signal.SIGINT, self.interrupt)
         signal.signal(signal.SIGTERM, self.interrupt)
-        executor = ThreadPoolExecutor(max_workers=max_thread)
+        loop = asyncio.get_event_loop()
         future_list = self.get_future_list()
         while True:
             try:
@@ -92,25 +84,27 @@ class AbstractCollector(abc.ABC):
                                 future_list.remove(future)
                         time.sleep(1)
                     print("Coroutine " + str(len(future_list)))
-                    f = executor.submit(AbstractCollector.miner_routine, store_info, keyword)
+                    f = loop.run_until_complete(self.miner_routine(store_info, keyword))
                     future_list.append(f)
-                # self.nice(keyword)
-                # self.refresh_keyword(keyword)
-                # self.update_keyword_list()
+                self.nice(keyword)
+                self.refresh_keyword(keyword)
+                self.update_keyword_list()
                 print("Next Keywords")
             except RuntimeError as e:
-                ExceptionWriter.instance().append_exception(e)
+                raise e
+                #ExceptionWriter.instance().append_exception(e)
                 pass
 
     @staticmethod
-    def miner_routine(store_info, keyword):
+    async def miner_routine(store_info, keyword):
         print("Routine Start...")
         miner = MinerImpl(None, None, None, 0, None, 50)
         miner.set_store(store_info.store, store_info.url, store_info.flag, store_info.parser)
         state_str = "store : " + store_info.store + ", and keyword : " + keyword.name + " and last priority : " + str(keyword.priority)
         LogWriter.instance().append("MINING LOG : " + state_str)
-        miner.mining(keyword.name)
+        out = await miner.mining(keyword.name)
         print("Mining End...")
+        return out
         # miner.close()
         # del miner
 
