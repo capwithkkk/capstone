@@ -254,7 +254,7 @@ class ParserImpl(ParserInterface):
 
     # 함수
     # ParserInterface로 부터 Implement
-    async def parse_to_list(self, driver: webdriver) -> []:
+    def parse_to_list(self, driver: webdriver):
         rule_list = []
         try:
             section = Repeater.repeat_function(driver.find_element_by_xpath, (self.parser_unit.section,), StaleElementReferenceException, 6)
@@ -475,14 +475,18 @@ class MinerImpl(MinerInterface):
         self.flag = flag
         self.limit = limit
         self.page = 1
+
         if parser is None and store is not None:
             self.parser = MinerImpl.get_parser(self.store, self.flag)
         else:
             self.parser = parser
         if driver is None:
+            print("stuck test")
             self.driver = MinerImpl.create_driver()
+            print("stuck test end")
         else:
             self.driver = driver
+
 
     # 함수
     # 새로운 웹 드라이버를 생성한다
@@ -609,13 +613,17 @@ class MinerImpl(MinerInterface):
             self.substitute_keyword(keyword)
             self.driver.get(self.get_pagination_url(1))
         else:
+            print("init start")
             self.driver.get(self.url)
+            print("init end")
             self.search_init(keyword)
+
 
     # 프로시저
     # 크롤링을 시작한다. pagination 이 끝날 때 까지 혹은 수집 상품 Data량이 limit 값을 초과할때 까지 무한 반복한다.
     # 입력 : keyword: str
     def mining(self, keyword: str):
+        print("mining start")
         try:
             self.init_drive(keyword)
         except WebDriverException as e:
@@ -631,8 +639,7 @@ class MinerImpl(MinerInterface):
         while True:
             try:
                 print("page : " + str(page))
-                future = asyncio.ensure_future(self.parser.parse_to_list(self.driver))
-                data_list = future.result(180)
+                data_list = self.parser.parse_to_list(self.driver)
                 if (not page_parsing_flag) and len(data_list) == 0 or front_item_name == data_list[0].name:
                     print("Crawling has been finished.")
                     break
@@ -653,7 +660,7 @@ class MinerImpl(MinerInterface):
                     break
                 page += 1
                 page_parsing_flag = False
-            except (StaleElementReferenceException, TimeoutError) as e:
+            except StaleElementReferenceException as e:
                 if alert_count < 2:
                     print("StaleElementWait!.")
                     alert_count += 1
